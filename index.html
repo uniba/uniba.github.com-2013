@@ -1,49 +1,53 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="ja"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="ja"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="ja"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="ja"><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
-	<title>ゆにば</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Uniba Inc. | ユニバ株式会社</title>
+	<meta name="description" content="ユニバ株式会社はクロスメディア・クロスデバイス領域で活動するデザイン会社です。多くのPC、モバイルを横断するウェブサービス、キャンペーン、サイトを手がけてきました。近年はスマートフォン、デジタルサイネージ等の隆盛を受けて、新しいウェブ標準とメディアアートがクロスする領域に取り組んでいます。">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
-	<style type="text/css">
-		#favor ul li {
-			list-style: none;
-		}
-		#favor ul li a {
-			color: #000000;
-			text-decoration: none;	
-		}
-	</style>
+	
+	<script src="ref/js/processing.js"></script>
+	<script src="ref/js/excanvas.js"></script>
+	<script src="ref/js/logo.p5.js"></script>
+	<link rel="stylesheet" type="text/css" href="ref/css/style.css?=uniba" media="all" />
 </head>
 <body>
 	<div id="container">
-		<div id="content">
-			<article id="tropy">
-				<header>
-					<h1>ユニバ株式会社 Uniba Inc.</h1>
-				</header>
+		<article id="top">
+			<header class="clearfix">
+				<h1>ユニバ株式会社 Uniba Inc.</h1>
 				<nav>
 					<ul>
-						<li>About</li>
-						<li>Works</li>
-						<li>Random Digit Dialogue Blog</li>
-						<li>Recruit</li>
+						<li class="nav01"><a href="#about"><span><img src="ref/images/icon_arrow.gif" width="11" height="11" alt="below" /></span><img src="ref/images/nav_about.png" width="45" height="12" alt="About" /></a></li><!--
+						--><li class="nav02"><a href="#works"><span><img src="ref/images/icon_arrow.gif" width="11" height="11" alt="below" /></span><img src="ref/images/nav_works.png" width="48" height="11" alt="Works" /></a></li><!--					
+						--><li class="nav03"><a href="" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img src="ref/images/nav_rdd.png" width="207" height="11" alt="Random Digit Dialogue Blog" /></a></li><!--
+						--><li class="nav04"><a href="" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img src="ref/images/nav_recruit.png" width="55" height="11" alt="Recruit" /></a></li>
 					</ul>
 				</nav>
-				<section>
-					<header>
-						<h1><mark>title of tropy</mark><span>32 / 1232 [Reload]</span></h1>
-					</header>
-					<iframe src="http://utropy.herokuapp.com/" frameborder="0" allowtransparency="true"></iframe>
-				</section>
-			</article>
+			</header>				
+			<section id="tropy">				
+				<iframe src="http://utropy.herokuapp.com/" frameborder="0" allowtransparency="true"></iframe>
+				<footer>
+					<h1>title of tropy<span>32 / 1232</span></h1>
+					<p>[Reload]</p>
+				</footer>
+			</section>
+		</article>
+		<div id="content">
 			<article id="about">
 				<header>
 					<h1>[会社概要 About]</h1>
 				</header>
 				<div class="clearfix">
 					<section>
-						<h3><mark>ユニバ株式会社 Uniba Inc.</mark></h3>
+						<h3>ユニバ株式会社 Uniba Inc.</h3>
 						<dl>
 							<dt>設立</dt>
 							<dd>2003年6月2日</dd>
@@ -95,20 +99,20 @@
 				</header>
 				<section>
 					<ul>
-						<li><marquee direction="right" width="100%" scrolldelay="60"><a href="">■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="100"><a href="">■<span style="color:#5fc4f8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="200"><a href="">■<span style="color:#5fc4f8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="60"><a href="">■<span style="color:#5fc4f8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="400"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="500"><a href="">■■<span style="color:#ffffff;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#5fc4f8;">■</span>■■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="60"><a href="">■<span style="color:#ffffff;">■</span><span style="color:#ffffff;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="100"><a href="">■<span style="color:#ffffff;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="800"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="50"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span>■<span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span>■<span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="120"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="80"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ee95a9;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ee95a9;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="400"><a href="">■<span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
-						<li><marquee direction="right" width="100%" scrolldelay="300"><a href="">■■■■■■■■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■■<span style="color:#ffffff;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#5fc4f8;">■</span>■■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#ffffff;">■</span><span style="color:#ffffff;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#ffffff;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span>■<span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span>■<span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ffffff;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#5fc4f8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ee95a9;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ee95a9;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■<span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#ee95a9;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span><span style="color:#40a0c8;">■</span>■</a></marquee></li>
+						<li><marquee direction="right" width="50%" scrolldelay="10"><a href="">■■■■■■■■</a></marquee></li>
 					</ul>
 				</section>
 			</section>
@@ -133,55 +137,391 @@
 				</header>
 				<section class="clearfix">
 					<div class="profile">
-						<header>
-							<h1><mark>菊地 玄摩 Haruma Kikuchi</mark></h1>
-						</header>
-						<figure>
-							Co-Founder.<br />Designer
-						</figure>
-						<aside>
-							<ul>
-								<li><a href="">[Facebook]</a></li>
-								<li><a href="">[twitter]</a></li>
-								<li><a href="">[LinkedIn]</a></li>
-							</ul>
-						</aside>
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
 					</div>
-					<div class="avator">
-						画像
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
 					</div>
 				</section>
-<article class="clearfix">
+				<section class="clearfix">
 					<div class="profile">
-						<header>
-							<h1><mark>小松 純 Jun Komatsu</mark></h1>
-						</header>
-						<figure>
-							Co-Founder.<br />Programmer
-						</figure>
-						<aside>
-							<ul>
-								<li><a href="">[Facebook]</a></li>
-								<li><a href="">[twitter]</a></li>
-								<li><a href="">[LinkedIn]</a></li>
-							</ul>
-						</aside>
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
 					</div>
-					<div class="avator">
-						画像
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
 					</div>
-				</article>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+							</header>
+							<figure>
+								Co-Founder / Designer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
+								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+							</dl>
+						</div>
+					</div>
+				</section>
 			</article>
-			<article id="footer">
-				<section>
-					<ul>
-						<li><a href="">[Facebook]</a></li>
-						<li><a href="">[Twitter]</a></li>
-						<li><a href="">[Tumblr]</a></li>
-						<li><a href="">[Google+]</a></li>
-					</ul>
-					<address>Uniba Inc. 2011 Some Rights Reserved.</address>
-				</section>				
+			<footer>
+				<address>Uniba Inc. 2011 Some Rights Reserved.</address>				
+			</footer>
+			<article id="canvas">
+				<!--<canvas id="logo" data-processing-sources="ref/js/unibajp.pjs"></canvas>-->
+				<canvas id="logo"></canvas> 
 			</article>
 		</div>
 	</div>
