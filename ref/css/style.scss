@@ -52,9 +52,13 @@ img {
 	vertical-align: top;
 }
 
+a {
+	text-decoration: none;
+}
 
 body {
 	background-color: #dddddd;
+	font-family: "Myriad Pro", "Hiragino Kaku Gothic Pro";
 }
 
 .clearfix:after {
@@ -70,86 +74,87 @@ body {
 	zoom: 1;
 }
 
-article {
+#container {
+	padding: 0 0 100px 0;
+}
+
+	
+#top {
 	width: $width;
 	margin: 0 auto;
-	
-	
-	&#top {
-		padding: 19px 0 0 0;
-	
-		header {
+	padding: 19px 0 0 0;
 
-			h1 {
-				float: left;
-				width: 102px;
-				height: 16px;
-				padding: 0 531px - 102px - 44px 0 44px;
-				@include bg("h_logo.png", 44px, top, no-repeat);
-				font-size: 1px;
-				line-height: 1em;
-				text-indent: -9999px;
-			}
+	header {
+
+		h1 {
+			float: left;
+			width: 102px;
+			height: 16px;
+			padding: 0 531px - 102px - 44px 0 44px;
+			@include bg("h_logo.png", 44px, top, no-repeat);
+			font-size: 1px;
+			line-height: 1em;
+			text-indent: -9999px;
+		}
 
 
-			nav {
-				float: left;
-				width: $width - 531px;
-				padding: 2px 0 0 0;
-				
-				ul {
-				
-					li {
-						float: left;
-						height: 12px;
-						font-size: 1px;
-						line-height: 1em;
-						overflow: hidden;
+		nav {
+			float: left;
+			width: $width - 531px;
+			padding: 2px 0 0 0;
+			
+			ul {
+			
+				li {
+					float: left;
+					height: 12px;
+					font-size: 1px;
+					line-height: 1em;
+					overflow: hidden;
+					
+					&.nav01 {
+						padding: 0 13px 0 0;
+					}
+					
+					&.nav02 {
+						padding: 0 15px 0 0;
+					}
+					
+					&.nav03 {
+						padding: 0 14px 0 0;
+					}
+					
+					&.nav04 {
+						padding: 0;
+					}
 						
-						&.nav01 {
-							padding: 0 13px 0 0;
+					a {
+						img {
+							margin: 0;
+							@include transition(opacity, 0.5s, ease, 0);
 						}
 						
-						&.nav02 {
-							padding: 0 15px 0 0;
-						}
-						
-						&.nav03 {
-							padding: 0 14px 0 0;
-						}
-						
-						&.nav04 {
-							padding: 0;
-						}
-							
-						a {
+						span {
+								
 							img {
-								margin: 0;
-								@include transition(opacity, 0.5s, ease, 0);
+								margin: 0 5px 0 0;
+								box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+								@include transition(box-shadow, 0.5s, ease, 0);
+								
+								
+							}
+						}
+											
+						&:hover {
+							img {
+								opacity: 0.5;
 							}
 							
 							span {
-									
-								img {
-									margin: 0 5px 0 0;
-									box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
-									@include transition(box-shadow, 0.5s, ease, 0);
-									
-									
-								}
-							}
-												
-							&:hover {
-								img {
-									opacity: 0.5;
-								}
 								
-								span {
-									
-									img {
-										box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-										opacity: 1;
-									}
+								img {
+									box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+									opacity: 1;
 								}
 							}
 						}
@@ -157,36 +162,310 @@ article {
 				}
 			}
 		}
+	}
+	
+	#tropy {		
+		width: $width;
+		padding: 129px 0 183px 0;
 		
-		#tropy {
-			display: none;
+		iframe {
+			width: 400px;
+			height: 266px;
+			margin: 0 0 1px 315px;
+			border: 1px solid #e5e5e5;
+			background-color: #ffffff;
+			box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+			vertical-align: bottom;
+		}
+		
+		footer {
+			width: 402px;
+			margin: 0 0 0 315px;
 			
-			width: $width;
-			padding: 129px 0 183px 0;
-			
-			iframe {
-				width: 400px;
-				height: 266px;
-				margin: 0 0 1px 315px;
-				border: 1px solid #e5e5e5;
-				background-color: #ffffff;
-				box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-				vertical-align: bottom;
+			h1 {
+				float: left;
+				width: 402px - 24px - 10px;
+				padding: 0 5px;
+				background-color: rgba(208, 208, 208, 0.73);
+				color: #ffffff;
+				font-size: 0.9em;
+				font-family: Helvetica, Arial, sans-serif;
+				font-weight: normal;
+				line-height: 23px;
+				position: relative;
+				
+				span {
+					position: absolute;
+					right: 5px;
+				}
 			}
 			
-			footer {
-				width: 402px;
-				margin: 0 0 0 315px;
+			aside {
+				float: right;
+				width: 23px;
+				height: 23px;
 				background-color: rgba(208, 208, 208, 0.73);
+				line-height: 1em;
 				
-				h1 {
+				a {
+					display: block;
+					width: 23px;
+					height: 23px;
+					
+					img {
+						padding: 5px 0 0 5px;
+					}
 				}
 			}
 		}
 	}
+}
+
+
+#content {
+	width: $width;
+	margin: 0 auto;
+	background-color: #ffffff;
+	box-shadow: 0 0 51px rgba(0, 0, 0, 0.4);
+	position: relative;
+	
+	#about {
+		width: $width - 42px*2;
+		padding: 48px 42px 10px 42px;	
+		background-color: #f6f5f0;
+		background-image: url(../images/bg_about_uniba.gif), url(../images/bg_about_repeat.gif);
+		background-position: 512px 241px, left top;
+		background-repeat: no-repeat, repeat-y;
+		position: relative;
+		
+		a {
+			color: #4e4e4e;
+		
+			img {
+				margin: 0;
+				opacity: 1;
+				@include transition(opacity box-shadow, 0.5s, ease, 0);
+			}
+		
+			span {
+					
+				img {
+					margin: 0 5px 0 0;
+					box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+					@include transition(box-shadow, 0.5s, ease, 0);
+					
+					
+				}
+			}
+							
+			&:hover {
+		
+				img {
+					opacity: 0.9;
+					box-shadow: 0 0 5px rgba(255, 255, 255, 0.29);
+				}
+				
+				span {
+					
+					img {
+						box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		header {
+		
+			h1 {
+				position: relative;
+				
+				aside {
+					font-size: 0.7em;
+					font-family: "Myriad Pro";
+					font-weight: normal;
+					position: absolute;
+					top: 4px;
+					right: 100px;
+					
+				}
+			}
+			
+			h2 {
+				padding: 36px 0 12px 0;
+				color: #312f24;
+				font-size: 1.1em;
+				font-family: "Hiragino Mincho Pro";
+				font-weight: normal;
+				line-height: 2em;
+			}
+		}
+		
+		section {
+			padding: 22px 0;
+			
+			header {
+				float: left;
+				width: 300px;
+				
+				h3 {
+					padding: 4px 0 0 0;
+				}
+			}
+			
+			.thumb {
+				float: left;
+				width: 280px;
+			}
+			
+			figure {
+				float: left;
+				width: $width - 42px*2 - 300px - 280px;
+				
+				a {
+					color: #62625f;
+					@include transition(color, 0.5s, ease, 0);
+					
+					&:hover {
+						color: #70706d;
+					}
+				}
+				
+				dl {
+					padding: 0 0 0 20px;
+					color: #62625f;
+					
+					dt {
+						clear: both;
+						float: left;
+						width: 90px;
+						padding: 10px 0;
+						font-weight: bold;
+					}
+					
+					dd {
+						float: left;
+						width: $width - 42px*2 - 300px - 280px - 90px - 20px;
+						padding: 10px 0;
+						
+						aside {
+							margin: 1.2em 0 0.2em 0;
+														
+							img {
+								vertical-align: baseline;
+							}
+						}
+					}
+				}
+			}
+			
+			.columns {
+				float: left;
+				width: $width - 42px*2 - 300px;
+			
+				.twoColumn,
+				.fourColumn {
+										
+					figure {
+						width: 280px;
+						padding: 0 20px 10px 0;
+						
+						h4 {
+							padding: 10px 0 10px 16px;
+							font-size: 1em;
+							font-weight: normal;
+							line-height: 1.3em;
+							position: relative;
+							
+							span {
+								display: block;
+								position: absolute;
+								top: auto;
+								left: 0;
+								
+								img {
+									vertical-align: baseline;
+								}
+							}
+						}
+					}
+				}
+				
+				.fourColumn {
+					
+					figure {
+						width: 130px;
+						padding: 0 20px 0 0;
+					}
+				}
+			}
+		}
+		
+		.mind {
+			width: 198;
+			height: 166px;
+			position: absolute;
+			left: 53px;
+			bottom: -31px;
+			z-index: 20;
+		}
+	}
+	
+	#favor {
+		width: $width - 42px*2;
+		padding: 48px 42px 5px 42px;
+		background-color: #3d3e3d;
+		background-image: url(../images/bg_favor_head.gif), url(../images/bg_favor_repeat.gif);
+		background-position: left top, left top;
+		background-repeat: no-repeat, repeat-y;
+		
+		ul {
+		
+			li {
+				line-height: 1em;
+				
+				a {
+					color: #1b1e1c;
+				}	
+			}
+		}
+		
+		footer {
+			padding: 24px 100px - 42px 0 0;
+			color: #e3e3e3;
+			font-family: "Hiragino Mincho Pro";
+			font-size: 0.7em;
+			text-align: right;
+		}
+	}
+	
+	#client {
+		background-color: #f6f5f0;
+		background-image: url(../images/bg_client_repeat.gif);
+		background-position: left top;
+		background-repeat: repeat-y;
+		
+		section {
+			width: $width - 120px - 90px;
+			padding: 60px 120px 40px 90px;
+		}
+	}
 	
 	#member {
+		width: $width - 42px*2;
+		padding: 48px 42px 70px 42px;	
 		background-color: #333333;
+		background-image: url(../images/bg_member_head.gif), url(../images/bg_member_repeat.gif);
+		background-position: left top, left top;
+		background-repeat: no-repeat, repeat-y;
+		
+		header {
+			padding: 0 0 34px 0;
+		}
+		
+		section {
+			padding: 0 0 0 2px;
+		}
 		
 		.profile {
 			float: left;
@@ -197,13 +476,18 @@ article {
 				float: right;
 				width: 292px - 85px;
 				
-				h1 {
-					display: inline-block;
-					border: 1px solid #7f7f7f;
-					background-color: rgba(231, 231, 231, 0.09);
-					font-family: "Myriad Peo";
-					font-weight: bold;
-					color: #d3d3d3;
+				header {
+					padding: 0;
+				
+					h1 {
+						display: inline-block;
+						padding: 2px 3px 0 3px;
+						border: 1px solid #7f7f7f;
+						background-color: rgba(231, 231, 231, 0.09);
+						font-family: "Myriad Pro";
+						font-weight: bold;
+						color: #d3d3d3;
+					}
 				}
 				
 				figure {
@@ -283,35 +567,44 @@ article {
 		}
 	}
 	
+	#anchor {
+		width: 50px;
+		height: 35px;
+		position: absolute;
+		top: 48px;
+		right: 0;
+		
+		a {
+			display: block;
+			width: 50px;
+			height: 35px;	
+			background-image: url(../images/bg_anchor_body.png), url(../images/bg_anchor_arrow.png);
+			background-position: left top, left top;
+			background-repeat: no-repeat, no-repeat;
+			opacity: 1;	
+			@include transition(opacity, 0.2s, ease, 0);
+			
+			&:hover {
+				opacity: 0.7;
+			}
+			
+			span {
+				display: hidden;
+				visibility: hidden;
+			}
+		}
+	}
+	
 	#canvas {
 	
 		#logo {
 			width: 100%;
 			height: 748px;
 			position: absolute;
-			background-color: #f5f5f5;
+			background-color: #ff0000;
 			top: 0;
 			left: 0;
 			z-index: -1;
 		}
 	}
-}
-
-#favor {
-	ul {
-		li {
-			line-height: 1em;
-			
-			a {
-				text-decoration: none;
-			}
-		}
-	}
-}
-
-#content {
-	width: $width;
-	margin: 0 auto;
-	background-color: #ffffff;
-	box-shadow: 0 0 51px rgba(0, 0, 0, 0.4);
 }
