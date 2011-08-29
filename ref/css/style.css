@@ -31,6 +31,18 @@ body {
 .clearfix {
   zoom: 1; }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block; }
+
 #container {
   padding: 0 0 100px 0; }
 
@@ -40,9 +52,9 @@ body {
   padding: 19px 0 0 0; }
   #top header h1 {
     float: left;
-    width: 102px;
-    height: 16px;
-    padding: 0 385px 0 44px;
+    width: 103px;
+    height: 17px;
+    padding: 0 384px 0 44px;
     background: url(../images/h_logo.png) 44px top no-repeat;
     font-size: 1px;
     line-height: 1em;
@@ -247,6 +259,9 @@ body {
         width: 300px; }
         #content #about section header h3 {
           padding: 4px 0 0 0; }
+        #content #about section header h4 {
+          padding: 28px 0 0 0;
+          font-weight: normal; }
       #content #about section .thumb {
         float: left;
         width: 280px; }

@@ -74,6 +74,19 @@ body {
 	zoom: 1;
 }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
 #container {
 	padding: 0 0 100px 0;
 }
@@ -88,9 +101,9 @@ body {
 
 		h1 {
 			float: left;
-			width: 102px;
-			height: 16px;
-			padding: 0 531px - 102px - 44px 0 44px;
+			width: 103px;
+			height: 17px;
+			padding: 0 531px - 103px - 44px 0 44px;
 			@include bg("h_logo.png", 44px, top, no-repeat);
 			font-size: 1px;
 			line-height: 1em;
@@ -310,6 +323,11 @@ body {
 				
 				h3 {
 					padding: 4px 0 0 0;
+				}
+				
+				h4 {
+					padding: 28px 0 0 0;
+					font-weight: normal;
 				}
 			}
 			
