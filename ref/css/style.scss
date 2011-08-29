@@ -49,6 +49,7 @@ li {
 }
 
 img {
+	border: none;
 	vertical-align: top;
 }
 
@@ -211,6 +212,7 @@ section {
 				
 				span {
 					position: absolute;
+					top: 0;
 					right: 5px;
 				}
 			}
@@ -294,10 +296,10 @@ section {
 		header {
 		
 			h1 {
+				font-size: 1em;
 				position: relative;
 				
-				aside {
-					font-size: 0.7em;
+				aside {					
 					font-family: "Myriad Pro";
 					font-weight: normal;
 					position: absolute;
@@ -392,17 +394,17 @@ section {
 						padding: 0 20px 10px 0;
 						
 						h4 {
-							padding: 10px 0 10px 16px;
+							margin: 0 0 0 16px;
+							padding: 10px 0 10px 0;
 							font-size: 1em;
 							font-weight: normal;
 							line-height: 1.3em;
 							position: relative;
 							
 							span {
-								display: block;
 								position: absolute;
 								top: auto;
-								left: 0;
+								left: -16px;
 								
 								img {
 									vertical-align: baseline;
@@ -505,6 +507,7 @@ section {
 						padding: 2px 3px 0 3px;
 						border: 1px solid #7f7f7f;
 						background-color: rgba(231, 231, 231, 0.09);
+						font-size: 1.2em;
 						font-family: "Myriad Pro";
 						font-weight: bold;
 						color: #d3d3d3;
@@ -627,4 +630,26 @@ section {
 		left: 0;
 		z-index: 5;
 	}
+}
+
+.ie6 #content #member .profile .description header h1,
+.ie7 #content #member .profile .description header h1 {
+	zoom: 1;
+	*display: inline;
+}
+
+.no-multiplebgs #content #about {
+	@include bg("bg_about_repeat.gif", left, top, repeat-y);
+}
+
+.no-multiplebgs #content #favor {
+	@include bg("bg_favor_repeat.gif", left, top, repeat-y);
+}
+
+.no-multiplebgs #content #member {
+	@include bg("bg_member_repeat.gif", left, top, repeat-y);
+}
+
+.no-multiplebgs #content #anchor a {
+	@include bg("bg_anchor_arrow.png", left, top, no-repeat);
 }

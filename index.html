@@ -12,25 +12,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+	<script src="ref/js/modernizr.js"></script>
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<!--[if lte IE 6]>
+	<script src="ref/js/dd_belatedpng.js"></script>
+	<script>DD_belatedPNG.fix('.png');</script>
+	<![endif]-->
 	
+	<!--[if !IE]>
 	<script src="ref/js/processing.js"></script>
 	<script src="ref/js/logo.p5.js"></script>
+	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="ref/css/style.css" media="all" />
 </head>
 <body>
 	<div id="container">
 		<article id="top">
 			<header class="clearfix">
-				<h1>ユニバ株式会社 Uniba Inc.</h1>
+				<h1 class="png">ユニバ株式会社 Uniba Inc.</h1>
 				<nav>
 					<ul>
-						<li class="nav01"><a href="#about"><span><img src="ref/images/icon_arrow.gif" width="11" height="11" alt="below" /></span><img src="ref/images/nav_about.png" width="45" height="13" alt="About" /></a></li><!--
-						--><li class="nav02"><a href="#works"><span><img src="ref/images/icon_arrow.gif" width="11" height="11" alt="below" /></span><img src="ref/images/nav_works.png" width="48" height="11" alt="Works" /></a></li><!--					
-						--><li class="nav03"><a href="http://rd.uniba.jp/blog/" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img src="ref/images/nav_rdd.png" width="207" height="12" alt="Random Digit Dialogue Blog" /></a></li><!--
-						--><li class="nav04"><a href="http://www.cbc-net.com/work/company/uniba/" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img src="ref/images/nav_recruit.png" width="55" height="12" alt="Recruit" /></a></li>
+						<li class="nav01"><a href="#about"><span><img src="ref/images/icon_arrow.gif" width="11" height="11" alt="below" /></span><img class="png" src="ref/images/nav_about.png" width="45" height="13" alt="About" /></a></li><!--
+						--><li class="nav02"><a href="#works"><span><img src="ref/images/icon_arrow.gif" width="11" height="11" alt="below" /></span><img class="png" src="ref/images/nav_works.png" width="48" height="11" alt="Works" /></a></li><!--					
+						--><li class="nav03"><a href="http://rd.uniba.jp/blog/" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img class="png" src="ref/images/nav_rdd.png" width="207" height="12" alt="Random Digit Dialogue Blog" /></a></li><!--
+						--><li class="nav04"><a href="http://www.cbc-net.com/work/company/uniba/" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img class="png" src="ref/images/nav_recruit.png" width="55" height="12" alt="Recruit" /></a></li>
 					</ul>
 				</nav>
 			</header>				
@@ -38,19 +45,19 @@
 				<iframe src="http://utropy.herokuapp.com/" frameborder="0" allowtransparency="true"></iframe>
 				<footer class="clearfix">
 					<h1>title of tropy<span>32 / 1232</span></h1>
-					<aside><a href="javascript:void(0);"><img src="ref/images/btn_reload.png" width="14" height="12" alt="Reload" /></a></aside>
+					<aside><a href="javascript:void(0);"><img class="png" src="ref/images/btn_reload.png" width="14" height="12" alt="Reload" /></a></aside>
 				</footer>
 			</section>
 		</article>
 		<div id="content">
 			<article id="about">
 				<header>
-					<h1><img src="ref/images/h_uniba.png" width="313" height="94" alt="Uniba Inc. ユニバ株式会社" /><aside><a href="http://www.facebook.com/UnibaInc" target="_blank"><span><img src="ref/images/icon_fb_g.gif" width="14" height="14" alt="Lastest news on Facebook" /></span>Lastest news on Facebook</a></aside></h1>
+					<h1><img class="png" src="ref/images/h_uniba.png" width="313" height="94" alt="Uniba Inc. ユニバ株式会社" /><aside><a href="http://www.facebook.com/UnibaInc" target="_blank"><span><img src="ref/images/icon_fb_g.gif" width="14" height="14" alt="Lastest news on Facebook" /></span>Lastest news on Facebook</a></aside></h1>
 					<h2>ユニバ株式会社はクロスメディア・クロスデバイス領域で活動するデザイン会社です。<br />多くのPC、モバイルを横断するウェブサービス、キャンペーン、サイトを手がけてきました。<br />近年はスマートフォン、デジタルサイネージ等の隆盛を受けて、<br />新しいウェブ標準とメディアアートがクロスする領域に取り組んでいます。</h2>
 				</header>
 				<section class="clearfix">
 					<header>
-						<h3><img src="ref/images/h_about.png" width="78" height="51" alt="About 会社概要" /></h3>
+						<h3><img class="png" src="ref/images/h_about.png" width="78" height="51" alt="About 会社概要" /></h3>
 					</header>						
 					<div class="thumb">
 						<ul>
@@ -71,7 +78,7 @@
 				</section>
 				<section class="clearfix">
 					<header>
-						<h3><img src="ref/images/h_works.png" width="81" height="50" alt="Works 実績" /></h3>
+						<h3><img class="png" src="ref/images/h_works.png" width="81" height="50" alt="Works 実績" /></h3>
 						<h4><a href="" target="_blank"><span><img src="ref/images/icon_vimeo_g.gif" width="14" height="14" alt="launch" /></span>Uniba on Vimeo</a></h4>
 					</header>
 					<div class="columns">
@@ -228,11 +235,15 @@
 				<address><img src="ref/images/h_footer.gif" width="1024" height="91" alt="Uniba Inc. Some Rights Reserved. We are open." /></address>				
 			</footer>
 			<div id="anchor">
-				<a href="#container"><span>To top</span></a>
+			
+				<a class="png" href="#container"><span>To top</span></a>
+			
 			</div>
 		</div>
 		<article id="canvas">
+			<!--[if !IE]>
 			<canvas id="logo" data-processing-sources="ref/js/unibajp.pjs"></canvas>
+			<![endif]-->
 		</article>
 	</div>
 </body>
