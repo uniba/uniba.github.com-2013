@@ -12,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+	<script src="ref/js/jquery.easingscroll.js"></script>
 	<script src="ref/js/modernizr.js"></script>
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,6 +27,30 @@
 	<script src="ref/js/logo.p5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="ref/css/style.css" media="all" />
+	<script type="text/javascript">
+		$(function(){
+			var anchor = $("#anchor"),
+				offset = anchor.offset(),
+				topY = 48;
+				
+			$(window).scroll(function(){
+				if ($(window).scrollTop() > offset.top ){
+					anchor.stop().animate({
+						top: $(window).scrollTop() - offset.top + anchor.height() + topY
+					});
+				} else {
+					anchor.stop().animate({
+						top: topY
+					});
+				}
+			});
+			
+			$("a[href*='#']").easingScroll({
+				easing: "easeOutExpo",
+				duration: 600
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="container">
@@ -76,7 +101,7 @@
 						</dl>
 					</figure>
 				</section>
-				<section class="clearfix">
+				<section id="works" class="clearfix">
 					<header>
 						<h3><img class="png" src="ref/images/h_works.png" width="81" height="50" alt="Works 実績" /></h3>
 						<h4><a href="" target="_blank"><span><img src="ref/images/icon_vimeo_g.gif" width="14" height="14" alt="launch" /></span>Uniba on Vimeo</a></h4>
