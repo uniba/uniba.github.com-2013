@@ -180,7 +180,8 @@ section {
 		}
 	}
 	
-	#tropy {		
+	#tropy {
+		display: none;
 		width: $width;
 		padding: 129px 0 183px 0;
 		
@@ -235,6 +236,13 @@ section {
 				}
 			}
 		}
+	}
+	
+	#push {
+		width: $width;
+		margin: 0 auto;
+		padding: 40px 0;
+		text-align: center;
 	}
 }
 
@@ -463,6 +471,7 @@ section {
 	}
 	
 	#client {
+		display: none;
 		background-color: #f6f5f0;
 		background-image: url(../images/bg_client_repeat.gif);
 		background-position: left top;
@@ -478,9 +487,14 @@ section {
 		width: $width - 42px*2;
 		padding: 48px 42px 70px 42px;	
 		background-color: #333333;
-		background-image: url(../images/bg_member_head.gif), url(../images/bg_member_repeat.gif);
-		background-position: left top, left top;
-		background-repeat: no-repeat, repeat-y;
+		//background-image: url(../images/bg_member_head.gif), url(../images/bg_member_repeat.gif);
+		//background-position: left top, left top;
+		//background-repeat: no-repeat, repeat-y;
+		
+		background-image: url(../images/bg_member_repeat.gif);
+		background-position: left top;
+		background-repeat: repeat-y;
+		
 		
 		header {
 			padding: 0 0 34px 0;
@@ -493,7 +507,9 @@ section {
 		.profile {
 			float: left;
 			width: 292px;
-			padding: 0 10px 28px 0;
+			height: 160px;
+			//padding: 0 10px 28px 0;
+			padding: 10px 0 0 0;
 			
 			.description {
 				float: right;

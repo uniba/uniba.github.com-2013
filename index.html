@@ -13,6 +13,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
 	<script src="ref/js/jquery.easingscroll.js"></script>
+	<script src="ref/js/site.js"></script>
 	<script src="ref/js/modernizr.js"></script>
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,32 +27,21 @@
 	<script src="ref/js/processing.js"></script>
 	<script src="ref/js/logo.p5.js"></script>
 	<![endif]>
+	<!--
+		コミットするッ・・・！
+		コンフリクト！？ログに何も残らねぇ！！
+		ログが無いと俺はコミットも出来ねぇのかよッ！
+		プッシュできるのかこれでッ・・・！？
+		俺の構文は小なりイコール、無限ループってね。イイね！いい教訓だよ！
+		ブレースをッ・・・ブレースを拾うんだ・・・！！
+		止まれっ止まらんかぁああ！！！！！！
+		ブラウザァ！いま何ループ目？ｸﾗｯｼｭ
+		
+		制作中です。
+		今しばらくお待ちください。
+	-->
 	
 	<link rel="stylesheet" type="text/css" href="ref/css/style.css" media="all" />
-	<script type="text/javascript">
-		$(function(){
-			var anchor = $("#anchor"),
-				offset = anchor.offset(),
-				topY = 48;
-				
-			$(window).scroll(function(){
-				if ($(window).scrollTop() > offset.top ){
-					anchor.stop().animate({
-						top: $(window).scrollTop() - offset.top + anchor.height() + topY
-					});
-				} else {
-					anchor.stop().animate({
-						top: topY
-					});
-				}
-			});
-			
-			$("a[href*='#']").easingScroll({
-				easing: "easeOutExpo",
-				duration: 600
-			});
-		});
-	</script>
 </head>
 <body>
 	<div id="container">
@@ -66,13 +56,16 @@
 						--><li class="nav04"><a href="http://www.cbc-net.com/work/company/uniba/" target="_blank"><span><img src="ref/images/icon_window.gif" width="11" height="11" alt="launch" /></span><img class="png" src="ref/images/nav_recruit.png" width="55" height="12" alt="Recruit" /></a></li>
 					</ul>
 				</nav>
-			</header>				
-			<section id="tropy">				
+			</header>
+			<section id="tropy">
 				<iframe src="http://utropy.herokuapp.com/" frameborder="0" allowtransparency="true"></iframe>
 				<footer class="clearfix">
 					<h1>title of tropy<span>32 / 1232</span></h1>
 					<aside><a href="javascript:void(0);"><img class="png" src="ref/images/btn_reload.png" width="14" height="12" alt="Reload" /></a></aside>
 				</footer>
+			</section>
+			<section id="push">
+				<a href="http://realtimeweblog.in/" target="_blank"><img class="png" src="ref/images/fig_rtwl.png" width="648" height="660" alt="REALTIMEWEBLOG.IN リアルタイムウェブロギン in Linz 2011.9.1-9.5" /></a>
 			</section>
 		</article>
 		<div id="content">
@@ -84,7 +77,7 @@
 				<section class="clearfix">
 					<header>
 						<h3><img class="png" src="ref/images/h_about.png" width="78" height="51" alt="About 会社概要" /></h3>
-					</header>						
+					</header>
 					<div class="thumb">
 						<ul>
 							<li><img src="ref/images/office/fig_uniba_img_01.jpg" width="280" height="375" alt="" /></li>
@@ -105,7 +98,7 @@
 				<section id="works" class="clearfix">
 					<header>
 						<h3><img class="png" src="ref/images/h_works.png" width="81" height="50" alt="Works 実績" /></h3>
-						<h4><a href="" target="_blank"><span><img src="ref/images/icon_vimeo_g.gif" width="14" height="14" alt="launch" /></span>Uniba on Vimeo</a></h4>
+						<h4><a href="http://vimeo.com/user5568276" target="_blank"><span><img src="ref/images/icon_vimeo_g.gif" width="14" height="14" alt="launch" /></span>Uniba on Vimeo</a></h4>
 					</header>
 					<div class="columns">
 						<div class="twoColumn clearfix">
@@ -167,12 +160,7 @@
 				</header>
 				<section>
 					<ul>
-						<li><a href="">ろご</a></li>
-						<li><a href="">が</a></li>
-						<li><a href="">はいる</a></li>
-						<li><a href="">と</a></li>
-						<li><a href="">いい</a></li>
-						<li><a href="">な</a></li>
+						<li><a href="#"></a></li>
 					</ul>
 				</section>
 				<footer>
@@ -187,23 +175,23 @@
 					<div class="profile">
 						<div class="description">
 							<header>
-								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+								<h1>Jun Komatsu<br />小松 純</h1>
 							</header>
 							<figure>
-								Co-Founder / Designer
+								Co-Founder / Engneer
 							</figure>
 							<aside>
 								<ul>
-									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
-									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
-									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+									<li><a href="http://facebook.com/komatsu.jun" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="https://twitter.com/#!/mod_jk2" target="_blank"><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href="https://github.com/junkomatsu" target="_blank"><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
 								</ul>
 							</aside>
 						</div>
 						<div class="avator">
 							<dl>
-								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
-								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+								<dt><img src="ref/images/profile/jun.png" width="73" height="73" alt="Jun Komatsu" /></dt>
+								<dd><img src="ref/images/profile/jun.png" width="73" height="73" alt="Jun Komatsu" /></dd>
 							</dl>
 						</div>
 					</div>
@@ -217,42 +205,291 @@
 							</figure>
 							<aside>
 								<ul>
-									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
-									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
-									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+									<li><a href="http://facebook.com/haruma.kikuchi" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="http://twitter.com/#!/harumakikuchi" target="_blank"><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href="https://github.com/kikuchiharuma" target="_blank"><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
 								</ul>
 							</aside>
 						</div>
 						<div class="avator">
 							<dl>
-								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
-								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+								<dt><img src="ref/images/profile/haruma.png" width="73" height="73" alt="Haruma Kikuchi" /></dt>
+								<dd><img src="ref/images/profile/haruma.png" width="73" height="73" alt="Haruma Kikuchi" /></dd>
 							</dl>
 						</div>
 					</div>
 					<div class="profile">
 						<div class="description">
 							<header>
-								<h1>Haruma Kikuchi<br />菊地 玄摩</h1>
+								<h1>Rei Kawai<br />河合 伶</h1>
 							</header>
 							<figure>
-								Co-Founder / Designer
+								Director / Developer
 							</figure>
 							<aside>
 								<ul>
-									<li><a href=""><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
-									<li><a href=""><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
-									<li><a href=""><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+									<li><a href="http://facebook.com/leicay" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="https://twitter.com/#!/animist" target="_blank"><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href="https://github.com/animist" target="_blank"><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
 								</ul>
 							</aside>
 						</div>
 						<div class="avator">
 							<dl>
-								<dt><img src="ref/images/face_dummy_01.jpg" width="73" height="73" alt="" /></dt>
-								<dd><img src="ref/images/face_dummy_02.jpg" width="73" height="73" alt="" /></dd>
+								<dt><img src="ref/images/profile/rei.png" width="73" height="73" alt="Rei Kawai" /></dt>
+								<dd><img src="ref/images/profile/rei.png" width="73" height="73" alt="Rei Kawai" /></dd>
+							</dl>
+						</div>
+					</div>					
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Yui Gokita<br />五木田 唯衣</h1>
+							</header>
+							<figure>
+								Designer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/yui.png" width="73" height="73" alt="Yui Gokita" /></dt>
+								<dd><img src="ref/images/profile/yui.png" width="73" height="73" alt="Yui Gokita" /></dd>
 							</dl>
 						</div>
 					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Seiya Konno<br />今野 聖也</h1>
+							</header>
+							<figure>
+								Developer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href="http://www.facebook.com/nulltask" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="https://github.com/nulltask" target="_blank"><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/seiya.png" width="73" height="73" alt="Seiya Konno" /></dt>
+								<dd><img src="ref/images/profile/seiya.png" width="73" height="73" alt="Seiya Konno" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Noriyuki Shimizu<br />清水 規行</h1>
+							</header>
+							<figure>
+								Designer / Developer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href="http://facebook.com/shimizu.noriyuki" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="https://twitter.com/#!/Nori_rhy" target="_blank"><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href="https://github.com/norhythm" target="_blank"><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/noriyuki.png" width="73" height="73" alt="Noriyuki Shimizu" /></dt>
+								<dd><img src="ref/images/profile/noriyuki.png" width="73" height="73" alt="Noriyuki Shimizu" /></dd>
+							</dl>
+						</div>
+					</div>					
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Ryo Murayama<br />村山 遼</h1>
+							</header>
+							<figure>
+								Assistant Developer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/ryo.png" width="73" height="73" alt="Ryo Murayama" /></dt>
+								<dd><img src="ref/images/profile/ryo.png" width="73" height="73" alt="Ryo Murayama" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Tetsuro Shimura<br />志村 徹朗</h1>
+							</header>
+							<figure>
+								Developer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href="http://facebook.com/shimuratetsuro" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/tetsuro.png" width="73" height="73" alt="Tetsuro Shimura" /></dt>
+								<dd><img src="ref/images/profile/tetsuro.png" width="73" height="73" alt="Tetsuro Shimura" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Shinichi Katayama<br />片山 慎一</h1>
+							</header>
+							<figure>
+								Director
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/shinichi.png" width="73" height="73" alt="Shinichi Katayama" /></dt>
+								<dd><img src="ref/images/profile/shinichi.png" width="73" height="73" alt="Shinichi Katayama" /></dd>
+							</dl>
+						</div>
+					</div>					
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Keiichi Tanifuji<br />谷藤 圭一</h1>
+							</header>
+							<figure>
+								Assistant Director
+							</figure>
+							<aside>
+								<ul>
+									<li><a href="http://facebook.com/k.tanifuji" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="https://twitter.com/#!/siratama" target="_blank"><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/keiichi.png" width="73" height="73" alt="Keiichi Tanifuji" /></dt>
+								<dd><img src="ref/images/profile/keiichi.png" width="73" height="73" alt="Keiichi Tanifuji" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>He Binbin<br />何 斌斌</h1>
+							</header>
+							<figure>
+								Assistant Developer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/binbin.png" width="73" height="73" alt="He Binbin" /></dt>
+								<dd><img src="ref/images/profile/binbin.png" width="73" height="73" alt="He Binbin" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Song Yang<br />宋 洋</h1>
+							</header>
+							<figure>
+								Assistant Developer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/song.png" width="73" height="73" alt="Song Yang" /></dt>
+								<dd><img src="ref/images/profile/song.png" width="73" height="73" alt="Song Yang" /></dd>
+							</dl>
+						</div>
+					</div>					
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Andre Elder<br />エルダー アンドレ</h1>
+							</header>
+							<figure>
+								Developer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/andre.png" width="73" height="73" alt="Andre Elder" /></dt>
+								<dd><img src="ref/images/profile/andre.png" width="73" height="73" alt="Andre Elder" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Hideyuki Saito<br />齋藤 秀行</h1>
+							</header>
+							<figure>
+								Developer
+							</figure>
+							<aside>
+								<ul>
+									<li><a href="http://facebook.com/heeeeeeedeyuki.saito" target="_blank"><span><img src="ref/images/icon_fb_k.gif" width="14" height="14" alt="Facebook" /></span>Facebook</a></li>
+									<li><a href="https://twitter.com/#!/hideyukisaito" target="_blank"><span><img src="ref/images/icon_twitter_k.gif" width="14" height="14" alt="twitter" /></span>twitter</a></li>
+									<li><a href="https://github.com/hideyukisaito" target="_blank"><span><img src="ref/images/icon_github_k.gif" width="14" height="14" alt="github" /></span>github</a></li>
+								</ul>
+							</aside>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/hideyuki.png" width="73" height="73" alt="Hideyuki Saito" /></dt>
+								<dd><img src="ref/images/profile/hideyuki.png" width="73" height="73" alt="Hideyuki Saito" /></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Daichi Sato<br />佐藤 大地</h1>
+							</header>
+							<figure>
+								Assistant Developer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/daichi.png" width="73" height="73" alt="Daichi Sato" /></dt>
+								<dd><img src="ref/images/profile/daichi.png" width="73" height="73" alt="Daichi Sato" /></dd>
+							</dl>
+						</div>
+					</div>					
+				</section>
+				<section class="clearfix">
+					<div class="profile">
+						<div class="description">
+							<header>
+								<h1>Sei Kataoka<br />片岡 聖</h1>
+							</header>
+							<figure>
+								Assistant Developer
+							</figure>
+						</div>
+						<div class="avator">
+							<dl>
+								<dt><img src="ref/images/profile/sei.png" width="73" height="73" alt="Sei Kataoka" /></dt>
+								<dd><img src="ref/images/profile/sei.png" width="73" height="73" alt="Sei Kataoka" /></dd>
+							</dl>
+						</div>
+					</div>				
 				</section>
 
 				
