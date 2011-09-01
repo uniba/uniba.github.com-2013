@@ -15,7 +15,7 @@ $(function(){
 		}
 	});
 	
-	$("a[href*='#']").easingScroll({
+	$("a[href*='#container']").easingScroll({
 		easing: "easeOutExpo",
 		duration: 600
 	});
