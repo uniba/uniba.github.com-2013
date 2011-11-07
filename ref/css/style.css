@@ -327,6 +327,7 @@ section {
         #content #about section .columns .fourColumn figure {
           width: 280px;
           padding: 0 20px 10px 0; }
+          #content #about section .columns .oneColumn h4,
           #content #about section .columns .twoColumn figure h4,
           #content #about section .columns .fourColumn figure h4 {
             margin: 0 0 0 16px;
@@ -335,11 +336,13 @@ section {
             font-weight: normal;
             line-height: 1.3em;
             position: relative; }
+            #content #about section .columns .oneColumn h4 span,
             #content #about section .columns .twoColumn figure h4 span,
             #content #about section .columns .fourColumn figure h4 span {
               position: absolute;
               top: auto;
               left: -16px; }
+              #content #about section .columns .oneColumn h4 span img,
               #content #about section .columns .twoColumn figure h4 span img,
               #content #about section .columns .fourColumn figure h4 span img {
                 vertical-align: baseline; }
