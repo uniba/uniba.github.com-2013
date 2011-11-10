@@ -346,6 +346,8 @@ section {
               #content #about section .columns .twoColumn figure h4 span img,
               #content #about section .columns .fourColumn figure h4 span img {
                 vertical-align: baseline; }
+        #content #about section .columns .oneColumn iframe {
+        	vertical-align: top; }
         #content #about section .columns .fourColumn figure {
           width: 130px;
           padding: 0 20px 0 0; }
