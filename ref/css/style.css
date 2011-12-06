@@ -327,7 +327,6 @@ section {
         #content #about section .columns .fourColumn figure {
           width: 280px;
           padding: 0 20px 10px 0; }
-          #content #about section .columns .oneColumn h4,
           #content #about section .columns .twoColumn figure h4,
           #content #about section .columns .fourColumn figure h4 {
             margin: 0 0 0 16px;
@@ -336,18 +335,14 @@ section {
             font-weight: normal;
             line-height: 1.3em;
             position: relative; }
-            #content #about section .columns .oneColumn h4 span,
             #content #about section .columns .twoColumn figure h4 span,
             #content #about section .columns .fourColumn figure h4 span {
               position: absolute;
               top: auto;
               left: -16px; }
-              #content #about section .columns .oneColumn h4 span img,
               #content #about section .columns .twoColumn figure h4 span img,
               #content #about section .columns .fourColumn figure h4 span img {
                 vertical-align: baseline; }
-        #content #about section .columns .oneColumn iframe {
-        	vertical-align: top; }
         #content #about section .columns .fourColumn figure {
           width: 130px;
           padding: 0 20px 0 0; }
@@ -376,7 +371,6 @@ section {
       font-size: 0.7em;
       text-align: right; }
   #content #client {
-    display: none;
     background-color: #f6f5f0;
     background-image: url(../images/bg_client_repeat.gif);
     background-position: left top;
@@ -384,6 +378,13 @@ section {
     #content #client section {
       width: 814px;
       padding: 60px 120px 40px 90px; }
+      #content #client section table {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 50px 0; }
+        #content #client section table tr td {
+          width: 271px;
+          text-align: center; }
   #content #member {
     width: 940px;
     padding: 48px 42px 70px 42px;
