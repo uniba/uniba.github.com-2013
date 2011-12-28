@@ -189,9 +189,9 @@ section {
   }
   
   #tropy {
-    display: none;
+    //display: none;
     width: $width;
-    padding: 129px 0 183px 0;
+    padding: 119px 0 153px 0;
     
     iframe {
       width: 400px;
@@ -457,22 +457,22 @@ section {
   }
   
   #favor {
-    width: $width - 42px*2;
-    padding: 48px 42px 5px 42px;
+    width: $width;
+    padding: 48px 0 5px 0;
     background-color: #3d3e3d;
     background-image: url(../images/bg_favor_head.gif), url(../images/bg_favor_repeat.gif);
     background-position: left top, left top;
     background-repeat: no-repeat, repeat-y;
     overflow: hidden;
     
+    marquee {
+      @include transform(rotate(24deg));
+    }
+    
     ul {
     
       li {
         line-height: 1em;
-        
-        marquee {
-          @include transform(rotate(24deg));
-        }
         
         a {
           color: #1b1e1c;

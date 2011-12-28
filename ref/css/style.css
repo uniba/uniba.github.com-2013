@@ -131,9 +131,8 @@ section {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
         opacity: 1; }
   #top #tropy {
-    display: none;
     width: 1024px;
-    padding: 129px 0 183px 0; }
+    padding: 119px 0 153px 0; }
     #top #tropy iframe {
       width: 400px;
       height: 266px;
@@ -356,21 +355,21 @@ section {
       bottom: -31px;
       z-index: 20; }
   #content #favor {
-    width: 940px;
-    padding: 48px 42px 5px 42px;
+    width: 1024px;
+    padding: 48px 0 5px 0;
     background-color: #3d3e3d;
     background-image: url(../images/bg_favor_head.gif), url(../images/bg_favor_repeat.gif);
     background-position: left top, left top;
     background-repeat: no-repeat, repeat-y;
     overflow: hidden; }
+    #content #favor marquee {
+      -webkit-transform: rotate(24deg);
+      -moz-transform: rotate(24deg);
+      -o-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg); }
     #content #favor ul li {
       line-height: 1em; }
-      #content #favor ul li marquee {
-        -webkit-transform: rotate(24deg);
-        -moz-transform: rotate(24deg);
-        -o-transform: rotate(24deg);
-        -ms-transform: rotate(24deg);
-        transform: rotate(24deg); }
       #content #favor ul li a {
         color: #1b1e1c; }
     #content #favor footer {
