@@ -19,7 +19,7 @@ a {
 
 body {
   background-color: #dddddd;
-  font-family: "Myriad Pro", "Hiragino Kaku Gothic Pro"; }
+  font-family: "Myriad Pro", "Segoe UI", "Hiragino Kaku Gothic Pro"; }
 
 .clearfix:after {
   content: ".";
