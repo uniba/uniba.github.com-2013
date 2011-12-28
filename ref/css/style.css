@@ -323,6 +323,8 @@ section {
       #content #about section .columns {
         float: left;
         width: 640px; }
+        #content #about section .columns .oneColumn iframe {
+          vertical-align: top; }
         #content #about section .columns .twoColumn figure,
         #content #about section .columns .fourColumn figure {
           width: 280px;
@@ -359,9 +361,16 @@ section {
     background-color: #3d3e3d;
     background-image: url(../images/bg_favor_head.gif), url(../images/bg_favor_repeat.gif);
     background-position: left top, left top;
-    background-repeat: no-repeat, repeat-y; }
+    background-repeat: no-repeat, repeat-y;
+    overflow: hidden; }
     #content #favor ul li {
       line-height: 1em; }
+      #content #favor ul li marquee {
+        -webkit-transform: rotate(24deg);
+        -moz-transform: rotate(24deg);
+        -o-transform: rotate(24deg);
+        -ms-transform: rotate(24deg);
+        transform: rotate(24deg); }
       #content #favor ul li a {
         color: #1b1e1c; }
     #content #favor footer {
@@ -561,7 +570,7 @@ section {
 .ie6 #content #member .profile .description header h1,
 .ie7 #content #member .profile .description header h1 {
   zoom: 1;
-  *display: inline; }
+  display: inline; }
 
 .no-multiplebgs #content #about {
   background: url(../images/bg_about_repeat.gif) left top repeat-y; }

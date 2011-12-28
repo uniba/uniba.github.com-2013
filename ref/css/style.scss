@@ -463,15 +463,20 @@ section {
     background-image: url(../images/bg_favor_head.gif), url(../images/bg_favor_repeat.gif);
     background-position: left top, left top;
     background-repeat: no-repeat, repeat-y;
+    overflow: hidden;
     
     ul {
     
       li {
         line-height: 1em;
         
+        marquee {
+          @include transform(rotate(24deg));
+        }
+        
         a {
           color: #1b1e1c;
-        } 
+        }
       }
     }
     
