@@ -29,6 +29,14 @@ $width: 1024px;
   transition-delay: $delay;
 }
 
+@mixin transform($prop) {
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -o-transform: $prop;
+  -ms-transform: $prop;
+  transform: $prop;
+}
+
 @mixin bg($path, $x, $y, $rp) {
   background: url(../images/#{$path}) $x $y $rp; 
 }
@@ -394,6 +402,12 @@ section {
         float: left;
         width: $width - 42px*2 - 300px;
       
+        .oneColumn {
+          iframe {
+            vertical-align: top;
+          }
+        }
+      
         .twoColumn,
         .fourColumn {
                     
@@ -663,7 +677,7 @@ section {
 .ie6 #content #member .profile .description header h1,
 .ie7 #content #member .profile .description header h1 {
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .no-multiplebgs #content #about {
