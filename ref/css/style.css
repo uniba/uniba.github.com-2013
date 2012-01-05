@@ -135,11 +135,10 @@ section {
     padding: 119px 0 153px 0; }
     #top #tropy iframe {
       width: 400px;
-      height: 266px;
+      height: 290px;
       margin: 0 0 1px 315px;
       border: 1px solid #e5e5e5;
       background-color: #ffffff;
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
       vertical-align: bottom; }
     #top #tropy footer {
       width: 402px;
