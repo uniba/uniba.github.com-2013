@@ -137,7 +137,8 @@ section {
       width: 400px;
       height: 290px;
       margin: 0 0 1px 315px;
-      vertical-align: bottom; }
+      vertical-align: bottom;
+      overflow: hidden; }
     #top #tropy footer {
       width: 402px;
       margin: 0 0 0 315px; }
