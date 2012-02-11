@@ -1,0 +1,25 @@
+.ie6 #content #member .profile .description header h1,
+.ie7 #content #member .profile .description header h1 {
+  zoom: 1;
+  display: inline;
+}
+
+.no-multiplebgs #content #about {
+  @include bg("bg_about_repeat.gif", left, top, repeat-y);
+}
+
+.no-multiplebgs #content #favor {
+  @include bg("bg_favor_repeat.gif", left, top, repeat-y);
+}
+
+.no-multiplebgs #content #member {
+  @include bg("bg_member_repeat.gif", left, top, repeat-y);
+}
+
+.no-multiplebgs #content #anchor a {
+  @include bg("bg_anchor_arrow.png", left, top, no-repeat);
+}
+
+.no-rgba #fb-likebox iframe {
+  background-color: #ffffff;
+}

@@ -1,0 +1,78 @@
+body {
+  background-color: #dddddd;
+  font-family: "Myriad Pro", "Segoe UI", "Hiragino Kaku Gothic Pro";
+}
+
+#container {
+  padding: 0 0 100px 0;
+}
+
+#top {
+  width: $width;
+  margin: 0 auto;
+  padding: 19px 0 0 0;
+  position: relative;
+  z-index: 10;
+  header {
+    h1 {
+      float: left;
+      width: 103px;
+      height: 17px;
+      padding: 0 531px - 103px - 44px 0 44px;
+      @include bg("h_logo.png", 44px, top, no-repeat);
+      font-size: 1px;
+      line-height: 1em;
+      text-indent: -9999px;
+    }
+    nav {
+      float: left;
+      width: $width - 531px;
+      padding: 2px 0 0 0;
+      ul {
+        li {
+          float: left;
+          height: 12px;
+          font-size: 1px;
+          line-height: 1em;
+          overflow: hidden;
+          &.nav01 {
+            padding: 0 13px 0 0;
+          }
+          &.nav02 {
+            padding: 0 15px 0 0;
+          }
+          &.nav03 {
+            padding: 0 14px 0 0;
+          }
+          &.nav04 {
+            padding: 0;
+          }
+          a {
+            img {
+              margin: 0;
+              @include transition(opacity, 0.5s, ease, 0);
+            }
+            span {
+              img {
+                margin: 0 5px 0 0;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+                @include transition(box-shadow, 0.5s, ease, 0);
+              }
+            }
+            &:hover {
+              img {
+                opacity: 0.5;
+              }
+              span {
+                img {
+                  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

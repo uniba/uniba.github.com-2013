@@ -1,0 +1,32 @@
+#favor {
+  width: $width;
+  padding: 48px 0 5px 0;
+  background-color: #3d3e3d;
+  background-image: url(../images/bg_favor_head.gif), url(../images/bg_favor_repeat.gif);
+  background-position: left top, left top;
+  background-repeat: no-repeat, repeat-y;
+  overflow: hidden;
+  
+  marquee {
+    @include transform(rotate(24deg));
+  }
+  
+  ul {
+  
+    li {
+      line-height: 1em;
+      
+      a {
+        color: #1b1e1c;
+      }
+    }
+  }
+  
+  footer {
+    padding: 24px 100px - 42px 0 0;
+    color: #e3e3e3;
+    font-family: "Hiragino Mincho Pro";
+    font-size: 0.7em;
+    text-align: right;
+  }
+}

@@ -1,0 +1,27 @@
+#anchor {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  
+  a {
+    display: block;
+    width: 50px;
+    height: 35px; 
+    background-image: url(../images/bg_anchor_body.png), url(../images/bg_anchor_arrow.png);
+    background-position: left top, left top;
+    background-repeat: no-repeat, no-repeat;
+    opacity: 1; 
+    @include transition(opacity, 0.2s, ease, 0);
+    
+    &:hover {
+      opacity: 0.7;
+    }
+    
+    span {
+      // display: hidden;
+      visibility: hidden;
+    }
+  }
+}

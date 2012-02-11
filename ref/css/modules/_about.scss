@@ -1,0 +1,192 @@
+#about {
+  width: $width - 42px*2;
+  padding: 48px 42px 10px 42px; 
+  background-color: #f6f5f0;
+  background-image: url(../images/bg_about_uniba.gif), url(../images/bg_about_repeat.gif);
+  background-position: 512px 241px, left top;
+  background-repeat: no-repeat, repeat-y;
+  position: relative;
+  
+  a {
+    color: #4e4e4e;
+  
+    img {
+      margin: 0;
+      opacity: 1;
+      @include transition(opacity box-shadow, 0.5s, ease, 0);
+    }
+  
+    span {
+        
+      img {
+        margin: 0 5px 0 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        @include transition(box-shadow, 0.5s, ease, 0);
+        
+        
+      }
+    }
+            
+    &:hover {
+  
+      img {
+        opacity: 0.9;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.29);
+      }
+      
+      span {
+        
+        img {
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  header {
+  
+    h1 {
+      font-size: 1em;
+      position: relative;
+      
+      aside {         
+        font-family: "Myriad Pro";
+        font-weight: normal;
+        position: absolute;
+        top: 4px;
+        right: 100px;
+        
+      }
+    }
+    
+    h2 {
+      padding: 36px 0 12px 0;
+      color: #312f24;
+      font-size: 1.1em;
+      font-family: "Hiragino Mincho Pro";
+      font-weight: normal;
+      line-height: 2em;
+    }
+  }
+  
+  section {
+    padding: 22px 0;
+    
+    header {
+      float: left;
+      width: 300px;
+      
+      h3 {
+        padding: 4px 0 0 0;
+      }
+      
+      h4 {
+        padding: 28px 0 0 0;
+        font-weight: normal;
+      }
+    }
+    
+    .thumb {
+      float: left;
+      width: 280px;
+    }
+    
+    figure {
+      float: left;
+      width: $width - 42px*2 - 300px - 280px;
+      
+      a {
+        color: #62625f;
+        @include transition(color, 0.5s, ease, 0);
+        
+        &:hover {
+          color: #70706d;
+        }
+      }
+      
+      dl {
+        padding: 0 0 0 20px;
+        color: #62625f;
+        
+        dt {
+          clear: both;
+          float: left;
+          width: 90px;
+          padding: 10px 0;
+          font-weight: bold;
+        }
+        
+        dd {
+          float: left;
+          width: $width - 42px*2 - 300px - 280px - 90px - 20px;
+          padding: 10px 0;
+          
+          aside {
+            margin: 1.2em 0 0.2em 0;
+                          
+            img {
+              vertical-align: baseline;
+            }
+          }
+        }
+      }
+    }
+    
+    .columns {
+      float: left;
+      width: $width - 42px*2 - 300px;
+    
+      .oneColumn {
+        iframe {
+          vertical-align: top;
+        }
+      }
+    
+      .twoColumn,
+      .fourColumn {
+                  
+        figure {
+          width: 280px;
+          padding: 0 20px 10px 0;
+          
+          h4 {
+            margin: 0 0 0 16px;
+            padding: 10px 0 10px 0;
+            font-size: 1em;
+            font-weight: normal;
+            line-height: 1.3em;
+            position: relative;
+            
+            span {
+              position: absolute;
+              top: auto;
+              left: -16px;
+              
+              img {
+                vertical-align: baseline;
+              }
+            }
+          }
+        }
+      }
+      
+      .fourColumn {
+        
+        figure {
+          width: 130px;
+          padding: 0 20px 0 0;
+        }
+      }
+    }
+  }
+  
+  .mind {
+    width: 198;
+    height: 166px;
+    position: absolute;
+    left: 53px;
+    bottom: -31px;
+    z-index: 20;
+  }
+}

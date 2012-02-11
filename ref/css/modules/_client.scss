@@ -1,0 +1,24 @@
+#client {
+  background-color: #f6f5f0;
+  background-image: url(../images/bg_client_repeat.gif);
+  background-position: left top;
+  background-repeat: repeat-y;
+  
+  section {
+    width: $width - 120px - 90px;
+    padding: 60px 120px 40px 90px;
+    
+    table {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 50px 0;
+      
+      tr {
+        td {
+          width: 271px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+ #fb-likebox {
+  width: $width;
+  padding: 119px 0 153px 0;
+  
+  iframe {
+    width: 400px;
+    height: 266px + 24px;
+    margin: 0 0 1px 315px;
+    box-shadow: 0 1px 4px 0 #ddd;
+    background-color: rgba(255, 255, 255, .8);
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+}
