@@ -1,36 +1,36 @@
-//“§‹•ÏŠ·—p‚Ì•Ï”
-//‹–ìŠpƒÆ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ÏŠï¿½ï¿½pï¿½Ì•Ïï¿½
+//ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½
 float radS = -PI/360*70;
-//ƒJƒƒ‰‚ÌŒ´“_‚©‚ç‚Ì‹——£
+//ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ÌŒï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 float camZ = -3000 - 0.5 * 3000;
-//ƒXƒNƒŠ[ƒ“‚ÌŒ´“_‚©‚ç‚Ì‹——£
+//ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ÌŒï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 float scZ = -1000;
-//‰ñ“]
+//ï¿½ï¿½]
 float xRotate = 0;
 float yRotate = 0;
 float zRotate = PI/2;
 
-//•`‰æ—p‚Ì•Ï”
-//ü‚Ì‘¾‚³
+//ï¿½`ï¿½ï¿½pï¿½Ì•Ïï¿½
+//ï¿½ï¿½Ì‘ï¿½ï¿½ï¿½
 float weight = 0.5;
-//ü‚ÌF
+//ï¿½ï¿½ÌF
 int strokeH = 0;
 int strokeS = 0;
 int strokeB = 255;
 
 //Midi Controller
-String xRotateMidiS = loadStrings("ref/js/xRotate.txt");
-String yRotateMidiS = loadStrings("ref/js/yRotate.txt");
-String zRotateMidiS = loadStrings("ref/js/zRotate.txt");
-String strokeHMidiS = loadStrings("ref/js/strokeH.txt");
-String strokeSMidiS = loadStrings("ref/js/strokeS.txt");
-String strokeBMidiS = loadStrings("ref/js/strokeB.txt");
-String bgAlphaMidiS = loadStrings("ref/js/bgAlpha.txt");
-String xDiffMidiS = loadStrings("ref/js/xDiff.txt");
-String yDiffMidiS = loadStrings("ref/js/yDiff.txt");
-String zDiffMidiS = loadStrings("ref/js/zDiff.txt");
-String scZMidiS = loadStrings("ref/js/scZ.txt");
-String weightMidiS = loadStrings("ref/js/weight.txt");
+String xRotateMidiS = loadStrings("ref/js/params/xRotate.txt");
+String yRotateMidiS = loadStrings("ref/js/params/yRotate.txt");
+String zRotateMidiS = loadStrings("ref/js/params/zRotate.txt");
+String strokeHMidiS = loadStrings("ref/js/params/strokeH.txt");
+String strokeSMidiS = loadStrings("ref/js/params/strokeS.txt");
+String strokeBMidiS = loadStrings("ref/js/params/strokeB.txt");
+String bgAlphaMidiS = loadStrings("ref/js/params/bgAlpha.txt");
+String xDiffMidiS = loadStrings("ref/js/params/xDiff.txt");
+String yDiffMidiS = loadStrings("ref/js/params/yDiff.txt");
+String zDiffMidiS = loadStrings("ref/js/params/zDiff.txt");
+String scZMidiS = loadStrings("ref/js/params/scZ.txt");
+String weightMidiS = loadStrings("ref/js/params/weight.txt");
 int xRotateMidiSOffset;
 int yRotateMidiSOffset;
 int zRotateMidiSOffset;
@@ -44,7 +44,7 @@ int zDiffMidiSOffset;
 int scZMidiSOffset;
 int weightMidiSOffset;
 
-//Logo‚Ì’¸“_À•W‚ğŠi”[‚·‚é”z—ñ : charctor number, x1, y1, x2, y2, z
+//Logoï¿½Ì’ï¿½ï¿½_ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½iï¿½[ï¿½ï¿½ï¿½ï¿½zï¿½ï¿½ : charctor number, x1, y1, x2, y2, z
 int[][] logo = {
   // U
   {0,  0,  0,  0,200, 80},
@@ -76,42 +76,42 @@ int[][] logo = {
   // B-A
   {8,500,100,700,  0,  0}
 };
-//¶ã‚É‚ ‚éŒ´“_‚ğ’†‰›‚ÖˆÚ“®
+//ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½éŒ´ï¿½_ï¿½ğ’†‰ï¿½ï¿½ÖˆÚ“ï¿½
 for(int i=0; i<logo.length; i++){
   logo[i][1] -= 400;
   logo[i][2] -= 125;
   logo[i][3] -= 400;
   logo[i][4] -= 125;
 }
-//Z•ûŒü‚É•`‰æ‚·‚éƒ‰ƒCƒ“‚ÌŠÔŠu
+//Zï¿½ï¿½ï¿½É•`ï¿½æ‚·ï¿½éƒ‰ï¿½Cï¿½ï¿½ï¿½ÌŠÔŠu
 int zPitch = 20;
 
-//Random Pattern 1 ‚Ì•Ï”
-//’¸“_‚ğƒ‰ƒ“ƒ_ƒ€ˆÚ“®‚·‚é‚½‚ß‚Ì”z—ñ
+//Random Pattern 1 ï¿½Ì•Ïï¿½
+//ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½Ú“ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ß‚Ì”zï¿½ï¿½
 float[] randomPos = new float[logo.length*6];
-//’¸“_‚ÌˆÚ“®—Ê‚ğˆê“I‚ÉŠi”[‚·‚é•Ï” x1, y1, z1, x2, y2, z2
+//ï¿½ï¿½ï¿½_ï¿½ÌˆÚ“ï¿½ï¿½Ê‚ï¿½ï¿½êï¿½Iï¿½ÉŠiï¿½[ï¿½ï¿½ï¿½ï¿½Ïï¿½ x1, y1, z1, x2, y2, z2
 float xPos;
 float yPos;
 float zPos;
 float xPos2;
 float yPos2;
 float zPos2;
-//ü‚ÌF‚Ì•Ï‰»—Ê‚ğŠi”[‚·‚é•Ï” h, s, b
+//ï¿½ï¿½ÌFï¿½Ì•Ï‰ï¿½ï¿½Ê‚ï¿½ï¿½iï¿½[ï¿½ï¿½ï¿½ï¿½Ïï¿½ h, s, b
 int strokeHval = 10;
 int strokeSval = 10;
 int strokeBval = 10;
-//ƒ^ƒCƒ~ƒ“ƒO”»’è—p‚Ì•Ï”
+//ï¿½^ï¿½Cï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½pï¿½Ì•Ïï¿½
 int frameCounter = 0;
 int drawPattern = 0;
 boolean drawMode = true;
 
-//‰æ–ÊƒXƒP[ƒ‹ HTML‘¤‚ÅŠg‘å•\¦‚µ‚Ä‚¢‚éê‡‚Ì’²®ƒpƒ‰ƒ[ƒ^
+//ï¿½ï¿½ÊƒXï¿½Pï¿½[ï¿½ï¿½ HTMLï¿½ï¿½ï¿½ÅŠgï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ê‡ï¿½Ì’ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 float windowScale = 1;
 
 
 //----------------------------------
 
-//‰Šú‰»
+//ï¿½ï¿½ï¿½ï¿½
 void setup()
 {
   processingInitComplete();
@@ -142,10 +142,10 @@ void setStageSize(int windowWidth, int windowHeight, float windowScaleS)
   windowScale = windowScaleS;
 }
 
-//ƒƒCƒ“ƒ‹[ƒv
+//ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½v
 void draw()
 {
-  //•`‰æƒ‚[ƒh‚ğ”½“]‚³‚¹‚é
+  //ï¿½`ï¿½æƒ‚ï¿½[ï¿½hï¿½ğ”½“]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   frameCounter += 1;
   if (frameCounter > 30 && drawMode) {
   	drawMode = false;
@@ -161,47 +161,47 @@ void draw()
   	    //----------------------------------
   	    //Random Pattern 1
   	    case 0:
-  	      //‘O‚ÌƒtƒŒ[ƒ€‚ğ”wŒi‚Åã‘‚«
+  	      //ï¿½Oï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½wï¿½iï¿½Åã‘ï¿½ï¿½
           if ((frameCounter < 23)||(frameCounter > 28)) {
             background(255);
           }
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
           for(int i=0; i<logo.length; i=i+1) {
             for(int j=0; j<=logo[i][5]; j=j+zPitch) {
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
               draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
             }
           }
-          //‰ñ“]
+          //ï¿½ï¿½]
      	  xRotate = xRotate + PI / (frameCounter%45+1)/10;
   	      yRotate = yRotate + PI / 120;
   	      zRotate = zRotate + PI / 4.5;
-          //F‚ğ•ÏX
+          //ï¿½Fï¿½ï¿½ÏX
   	      changeColor();
   	      break;
   	    //----------------------------------
   	    // Random Pattern 2 
   	    case 1:
-  	      //‘O‚ÌƒtƒŒ[ƒ€‚ğ”wŒi‚Åã‘‚«
+  	      //ï¿½Oï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½wï¿½iï¿½Åã‘ï¿½ï¿½
   	      if (frameCounter < 5) {
             background(255);
           }
-          //ƒJƒƒ‰‚ÌˆÊ’u‚ğƒ‰ƒ“ƒ_ƒ€‚Å•ÏX
+          //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ÌˆÊ’uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½Å•ÏX
           camZ = -3000 - random() * 3000;
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
           for(int i=0; i<logo.length; i=i+1) {
             for(int j=0; j<=logo[i][5]; j=j+zPitch) {
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
           	  //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
          	  draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
             }
           }
-          //‰ñ“]
+          //ï¿½ï¿½]
      	  xRotate = xRotate + PI / random(45);
   	      yRotate = yRotate + PI / random(45);
   	      zRotate = zRotate + PI / random(45);
-          //F‚ğ•ÏX
+          //ï¿½Fï¿½ï¿½ÏX
   	      changeColor();
   	      break;
   	    //----------------------------------
@@ -212,14 +212,14 @@ void draw()
   	          randomPos[i] = 0;
   	        }
   	      }
-  	      //‘O‚ÌƒtƒŒ[ƒ€‚ğ”wŒi‚Åã‘‚«
+  	      //ï¿½Oï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½wï¿½iï¿½Åã‘ï¿½ï¿½
           if (frameCounter > 5) {
             background(255);
           }
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
           for(int i=0; i<logo.length; i=i+1) {
             for(int j=0; j<=logo[i][5]; j=j+zPitch) {
-              //’¸“_‚ğƒ‰ƒ“ƒ_ƒ€ˆÚ“®
+              //ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½Ú“ï¿½
               randomPos[j/4*3]   += random(10)-5;    // x
   		      randomPos[j/4*3+1] += random(10)-5;    // y
               randomPos[j/4*3+2] += random(10)-5;  // z
@@ -232,15 +232,15 @@ void draw()
               xPos2 = logo[i][3] + randomPos[j/4*3+3];
               yPos2 = logo[i][4] + randomPos[j/4*3+4];
               zPos2 = j + randomPos[j/4*3+5];
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
 		      draw2dLine(xPos, yPos, xPos2, yPos2, zPos, zPos2, xRotate, yRotate, zRotate);
             }
           }
-          //F‚ğ•ÏX
+          //ï¿½Fï¿½ï¿½ÏX
   	      changeColor();
   	      break;
-  	    //Random Pattern 4 (‚Ä‚Â‚ë[)
+  	    //Random Pattern 4 (ï¿½Ä‚Â‚ï¿½[)
   	    case 3:
   	      //background(255);
   	      strokeCap(SQUARE);
@@ -253,10 +253,10 @@ void draw()
           y = int (random(4));
           z = int (random(4));
               
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
           for(int i=0; i<logo.length; i=i+1) {
             for(int j=0; j<=300; j=j+zPitch){
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
               draw2dLine(logo[i][w],logo[i][x],logo[i][y],logo[i][z], j, j, xRotate, yRotate, zRotate);
             }
@@ -265,20 +265,20 @@ void draw()
           yRotate = yRotate + PI/120;
           zRotate = zRotate + PI/(random(10,40,120));
          
-          //F‚ğ•ÏX
+          //ï¿½Fï¿½ï¿½ÏX
   	      changeColor();
-  	      //‘¾‚³‚ğ•ÏX
+  	      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏX
   	      weight = weight+random(-1,1,3);
   	      break;
-  	    //Random Pattern 5 (‚Ì‚è)
+  	    //Random Pattern 5 (ï¿½Ì‚ï¿½)
   	    case 4:
-  	      //”wŒi‚ğƒ‰ƒ“ƒ_ƒ€F‚É
+  	      //ï¿½wï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½Fï¿½ï¿½
   	      background(255);
   	      strokeCap(SQUARE);
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
           for(int i=0; i<logo.length; i=i+1) {
             for(int j=0; j<=300; j=j+zPitch){
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
               
               w = int (random(1,4));
               x = int (random(1,4));
@@ -296,14 +296,14 @@ void draw()
               draw2dLine(logo[i][w],logo[i][x],logo[i][y],logo[i][z], j, j, xRotate, yRotate, zRotate);
             }
           }
-          //F‚ğ•ÏX
+          //ï¿½Fï¿½ï¿½ÏX
   	      //changeColor();
   	      //strokeH = int (random(255));
   	      //strokeS = 255;
   	      //strokeB = 255;
   	      weight = weight+0.1;
   	      break;
-  	      //Random Pattern 6 (‚Ä‚Â‚ë[2)
+  	      //Random Pattern 6 (ï¿½Ä‚Â‚ï¿½[2)
   	    case 5:
   	      //background(255);
   	      
@@ -323,10 +323,10 @@ void draw()
           y = int (random(4));
           z = int (random(4));
               
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
           for(int i=0; i<logo.length; i=i+1) {
             for(int j=0; j<=500; j=j+zPitch){//logo[i][5]; j=j+zPitch) {
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
               draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
             }
@@ -334,7 +334,7 @@ void draw()
           xRotate = xRotate + PI/3;
           
          
-          //F‚ğ•ÏX
+          //ï¿½Fï¿½ï¿½ÏX
   	      changeColor();
   	      break;
   	    //
@@ -348,10 +348,10 @@ void draw()
   		  fill(255, bgAlphaMidiS[(frameCount+bgAlphaMidiSOffset)%bgAlphaMidiS.length]);
   		  rect(0,0,width,height);
           
-          //•¶š‚Ì•`‰æƒ‹[ƒv
+          //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
       	  for(int i=0; i<logo.length; i=i+1) {
         	for(int j=0; j<=logo[i][5]; j=j+zPitch) {
-              //•`‰æ
+              //ï¿½`ï¿½ï¿½
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
           	  draw2dLine(logo[i][1] + float(xDiffMidiS[(frameCount+xDiffMidiSOffset)%xDiffMidiS.length])
           	  			,logo[i][2] + float(yDiffMidiS[(frameCount+yDiffMidiSOffset)%yDiffMidiS.length])
@@ -374,22 +374,22 @@ void draw()
       
       
       /*
-      //‘O‚ÌƒtƒŒ[ƒ€‚ğ”wŒi‚Åã‘‚«
+      //ï¿½Oï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½wï¿½iï¿½Åã‘ï¿½ï¿½
       background(255);
-      //•¶š‚Ì•`‰æƒ‹[ƒv
+      //ï¿½ï¿½ï¿½ï¿½ï¿½Ì•`ï¿½æƒ‹ï¿½[ï¿½v
       for(int i=0; i<logo.length; i=i+1) {
         for(int j=0; j<=logo[i][5]; j=j+zPitch) {
-          //•`‰æ
+          //ï¿½`ï¿½ï¿½
           //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
           draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
         }
       }
-      //‰ñ“]
+      //ï¿½ï¿½]
   	  xRotate += (0 - xRotate) / 2;
   	  yRotate += (0 - yRotate) / 2;
   	  zRotate += (PI / 2 - zRotate) / 2;
   	  //
-  	  //‹–ìŠpƒÆ
+  	  //ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½
       float radS = -PI/360*70;
 	  //
   	  weight = 0.5;
@@ -397,24 +397,24 @@ void draw()
   }
 }
 
-//“§‹•ÏŠ· x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ÏŠï¿½ x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
 void draw2dLine(float x1,float y1,float x2,float y2,float z1, float z2, float rx, float ry, float rz)
 {
-  //Y²‚Ì‰ñ“]—Ê‚ğ”½‰f
+  //Yï¿½ï¿½ï¿½Ì‰ï¿½]ï¿½Ê‚ğ”½‰f
   float z1cash = z1;
   float z2cash = z2;
   z1 = x1 * sin(ry) - z1cash * cos(ry);
   z2 = x2 * sin(ry) - z2cash * cos(ry);
   x1 = x1 * cos(ry) + z1cash * sin(ry);
   x2 = x2 * cos(ry) + z2cash * sin(ry);
-  //X²‚Ì‰ñ“]—Ê‚ğ”½‰f
+  //Xï¿½ï¿½ï¿½Ì‰ï¿½]ï¿½Ê‚ğ”½‰f
   float z1cash = z1;
   float z2cash = z2;
   z1 = y1 * sin(rx) - z1cash * cos(rx);
   z2 = y2 * sin(rx) - z2cash * cos(rx);
   y1 = y1 * cos(rx) + z1cash * sin(rx);
   y2 = y2 * cos(rx) + z2cash * sin(rx);
-  //Z²‚Ì‰ñ“]—Ê‚ğ”½‰f
+  //Zï¿½ï¿½ï¿½Ì‰ï¿½]ï¿½Ê‚ğ”½‰f
   float x1cash = x1;
   float x2cash = x2;
   float y1cash = y1;
@@ -423,31 +423,31 @@ void draw2dLine(float x1,float y1,float x2,float y2,float z1, float z2, float rx
   x2 = x2 * sin(rz) + y2cash * cos(rz);
   y1 = y1 * sin(rz) - x1cash * cos(rz);
   y2 = y2 * sin(rz) - x2cash * cos(rz);
-  //“§‹•ÏŠ·
+  //ï¿½ï¿½ï¿½ï¿½ï¿½ÏŠï¿½
   float x1b = width/2  + x1 * (camZ + z1) * tan(radS/2) / (scZ + z1) * tan(radS/2);
   float y1b = height/2 + y1 * (camZ + z1) * tan(radS/2) / (scZ + z1) * tan(radS/2);
   float x2b = width/2  + x2 * (camZ + z2) * tan(radS/2) / (scZ + z2) * tan(radS/2);
   float y2b = height/2 + y2 * (camZ + z2) * tan(radS/2) / (scZ + z2) * tan(radS/2);
-  //•`‰æŠJnˆÊ’u‚ğ‰Šú‰»
+  //ï¿½`ï¿½ï¿½Jï¿½nï¿½Ê’uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   translate(0,0);
-  //ü‚ÌFE‘¾‚³
+  //ï¿½ï¿½ÌFï¿½Eï¿½ï¿½ï¿½ï¿½
   stroke(strokeH, strokeS, strokeB);
   strokeWeight(weight);
   
-  //HTML‘¤‚ÌŠg‘åk¬ƒXƒP[ƒ‹‚ğ“K—p
+  //HTMLï¿½ï¿½ï¿½ÌŠgï¿½ï¿½kï¿½ï¿½ï¿½Xï¿½Pï¿½[ï¿½ï¿½ï¿½ï¿½Kï¿½p
   x1b = x1b * windowScale + (width-width*windowScale)/2;
   y1b = y1b * windowScale + (height-height*windowScale)/2;
   x2b = x2b * windowScale + (width-width*windowScale)/2;
   y2b = y2b * windowScale + (height-height*windowScale)/2;
   
-  //•`‰æ
+  //ï¿½`ï¿½ï¿½
   line(x1b,y1b,x2b,y2b);
 }
 
-//F‚ğ•ÏX‚·‚é
+//ï¿½Fï¿½ï¿½ÏXï¿½ï¿½ï¿½ï¿½
 void changeColor()
 {
-  //F H
+  //ï¿½F H
   strokeH += strokeHval;
   if (strokeH > 255) {
     strokeH = 255;
@@ -457,7 +457,7 @@ void changeColor()
     strokeH = 0;
     strokeHval = - strokeHval;
   }
-  //F S
+  //ï¿½F S
   strokeS += strokeSval;
   if (strokeS > 255) {
     strokeS = 255;
@@ -467,7 +467,7 @@ void changeColor()
     strokeS = 255;
     strokeSval = - strokeSval;
   }
-  //F B
+  //ï¿½F B
   strokeB += strokeBval;
   if (strokeB > 255) {
     strokeB = 255;

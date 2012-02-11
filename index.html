@@ -10,17 +10,16 @@
 	<meta name="description" content="「ユニバ株式会社」は、クロスメディア・クロスデバイス領域で活動するデザイン会社です。多くのウェブサービス、キャンペーン、サイト等を手がけています。現在、新しいウェブ標準とメディアアートがクロスする領域にも取り組んでいます。">
 	<meta name="author" content="Uniba Inc.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="ref/js/modernizr.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
 	<script src="ref/js/jquery.easingscroll.js"></script>
 	<script src="ref/js/site.js"></script>
-	<script src="ref/js/modernizr.js"></script>
 	<!--[if lte IE 6]>
 	<script src="ref/js/dd_belatedpng.js"></script>
 	<script>DD_belatedPNG.fix('img, .png');</script>
 	<![endif]-->
-	
-	<![if !IE ]>
+	<![if gte IE 9]>
 	<script src="ref/js/processing.js"></script>
 	<script src="ref/js/logo.p5.js"></script>
 	<![endif]>
@@ -510,9 +509,10 @@
 				<a class="png" href="#container"><span>To top</span></a>
 			</div>
 		</div>
+		
 		<article id="canvas">
-			<![if !IE]>
-			<canvas id="logo" data-processing-sources="ref/js/unibajp.pjs"></canvas>
+		  <![if gte IE 9]>
+			<canvas id="logo" data-processing-sources="ref/js/unibajp.pde"></canvas>
 			<![endif]>
 		</article>
 	</div>
