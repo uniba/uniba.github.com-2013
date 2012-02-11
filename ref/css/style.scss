@@ -188,7 +188,7 @@ section {
     }
   }
   
-  #tropy {
+  #fb-likebox {
     //display: none;
     width: $width;
     padding: 119px 0 153px 0;
@@ -197,9 +197,8 @@ section {
       width: 400px;
       height: 266px + 24px;
       margin: 0 0 1px 315px;
-      //border: 1px solid #e5e5e5;
-      //background-color: #ffffff;
-      //box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 4px 0 #ddd;
+      background-color: rgba(255, 255, 255, .7);
       vertical-align: bottom;
       overflow: hidden;
     }
@@ -700,4 +699,8 @@ section {
 
 .no-multiplebgs #content #anchor a {
   @include bg("bg_anchor_arrow.png", left, top, no-repeat);
+}
+
+.no-rgba #fb-likebox iframe {
+  background-color: #ffffff;
 }

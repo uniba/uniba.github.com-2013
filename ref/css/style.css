@@ -130,19 +130,21 @@ section {
       #top header nav ul li a:hover span img {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
         opacity: 1; }
-  #top #tropy {
+  #top #fb-likebox {
     width: 1024px;
     padding: 119px 0 153px 0; }
-    #top #tropy iframe {
+    #top #fb-likebox iframe {
       width: 400px;
       height: 290px;
       margin: 0 0 1px 315px;
+      box-shadow: 0 1px 4px 0 #ddd;
+      background-color: rgba(255, 255, 255, 0.7);
       vertical-align: bottom;
       overflow: hidden; }
-    #top #tropy footer {
+    #top #fb-likebox footer {
       width: 402px;
       margin: 0 0 0 315px; }
-      #top #tropy footer h1 {
+      #top #fb-likebox footer h1 {
         float: left;
         width: 368px;
         padding: 0 5px;
@@ -153,21 +155,21 @@ section {
         font-weight: normal;
         line-height: 23px;
         position: relative; }
-        #top #tropy footer h1 span {
+        #top #fb-likebox footer h1 span {
           position: absolute;
           top: 0;
           right: 5px; }
-      #top #tropy footer aside {
+      #top #fb-likebox footer aside {
         float: right;
         width: 23px;
         height: 23px;
         background-color: rgba(208, 208, 208, 0.73);
         line-height: 1em; }
-        #top #tropy footer aside a {
+        #top #fb-likebox footer aside a {
           display: block;
           width: 23px;
           height: 23px; }
-          #top #tropy footer aside a img {
+          #top #fb-likebox footer aside a img {
             padding: 5px 0 0 5px; }
   #top #push {
     width: 1024px;
@@ -580,3 +582,6 @@ section {
 
 .no-multiplebgs #content #anchor a {
   background: url(../images/bg_anchor_arrow.png) left top no-repeat; }
+
+.no-rgba #fb-likebox iframe {
+  background-color: #ffffff; }
