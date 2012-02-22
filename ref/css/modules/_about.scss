@@ -51,7 +51,7 @@
       position: relative;
       
       aside {         
-        font-family: "Myriad Pro", "Open Sans";
+        font-family: $sansSerif;
         font-weight: normal;
         position: absolute;
         top: 4px;
@@ -64,7 +64,7 @@
       padding: 36px 0 12px 0;
       color: #312f24;
       font-size: 1.1em;
-      font-family: "Hiragino Mincho Pro";
+      font-family: $serif;
       font-weight: normal;
       line-height: 2em;
     }
