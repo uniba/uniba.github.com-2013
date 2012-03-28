@@ -1,5 +1,5 @@
 /**
- *  Sassy stylesheet for uniba.jp
+ * Sassy stylesheet for uniba.jp
  */
 
 @charset "UTF-8";
@@ -8,9 +8,9 @@
  * Reset and utilities.
  */
 
-@import "modules/mixin.scss";
-@import "modules/reset.scss";
-@import "modules/clearfix.scss";
+@import "modules/mixin";
+@import "modules/reset";
+@import "modules/clearfix";
 
 /**
  * Variables
@@ -24,13 +24,14 @@ $sansSerif: "Myriad Pro", "Open Sans", "Segoe UI", "Gothic Medium BBB", "Hiragin
  * Style modules.
  */
 
-@import "modules/foundation.scss";
-@import "modules/content.scss";
-@import "modules/fb-likebox.scss";
-@import "modules/about.scss";
-@import "modules/favor.scss";
-@import "modules/client.scss";
-@import "modules/member.scss";
-@import "modules/anchor.scss";
-@import "modules/canvas.scss";
-@import "modules/fallback.scss";
+@import "modules/foundation";
+@import "modules/content";
+@import "modules/fb-likebox";
+@import "modules/about";
+@import "modules/works";
+@import "modules/favor";
+@import "modules/client";
+@import "modules/member";
+@import "modules/anchor";
+@import "modules/canvas";
+@import "modules/fallback";
