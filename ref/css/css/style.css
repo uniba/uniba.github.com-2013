@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- *  Sassy stylesheet for uniba.jp
+ * Sassy stylesheet for uniba.jp
  */
 /**
  * Reset and utilities.
@@ -240,8 +240,6 @@ body {
     font-family: "Ryumin Medium KL", "Hiragino Mincho Pro";
     font-weight: normal;
     line-height: 2em; }
-  #about section#media {
-    margin: 0 0 100px 0; }
   #about section {
     padding: 22px 0; }
     #about section header {
@@ -302,10 +300,8 @@ body {
     #about section .columns {
       float: left;
       width: 640px; }
-      #about section .columns .oneColumn {
-        margin: 0 0 15px 0; }
-        #about section .columns .oneColumn iframe {
-          vertical-align: top; }
+      #about section .columns .oneColumn iframe {
+        vertical-align: top; }
       #about section .columns .twoColumn figure,
       #about section .columns .fourColumn figure {
         width: 280px;
@@ -329,112 +325,6 @@ body {
       #about section .columns .fourColumn figure {
         width: 130px;
         padding: 0 20px 0 0; }
-    #about section .columns-works {
-      float: left;
-      width: 580px; }
-      #about section .columns-works .works-rack {
-        width: 580px;
-        margin: 0 0 20px 0; }
-        #about section .columns-works .works-rack .works-block {
-          width: 180px;
-          height: 70px;
-          position: relative;
-          top: 0;
-          left: 0; }
-          #about section .columns-works .works-rack .works-block .works-photo {
-            width: 180px;
-            height: 160px;
-            position: absolute;
-            top: 0;
-            display: none; }
-          #about section .columns-works .works-rack .works-block .works-photo.active {
-            display: block; }
-          #about section .columns-works .works-rack .works-block .works-detail {
-            width: 180px;
-            height: 70px;
-            text-align: center;
-            font-size: 10px;
-            color: #FFF;
-            background-color: #000;
-            position: absolute;
-            top: 0; }
-            #about section .columns-works .works-rack .works-block .works-detail table {
-              width: 180px;
-              height: 70px; }
-              #about section .columns-works .works-rack .works-block .works-detail table tr {
-                overflow: hidden; }
-                #about section .columns-works .works-rack .works-block .works-detail table tr th {
-                  height: 70px;
-                  text-align: center;
-                  vertical-align: middle; }
-                  #about section .columns-works .works-rack .works-block .works-detail table tr th h3 {
-                    text-align: center;
-                    font-size: 1.4em;
-                    letter-spacing: 0.03em;
-                    color: #FFF;
-                    font-family: 'Maven Pro', 'Maru Folk Medium', sans-serif;
-                    display: inline; }
-                #about section .columns-works .works-rack .works-block .works-detail table tr td {
-                  display: none; }
-                  #about section .columns-works .works-rack .works-block .works-detail table tr td p {
-                    display: none; }
-        #about section .columns-works .works-rack .works-block.column-1 {
-          margin: 0 20px 0 0;
-          float: left; }
-        #about section .columns-works .works-rack .works-block.column-2 {
-          float: left; }
-        #about section .columns-works .works-rack .works-block.column-3 {
-          float: right; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-1 {
-          background: #CF0C83; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-2 {
-          background: #00B9E4; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-3 {
-          background: #8CD600; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-4 {
-          background: #FFD70F; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-5 {
-          background: #E47A00; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-6 {
-          background: #8D00C9; }
-        #about section .columns-works .works-rack .works-block.active .works-detail.bg-7 {
-          background: #576E4B; }
-        #about section .columns-works .works-rack .works-block.active .works-detail table {
-          height: 160px; }
-          #about section .columns-works .works-rack .works-block.active .works-detail table tr th h3 {
-            font-size: 1.5em;
-            text-shadow: 1px 1px 5px #AAA;
-            color: #FFF; }
-          #about section .columns-works .works-rack .works-block.active .works-detail table tr td {
-            height: 50px;
-            vertical-align: top;
-            display: block; }
-            #about section .columns-works .works-rack .works-block.active .works-detail table tr td p {
-              margin: 0 10px;
-              font-size: 1em;
-              letter-spacing: 0.08em;
-              line-height: 1.3em;
-              font-family: 'Iceland', 'Maru Folk Medium', sans-serif;
-              color: #FFF;
-              text-align: left;
-              display: block; }
-          #about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right {
-            height: 20px;
-            vertical-align: middle;
-            display: block; }
-            #about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right p {
-              font-size: 1em;
-              text-align: right;
-              display: block; }
-              #about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right p a {
-                font-size: 1.3em;
-                font-weight: bold;
-                color: #FFF;
-                text-decoration: underline;
-                font-family: 'Maven Pro', sans-serif; }
-              #about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right p a:hover {
-                font-size: 1.3em;
-                text-decoration: none; }
   #about .mind {
     width: 198;
     height: 166px;
@@ -442,6 +332,154 @@ body {
     left: 53px;
     bottom: -31px;
     z-index: 20; }
+
+#about section#media {
+  margin: 0 0 100px 0; }
+
+#about section .columns-works {
+  float: left;
+  width: 580px; }
+
+#about section .oneColumn h4 {
+  margin: 0 0 20px 0; }
+
+#about section .columns-works .works-rack {
+  width: 580px;
+  margin: 0 0 20px 0; }
+
+#about section .columns-works .works-rack .works-block {
+  width: 180px;
+  height: 70px;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+#about section .columns-works .works-rack .works-block .works-photo {
+  width: 180px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  display: none; }
+
+#about section .columns-works .works-rack .works-block .works-photo.active {
+  display: block; }
+
+#about section .columns-works .works-rack .works-block .works-detail {
+  width: 180px;
+  height: 70px;
+  text-align: center;
+  font-size: 10px;
+  color: #FFF;
+  background-color: #000;
+  position: absolute;
+  top: 0; }
+
+#about section .columns-works .works-rack .works-block .works-detail table {
+  width: 180px;
+  height: 70px; }
+
+#about section .columns-works .works-rack .works-block .works-detail table tr {
+  overflow: hidden; }
+
+#about section .columns-works .works-rack .works-block .works-detail table tr th {
+  height: 70px;
+  text-align: center;
+  vertical-align: middle; }
+
+#about section .columns-works .works-rack .works-block .works-detail table tr th h3 {
+  text-align: center;
+  font-size: 1.4em;
+  letter-spacing: 0.03em;
+  color: #FFF;
+  font-family: 'Maven Pro', 'Maru Folk Medium', sans-serif;
+  display: inline; }
+
+#about section .columns-works .works-rack .works-block .works-detail table tr td {
+  display: none; }
+
+#about section .columns-works .works-rack .works-block .works-detail table tr td p {
+  display: none; }
+
+#about section .columns-works .works-rack .works-block.column-1 {
+  margin: 0 20px 0 0;
+  float: left; }
+
+#about section .columns-works .works-rack .works-block.column-2 {
+  float: left; }
+
+#about section .columns-works .works-rack .works-block.column-3 {
+  float: right; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-1 {
+  background: #CF0C83; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-2 {
+  background: #00B9E4; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-3 {
+  background: #8CD600; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-4 {
+  background: #E47A00; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-5 {
+  background: #FFD70F; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-6 {
+  background: #8D00C9; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-7 {
+  background: #576E4B; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-8 {
+  background: #497584; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail.bg-9 {
+  background: #A0674B; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table {
+  height: 160px; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr th h3 {
+  font-size: 1.5em;
+  text-shadow: 1px 1px 5px #AAA;
+  color: #FFF; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr td {
+  height: 50px;
+  vertical-align: top;
+  display: block; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr td p {
+  margin: 0 10px;
+  font-size: 1em;
+  letter-spacing: 0.08em;
+  line-height: 1.3em;
+  font-family: 'Iceland', 'Maru Folk Medium', sans-serif;
+  color: #FFF;
+  text-align: left;
+  display: block; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right {
+  height: 20px;
+  vertical-align: middle;
+  display: block; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right p {
+  font-size: 1em;
+  text-align: right;
+  display: block; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right p a {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: underline;
+  font-family: 'Maven Pro', sans-serif; }
+
+#about section .columns-works .works-rack .works-block.active .works-detail table tr td.works-align-right p a:hover {
+  font-size: 1.3em;
+  text-decoration: none; }
 
 #favor {
   width: 1024px;
@@ -657,7 +695,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
     outline: none; }
 
 .ie6 #content #member .profile .description header h1,
