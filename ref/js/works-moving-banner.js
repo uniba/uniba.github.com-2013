@@ -1,9 +1,16 @@
 $(function(){
     var zIndexNumber = 1000;
+	
     $('div').each(function() {
         $(this).css('zIndex', zIndexNumber);
         zIndexNumber = 1;
     });
+	
+	$('.works-block')
+		.on('click', function(e) {
+			window.open($(this).find('a').attr('href'));
+		})
+	 	.css('cursor', 'pointer')
 	
 	$('.works-block.move-bottom').hover(function(){
 		var $this = $(this);
