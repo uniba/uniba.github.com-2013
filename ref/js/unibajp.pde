@@ -84,7 +84,7 @@ for(int i=0; i<logo.length; i++){
   logo[i][4] -= 125;
 }
 //Z方向に描画するラインの間隔
-int zPitch = 20;
+int zPitch = 10;
 
 //Random Pattern 1 の変数
 //頂点をランダム移動するための配列
@@ -170,7 +170,7 @@ void draw()
             for(int j=0; j<=logo[i][5]; j=j+zPitch) {
               //描画
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
-              draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
+              draw2dLine(logo[i][1]-j, logo[i][2]+j, logo[i][3]-j, logo[i][4]+j, -j, -j, xRotate, yRotate, zRotate);
             }
           }
           //回転
@@ -194,7 +194,7 @@ void draw()
             for(int j=0; j<=logo[i][5]; j=j+zPitch) {
               //描画
           	  //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
-         	  draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
+         	  draw2dLine(logo[i][1]-j, logo[i][2]+j, logo[i][3]-j, logo[i][4]+j, -j, -j, xRotate, yRotate, zRotate);
             }
           }
           //回転
@@ -258,7 +258,7 @@ void draw()
             for(int j=0; j<=300; j=j+zPitch){
               //描画
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
-              draw2dLine(logo[i][w],logo[i][x],logo[i][y],logo[i][z], j, j, xRotate, yRotate, zRotate);
+              draw2dLine(logo[i][1]-j, logo[i][2]+j, logo[i][3]-j, logo[i][4]+j, -j, -j, xRotate, yRotate, zRotate);
             }
           }
           xRotate = xRotate + PI/random(40,120);
@@ -293,7 +293,7 @@ void draw()
               yRotate = numY;
               zRotate = numZ;
               
-              draw2dLine(logo[i][w],logo[i][x],logo[i][y],logo[i][z], j, j, xRotate, yRotate, zRotate);
+              draw2dLine(logo[i][1]-j, logo[i][2]+j, logo[i][3]-j, logo[i][4]+j, -j, -j, xRotate, yRotate, zRotate);
             }
           }
           //色を変更
@@ -328,7 +328,7 @@ void draw()
             for(int j=0; j<=500; j=j+zPitch){//logo[i][5]; j=j+zPitch) {
               //描画
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
-              draw2dLine(logo[i][1],logo[i][2],logo[i][3],logo[i][4], j, j, xRotate, yRotate, zRotate);
+              draw2dLine(logo[i][1]-j, logo[i][2]+j, logo[i][3]-j, logo[i][4]+j, -j, -j, xRotate, yRotate, zRotate);
             }
           }
           xRotate = xRotate + PI/3;
@@ -353,15 +353,15 @@ void draw()
         	for(int j=0; j<=logo[i][5]; j=j+zPitch) {
               //描画
               //x1, y1, x2, y2, z1, z2, rotateX, rotateY, rotateZ
-          	  draw2dLine(logo[i][1] + float(xDiffMidiS[(frameCount+xDiffMidiSOffset)%xDiffMidiS.length])
-          	  			,logo[i][2] + float(yDiffMidiS[(frameCount+yDiffMidiSOffset)%yDiffMidiS.length])
-          	  			,logo[i][3] + float(xDiffMidiS[(frameCount+xDiffMidiSOffset)%xDiffMidiS.length])
-          	  			,logo[i][4] + float(yDiffMidiS[(frameCount+yDiffMidiSOffset)%yDiffMidiS.length])
-          	  			, j + float(zDiffMidiS[(frameCount+zDiffMidiSOffset)%zDiffMidiS.length])
-          	  			, j + float(zDiffMidiS[(frameCount+zDiffMidiSOffset)%zDiffMidiS.length])
-          	  			, float(xRotateMidiS[(frameCount+xRotateMidiSOffset)%xRotateMidiS.length])
-          	  			, float(yRotateMidiS[(frameCount+yRotateMidiSOffset)%yRotateMidiS.length])
-          	  			, float(zRotateMidiS[(frameCount+zRotateMidiSOffset)%zRotateMidiS.length])
+          	  draw2dLine(logo[i][1] + float(xDiffMidiS[(frameCount+xDiffMidiSOffset)%xDiffMidiS.length]) - j
+          	  			,logo[i][2] + float(yDiffMidiS[(frameCount+yDiffMidiSOffset)%yDiffMidiS.length]) + j
+          	  			,logo[i][3] + float(xDiffMidiS[(frameCount+xDiffMidiSOffset)%xDiffMidiS.length]) - j
+          	  			,logo[i][4] + float(yDiffMidiS[(frameCount+yDiffMidiSOffset)%yDiffMidiS.length]) + j
+          	  			,- j + float(zDiffMidiS[(frameCount+zDiffMidiSOffset)%zDiffMidiS.length])
+          	  			,- j + float(zDiffMidiS[(frameCount+zDiffMidiSOffset)%zDiffMidiS.length])
+          	  			,float(xRotateMidiS[(frameCount+xRotateMidiSOffset)%xRotateMidiS.length])
+          	  			,float(yRotateMidiS[(frameCount+yRotateMidiSOffset)%yRotateMidiS.length])
+          	  			,float(zRotateMidiS[(frameCount+zRotateMidiSOffset)%zRotateMidiS.length])
           	  			);
             }
           }
