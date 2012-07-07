@@ -1,184 +1,388 @@
-<!DOCTYPE HTML>
-<html lang="ja">
-<head>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="ja" itemscope itemtype="http://schema.org/Corporation"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="ja" itemscope itemtype="http://schema.org/Corporation"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="ja" itemscope itemtype="http://schema.org/Corporation"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="ja" itemscope itemtype="http://schema.org/Corporation"><!--<![endif]-->
 
-	<meta charset="UTF-8">
-	<title>UNB</title>
-	<link rel="stylesheet" href="./css/reset.css" />
-	<link rel="stylesheet" href="./css/style.css" />
-	<!--
-<link rel="stylesheet" href="./css/bootstrap.css" />
-	<link rel="stylesheet" href="./css/bootstrap-responsive.css" />
+<!-- めも-->
+<!--
+ロゴにフルスクリーンモード追加したいなあ...
+そういやサーキットラボへのリンクは？
 -->
-	<link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="./js/jquery.fitvids.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('#visual').fitVids();
-		});
-	</script>
-
+<!--/めも-->
+<head>
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+<![endif]-->
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="fb:app_id" content="">
+<meta itemprop="name" content="uniba.jp">
+<meta itemprop="description" content="">
+<meta itemprop="image" content="">
+<link rel="image_src" href="">
+<link rel="shortcut icon" href="">
+<link rel="apple-touch-icon" href="">
+<title>Uniba Inc.</title>
+<link type="text/css" href="assets/css/reset.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/style.css" rel="stylesheet" media="all">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(window).on('load resize',function(){
+		var vH = $('#visual').height();
+		console.log(vH);
+		$('#header').css('height',vH);
+	});
+</script>
 </head>
 <body>
 
 <header id="header">
-	<div id="headerWrapper">
-		<h1 id="logo"><a href="#">Uniba Inc.</a></h1>
-			<nav>
-				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Works</a></li>
-					<li><a href="#">PARTNERS</a></li>
-					<li><a href="#">MEMBER</a></li>
-					<li><a href="#">BLOG</a></li>
-				</ul>
-		</nav>
+	<div id="visual"><img src="assets/img/Visual.png" alt="Uniba Motion Logo" /></div>
+	<div id="news" class="hCont">
+		<h3>NEWS</h3>
+		<ol>
+			<li><a href="#">
+				<span>2012/10/12</span>
+				Make大垣ミーティングに参加しました。
+			</a></li>
+			<li><a href="#">
+				<span>2012/10/12</span>
+				Make大垣ミーティングに参加しました。
+			</a></li>
+			<li><a href="#">
+				<span>2012/10/12</span>
+				Make大垣ミーティングに参加しました。
+			</a></li>
+		</ol>
+		<a href="#" id="close" class="icon">'</a>
+	</div>
+	<div class="house hCont">
+		<a href="#">
+			<img src="assets/img/house.png" alt="ユニバハウス" />
+			<h3>SUMMER<br />GREETING2012<br />UNIBA HOUSE</h3>
+		</a>
+		<a href="#" id="close" class="icon">'</a>
 	</div>
 </header>
 
-<div id="visual">
-	<iframe src="http://player.vimeo.com/video/39750812?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-	<div id="hBg"></div>
-</div>
+<nav id="nav" class="cf">
+	<h1 id="uniba"><a href="#">Uniba Inc.</a></h1>
+	<ul class="cf">
+		<li><a href="#"><span>ABOUT</span></a></li>
+		<li><a href="#"><span>WORKS</span></a></li>
+		<li><a href="#"><span>CLIANT&amp;PARTNERS</span></a></li>
+		<li><a href="#"><span>MEMBER</span></a></li>
+		<li><a href="#"><span>CONTACT</span></a></li>
+		<li><a href="#"><span>RECRUIT</span></a></li>
+	</ul>
+</nav>
 
-	<section id="text">
-		<p>ユニバ株式会社はクロスメディア・クロスデバイス領域で活動するデザイン会社です。</p>
-		<p>多くのPC、モバイルを横断するウェブサービス、キャンペーン、サイトを手がけてきました。</p>
-		<p>近年はスマートフォン、デジタルサイネージ等の隆盛を受けて、
-新しいウェブ標準とメディアアートがクロスする領域に取り組んでいます。</p>
-	</section>
+<section id="about">
+	<h1 class="fsch1 sectionH1">ABOUT</h1>
+		<ul id="aRotation" class="cf">
+			<li><a href="#"><img src="assets/img/a_01.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="assets/img/a_02.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="assets/img/a_01.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="assets/img/a_02.jpg" alt="" /></a></li>
+		</ul>
+		<div id="aText">
+			<p><span>ユニバ株式会社はクロスメディア・クロスデバイス領域で活動するデザイン会社です。</span></p>
+			<p><span>多くのPC、モバイルを横断するウェブサービス、キャンペーン、サイトを手がけてきました。</span></p>
+			<p><span>近年はスマートフォン、デジタルサイネージ等の隆盛を受けて、</span></p>
+			<p><span>新しいウェブ標準とメディアアートがクロスする領域に取り組んでいます。</span></p>
+		</div>
+		<div id="aBnr">
+			<dl>
+				<dt>最新情報はこちらから</dt>
+				<dd><a href="#"><img src="assets/img/a_fb.gif" alt="" /></a></dd>
+			</dl>
+		</div>
+</section>
 
-	<section id="works">
-		<h2>Works</h2>
-		<div class="clearfix">
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>	
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>	
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>	
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>	
-			<article>
-				<img src="http://placehold.it/300x150" />
-			</article>
-			</article>
-		</div>
-	</section>
-	
-	<section id="about">
-		<h2>About</h2>
-		<dl>
-			<dt>社名</dt>
-			<dd>ユニバ株式会社 Uniba Inc.</dd>
-		</dl>
-		<dl>
-			<dt>設立</dt>
-			<dd>2003年6月2日</dd>
-		</dl>
-		<dl>
-			<dt>オフィス</dt>
-			<dd>150-0001 東京都渋谷区神宮前5-34-4 ジェイハウス B1F</dd>
-		</dl>
-		<dl>
-			<dt>TEL</dt>
-			<dd>03 3486 9337</dd>
-		</dl>
-		<dl>
-			<dt>FAX</dt>
-			<dd>03 6427 4787</dd>
-		</dl>
-		<dl>
-			<dt>Circuit Lab.</dt>
-			<dd>03 6427 4787</dd>
-		</dl>
-		<dl>
-			<dt>FAX</dt>
-			<dd>150-0002 東京都渋谷区渋谷1-3-18 ビラ・モデルナA307</dd>
-		</dl>
-		<dl>
-			<dt>Email</dt>
-			<dd>info@uniba.jp</dd>
-		</dl>		 
-		<dl>
-			<dt>資本金</dt>
-			<dd>1000万円</dd>
-		</dl>		
-	</section>
-	
-	<section id="partners">
-		<h2>Partners</h2>
-		<div class="clearfix">
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-		</div>
-	</section>
+<section id="works">
+	<h1 class="sectionH1">WORKS</h1>
+	<ul id="worksGrid" class="cf">
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+		<li><img src="http://placehold.it/210x245"></li>
+	</ul>
+</section>
 
-	<section id="member">
-		<h2>Member</h2>
-		<div class="clearfix">
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
-			<article>
-				<img src="http://placehold.it/150x75" />
-			</article>
+<section id="cliant">
+	<h1 class="sectionH1">CLIENT&amp;PARTNERS</h1>
+	<div id="cliantGrid">
+		<img src="assets/img/c_list.gif" alt="" />
+	</div>
+</section>
+
+<section id="member">
+	<h1 class="sectionH1">MEMBER</h1>
+	<div id="memberGrid">
+		<ul>
+		
+			<li>
+				<img src="assets/img/m_jun.png" alt="小松純" />
+				<div>
+					<h4><span>Jun Komatsu</span>小松 純</h4>
+					<p>Co-Founder / Engineer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_haruma.png" alt="菊地 玄摩" />
+				<div>
+					<h4><span>Haruma Kikuchi</span>菊地 玄摩</h4>
+					<p>Co-Founder / Designer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_rei.png" alt="河合 伶" />
+				<div>
+					<h4><span>Rei Kawai</span>河合 伶</h4>
+					<p>Director / Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_yui.png" alt="五木田 唯衣" />
+				<div>
+					<h4><span>Yui Gokita</span>五木田 唯衣</h4>
+					<p>Designer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_seiya.png" alt="今野 聖也" />
+				<div>
+					<h4><span>Seiya Konno</span>今野 聖也</h4>
+					<p>Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_noriyuki.png" alt="清水 規行" />
+				<div>
+					<h4><span>Noriyuki Shimizu</span>清水 規行</h4>
+					<p>Designer / Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<img src="assets/img/m_ryo.png" alt="村山 遼" />
+				<div>
+					<h4><span>Ryo Murayama</span>村山 遼</h4>
+					<p>Assistant Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_tetsuro.png" alt="志村 徹朗" />
+				<div>
+					<h4><span>Tetsuro Shimura</span>志村 徹朗</h4>
+					<p>Designer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_keiichi.png" alt="谷藤 圭一" />
+				<div>
+					<h4><span>Keiichi Tanifuji</span>谷藤 圭一</h4>
+					<p>Assistant Director</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_andre.png" alt="エルダ アンドレ" />
+				<div>
+					<h4><span>Andre Elder</span>エルダ アンドレ</h4>
+					<p>Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_hideyuki.png" alt="齋藤 秀行" />
+				<div>
+					<h4><span>Hideyuki Saito</span>齋藤 秀行</h4>
+					<p>Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_daichi.png" alt="佐藤 大地" />
+				<div>
+					<h4><span>Daichi Sato</span>佐藤 大地</h4>
+					<p>Assistant Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+						
+			<li>
+				<img src="assets/img/m_sei.png" alt="片岡 聖" />
+				<div>
+					<h4><span>Sei Kataoka</span>片岡 聖</h4>
+					<p>Assistant Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_koichiro.png" alt="森 浩一郎" />
+				<div>
+					<h4><span>Koichiro Mori</span>森 浩一郎</h4>
+					<p>Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_saki.png" alt="内山 彩希" />
+				<div>
+					<h4><span>Saki Uchiyama</span>内山 彩希</h4>
+					<p>Designer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_keisuke.png" alt="小川 圭祐" />
+				<div>
+					<h4><span>Keisuke Ogawa</span>小川 圭祐</h4>
+					<p>Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<img src="assets/img/m_youta.png" alt="白石 洋太" />
+				<div>
+					<h4><span>Youta Shiraishi</span>白石 洋太</h4>
+					<p>Designer / Developer</p>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+												
+		</ul>
+	</div>
+</section>
+
+<section id="contact">
+	<h1 class="sectionH1">CONTACT</h1>
+	<div id="contactW">
+		<p id="cMail"><a href="mailto:info@uniba.jp"><span>info@uniba.jp</span></a></p>
+		<div id="jhaus">
+			<p><span>150-0001</span></p>
+			<p><span>東京都渋谷区神宮前5-34-4 ジェイハウス B1F</span></p>
+			<p id="gMap"><a href="#">Google Map</a></p>
 		</div>
-	</section>
-	
+		<div id="cct">
+			<p id="la">Circuit Lab.</p>
+			<p><span>150-0002</span></p>
+			<p><span>東京都渋谷区渋谷1-3-18 ビラ・モデルナ A307</span></p>
+		</div>
+	</div>
+</section>
+
+<footer id="footer">
+	<p><small>Uniba Inc. Some Rights Reserved.</small></p>
+	<p><span>We Are Open.</span></p>
+</footer>
+
 </body>
 </html>
