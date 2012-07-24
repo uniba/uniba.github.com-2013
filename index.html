@@ -34,10 +34,17 @@
 <link type="text/css" href="assets/css/reset.css" rel="stylesheet" media="all">
 <link type="text/css" href="assets/css/style.css" rel="stylesheet" media="all">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="assets/js/libs/modernizr.js"></script>  
+<script src="assets/js/libs/Three.js"></script>
+<script src="assets/js/libs/Detector.js"></script>
+<script src="assets/js/libs/Stats.js"></script>
+<script src="assets/js/libs/THREEx.screenshot.js"></script>
+<script src="assets/js/libs/THREEx.FullScreen.js"></script>
+<script src="assets/js/libs/processing.js"></script>
+<script src="assets/js/libs/initp5.js"></script>
 <script type="text/javascript">
 	$(window).on('load resize',function(){
 		var vH = $('#visual').height();
-		console.log(vH);
 		$('#header').css('height',vH);
 	});
 </script>
@@ -45,7 +52,14 @@
 <body>
 
 <header id="header">
-	<div id="visual"><img src="assets/img/Visual.png" alt="Uniba Motion Logo" /></div>
+
+ <div id="visual">
+  <div id="console"></div>
+  <div id="webglcontainer"></div>
+  <canvas id="p5container" data-processing-sources="assets/js/bg.pde"></canvas>
+  <script type="text/javascript" src="assets/js/unibavi.js"></script>
+	</div>
+	
 	<div id="news" class="hCont">
 		<h3>NEWS</h3>
 		<ol>

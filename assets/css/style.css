@@ -1,14 +1,3 @@
-@font-face{ 
-	font-family: 'WebSymbolsRegular';
-	src: url('websymbols-regular-webfont.eot');
-	src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('websymbols-regular-webfont.woff') format('woff'),
-	     url('websymbols-regular-webfont.ttf') format('truetype'),
-	     url('websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
-}
-.icon {
-	font-family: 'WebSymbolsRegular';
-}
 ::selection,
 ::-moz-selection,
 ::-webkit-selection{
@@ -39,17 +28,32 @@ h1,h2,h3,h4,h5,h6{
 	line-height:1.6em
 }
 
-#visual,
-#visual img{
+#visual{
 	width: 100%;
 	min-width: 930px;
+	position: relative;
 }
-#visual{
-	position: absolute;
-	top:0;
-	left:0;
-	z-index: 1;
+
+
+#console {
+  position:absolute;
+  left:10px;
+  top:10px;
+  z-index:100;
 }
+#webglcontainer { 
+  position:relative;
+  left:0px;
+  top:0px;
+  z-index:50;
+}
+#p5container { 
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:0;
+}
+
 
 #header,
 #header a{
@@ -59,15 +63,15 @@ h1,h2,h3,h4,h5,h6{
 	width: 290px;
 	line-height: 20px;
 	background: url(../img/h_cbg.png) repeat;
-	position: relative;
-	z-index: 10;
+	position: absolute;
+	z-index: 100;
 	left:30px;
 }
 #header #news{
 	padding:25px 0;
 	line-height: 20px;
 	background: url(../img/h_cbg.png) repeat;
-	top:30px;
+	top:10%;
 }
 #header #news h3{
 	text-align: center;
@@ -97,7 +101,7 @@ h1,h2,h3,h4,h5,h6{
 }
 #header .house{
 	height: 132px;
-	top:60px;
+	top:40%;
 }
 #header .house img{
 	position: absolute;
