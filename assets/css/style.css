@@ -174,10 +174,13 @@ section .fsch1{
 #about #aRotation{
 	margin-top: 60px;
 	width: 9999px;
+	position: relative;
+	overflow: hidden;
 }
 #about #aRotation li{
 	float: left;
 	margin:0 30px;
+	position: relative;
 }
 #about #aText{
 	margin:40px 0 0 30px;
