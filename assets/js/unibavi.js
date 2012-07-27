@@ -4,11 +4,11 @@
     , autoAnimation      = true
     , cameraSphereRadius = 10
     , friction           = 0.55
-    , spring             = 0.85;
+    , spring             = 0.85
+    , mouseControl       = false;
       
   // Option
-  var mouseControl       = false
-    , forceUseCanvas     = false;
+  var forceUseCanvas     = false;
       
   // Counters
   var firstTime          = true
@@ -45,7 +45,7 @@
     , cameraSpring       = 0.05
     , cameraScale        = 0
     , strokeVertexTarget = []
-    , curCamPos          = {x:0, y:0, z:12}
+    , curCamPos          = {x:0, y:0, z:10}
     , nextCamPos         = {x:0, y:0, z:10}
     , speed              = {x:0, y:0, z:0};
       
@@ -85,7 +85,7 @@
     camera = new THREE.PerspectiveCamera(45.0, ww / wh, 0.1, 24.0);
     camera.position.z = 10;
     
-    scene.add( camera );
+    scene.add(camera);
     
     // Lights
     var pointLight1 = new THREE.PointLight(0xffffff)
@@ -392,6 +392,21 @@
     // Three.js TrackballControls
     controls = new THREE.TrackballControls(camera, renderer.domElement);
     
+    renderer.domElement.addEventListener('mousedown', autoCameraOff);
+    renderer.domElement.addEventListener('mouseup', autoCameraOn);
+    
+    var timer;
+    
+    function autoCameraOff() {
+      clearTimeout(timer);
+      mouseControl = true;
+    }
+
+    function autoCameraOn() {
+      clearTimeout(timer);
+      timer = setTimeout("mouseControl = false", 5000);
+    }
+    
     function setFParams(g) {
       g.faces.push(f4(0, 2, 3, 1));    
       g.computeCentroids();
@@ -426,7 +441,7 @@
     dividedBackgroundUpdate();
     lightsUpdte();
     counterUpdate();
-
+    
     if (mouseControl) {
       controls.update();
     } else {
@@ -439,6 +454,10 @@
       var ax
         , ay
         , az;
+      
+      curCamPos.x = camera.position.x;
+      curCamPos.y = camera.position.y;
+      curCamPos.z = camera.position.z;
       
       ax = (nextCamPos.x - curCamPos.x) * cameraSpring;
       speed.x += ax;
@@ -510,11 +529,17 @@
         }
         
         // Stroke Vertex
+        var targetScale;
+        if (firstTime) {
+          targetScale = 2.0;
+        } else {
+          targetScale = 1.0;
+        }
         for (i=0; i<strokeVertex.children.length; i++) {
           if (i <= currentVertice) {
-            strokeVertex.children[i].scale.x = 2.0;
-            strokeVertex.children[i].scale.y = 2.0;
-            strokeVertex.children[i].scale.z = 2.0;
+            strokeVertex.children[i].scale.x = targetScale;
+            strokeVertex.children[i].scale.y = targetScale;
+            strokeVertex.children[i].scale.z = targetScale;
           } else {
             strokeVertex.children[i].scale.x = 0.001;
             strokeVertex.children[i].scale.y = 0.001;

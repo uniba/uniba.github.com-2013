@@ -4,12 +4,6 @@
 <!--[if IE 8]><html class="no-js ie8 oldie" lang="ja" itemscope itemtype="http://schema.org/Corporation"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="ja" itemscope itemtype="http://schema.org/Corporation"><!--<![endif]-->
 
-<!-- めも-->
-<!--
-ロゴにフルスクリーンモード追加したいなあ...
-そういやサーキットラボへのリンクは？
--->
-<!--/めも-->
 <head>
 <meta charset="utf-8">
 <!--[if IE]>
@@ -34,7 +28,9 @@
 <link type="text/css" href="assets/css/reset.css" rel="stylesheet" media="all">
 <link type="text/css" href="assets/css/style.css" rel="stylesheet" media="all">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="assets/js/libs/modernizr.js"></script>  
+<script src="assets/js/libs/modernizr.js"></script> 
+<script src="assets/js/libs/waypoints.min.js"></script>
+<script src="assets/js/libs/jquery.easing.1.3.js"></script> 
 <script src="assets/js/libs/Three.js"></script>
 <script src="assets/js/libs/Detector.js"></script>
 <script src="assets/js/libs/Stats.js"></script>
@@ -43,12 +39,6 @@
 <script src="assets/js/libs/processing.js"></script>
 <script src="assets/js/libs/initp5.js"></script>
 <script src="assets/js/script.js"></script>
-<script type="text/javascript">
-	$(window).on('load resize',function(){
-		var vH = $('#visual').height();
-		$('#header').css('height',vH);
-	});
-</script>
 </head>
 <body>
 
@@ -77,34 +67,37 @@
 				Make大垣ミーティングに参加しました。
 			</a></li>
 		</ol>
-		<a href="#" id="close" class="icon">'</a>
+		<!-- <a href="#" id="close" class="icon">✕</a> -->
 	</div>
 	<div class="house hCont">
 		<a href="#">
 			<img src="assets/img/house.png" alt="ユニバハウス" />
 			<h3>SUMMER<br />GREETING2012<br />UNIBA HOUSE</h3>
 		</a>
-		<a href="#" id="close" class="icon">'</a>
+		<!-- <a href="#" id="close" class="icon">✕</a> -->
 	</div>
 </header>
 
-<nav id="nav" class="cf">
-	<h1 id="uniba"><a href="#">Uniba Inc.</a></h1>
-	<ul class="cf">
-		<li><a href="#"><span>ABOUT</span></a></li>
-		<li><a href="#"><span>WORKS</span></a></li>
-		<li><a href="#"><span>CLIANT&amp;PARTNERS</span></a></li>
-		<li><a href="#"><span>MEMBER</span></a></li>
-		<li><a href="#"><span>CONTACT</span></a></li>
-		<li><a href="#"><span>RECRUIT</span></a></li>
-	</ul>
-</nav>
+<div id="navWrap">
+ <nav id="nav" class="cf">
+ 	<h1 id="uniba"><a href="#header">Uniba Inc.</a></h1>
+ 	<ul class="cf">
+ 		<li><a href="#about"><span>ABOUT</span></a></li>
+ 		<li><a href="#works"><span>WORKS</span></a></li>
+ 		<li><a href="#cliant"><span>CLIANT&amp;PARTNERS</span></a></li>
+ 		<li><a href="#member"><span>MEMBER</span></a></li>
+ 		<li><a href="#contact"><span>CONTACT</span></a></li>
+ 		<li><a href="#recruit"><span>RECRUIT</span></a></li>
+ 	</ul>
+ </nav>
+</div>
 
 <section id="about">
-	<h1 class="fsch1 sectionH1">ABOUT</h1>
+	<h1 class="sectionH1">ABOUT</h1>
 		<ul id="aRotation" class="cf">
 			<li><a href="#"><img src="assets/img/a_01.jpg" alt="" /></a></li>
 			<li><a href="#"><img src="assets/img/a_02.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="http://placehold.it/600x402" alt="" /></a></li>
 			<li><a href="#"><img src="assets/img/a_01.jpg" alt="" /></a></li>
 			<li><a href="#"><img src="assets/img/a_02.jpg" alt="" /></a></li>
 		</ul>
@@ -114,10 +107,14 @@
 			<p><span>近年はスマートフォン、デジタルサイネージ等の隆盛を受けて、</span></p>
 			<p><span>新しいウェブ標準とメディアアートがクロスする領域に取り組んでいます。</span></p>
 		</div>
-		<div id="aBnr">
+		<div id="aBnr" class="cf">
 			<dl>
 				<dt>最新情報はこちらから</dt>
-				<dd><a href="#"><img src="assets/img/a_fb.gif" alt="" /></a></dd>
+				<dd><a href="#"><img src="assets/img/a_fb.gif" alt="Facebook" /></a></dd>
+			</dl>
+			<dl>
+				<dt>ユニバ社の実験プロジェクト</dt>
+				<dd><a href="#"><img src="assets/img/a_cct.png" alt="circuitlab" /></a></dd>
 			</dl>
 		</div>
 </section>
@@ -391,6 +388,14 @@
 			<p><span>150-0002</span></p>
 			<p><span>東京都渋谷区渋谷1-3-18 ビラ・モデルナ A307</span></p>
 		</div>
+	</div>
+</section>
+
+<section id="recruit">
+	<h1 class="sectionH1">RECRUIT</h1>
+	<div id="rText">
+ 	<p><span>CBCNETで求人中です</span></p>
+ 	<p><span>詳しくは<a href="http://www.cbc-net.com/work/company/uniba/" target="_blank">こちら</a></span></p>
 	</div>
 </section>
 
