@@ -221,16 +221,14 @@ section .sectionH1{
 	margin-top: 10px;
 }
 
-#works #worksGrid{
+#works .worksGrid{
 	margin:40px 0 0 30px;
 	width: 100%;
 	max-width: 1610px;
-	height: 560px;
 }
-#works #worksGrid li{
+#works .worksGrid li{
 	float: left;
 	margin:0 20px 20px 0;
-	height: 260px;
 }
 #works #filter{
  margin:40px 0 0 30px;

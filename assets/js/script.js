@@ -58,11 +58,11 @@
    timer = setInterval(rotateimg, 20);
    
   var $controls = $('#filter li'),
-      $list = $('#worksGrid'),
+      $list = $('.worksGrid'),
       $data = $list.clone();
     
   var $preferences = {
-    duration: 800,
+    duration: 600,
     easing: 'easeInOutQuad',
     adjustHeight: 'dynamic',
     useScaling: true,
