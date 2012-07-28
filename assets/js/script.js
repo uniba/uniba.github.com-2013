@@ -23,6 +23,18 @@
 	    $('a[href=#'+$active.attr('id')+']').addClass('active');
 	  });
 	  
+	  $('.scale img,#cliantGrid img').scale(0.9);
+	  $('.scale img,#cliantGrid img').hover(function(){
+ 	  $(this).scale(1);
+	  },function(){
+ 	  $(this).scale(0.9);
+	  });
+	  $('.gMap a').hover(function(){
+ 	   $(this).prev().css('color','green');
+	  },function(){
+ 	   $(this).prev().css('color','black');
+	  });
+	  
 	  $('.close').click(function(){
  	   $(this).parent().hide();
 	  });
@@ -103,7 +115,7 @@
   				$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
   			if ($target.length) {
   				var targetOffset = $target.offset().top;
-  				$('html,body').animate({scrollTop: targetOffset}, {duration:500},'easeInOutExpo');
+  				$('html,body').animate({scrollTop: targetOffset}, {duration:500},'easeInOutQuad');
   				return false;
   			}
   		}
