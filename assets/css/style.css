@@ -5,54 +5,54 @@
 	background:#ff0;
 }
 .cf:before,
-.cf:after{
+.cf:after,
+section:before,
+section:after{
 	content:"";
 	display:table;
 }
-.cf:after{
+section:after{
 	clear:both;
 }
-.cf{
+section{
 	zoom:1;
 }
+
+a:active, a:focus{
+	outline:none;
+}
+
 body{
 	font-family:Helvetica,Arial,Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 	font-size:10px;
-	line-height:1.6em;
 	background: #f5f5f5;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
 }
-h1,h2,h3,h4,h5,h6{
-	font-weight:normal;
-	font-family:Helvetica,Arial,Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
-	font-size:10px;
-	line-height:1.6em
-}
 
 #visual{
 	width: 100%;
-	min-width: 930px;
+	height: 100%;
 	position: relative;
-	z-index:100
+	z-index:100;
 }
 #console {
-  position:absolute;
-  left:10px;
-  top:10px;
-  z-index:100;
+ position:absolute;
+ left:10px;
+ top:10px;
+ z-index:50;
 }
 #webglcontainer { 
-  position:relative;
-  left:0px;
-  top:0px;
-  z-index:50;
+ position:relative;
+ left:0px;
+ top:0px;
+ z-index:100;
 }
 #p5container { 
-  position:absolute;
-  left:0px;
-  top:0px;
-  z-index:0;
+ position:absolute;
+ left:0px;
+ top:0px;
+ z-index:0;
 }
 
 #header{
@@ -96,16 +96,19 @@ h1,h2,h3,h4,h5,h6{
 	color: yellow;
 	display: block;
 }
-#header #close{
+#header .close{
 	display: block;
 	position: absolute;
 	top:10px;
 	left:10px;
+	z-index: 999;
 	font-size: 15px;
+	line-height: 1;
 }
 #header .house{
 	height: 132px;
 	top:410px;
+	line-height: 31px;
 }
 #header .house img{
 	position: absolute;
@@ -129,7 +132,7 @@ h1,h2,h3,h4,h5,h6{
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
 	background: rgba(245,245,245,0.9);
-	margin-top: -64px;
+	margin-top: -63px;
 	position: relative;
 	z-index: 200;
 }
@@ -138,9 +141,8 @@ h1,h2,h3,h4,h5,h6{
 	position: fixed;
 	top:63px;
 	left:0;
-	border-top:none;
-	border-bottom: solid 1px #808080;
 }
+
 #nav #uniba,
 #nav ul,
 #nav ul li{
@@ -184,14 +186,11 @@ section .sectionH1{
 	width: 100%;
 	overflow: hidden;
 }
-#about .rocket{
- right:-3000px;
-}
 #about #aRotation{
 	margin-top: 60px;
-	width: 9999px;
 	position: relative;
 	overflow: hidden;
+	width: 99999px;
 }
 #about #aRotation li{
 	float: left;
