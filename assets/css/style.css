@@ -223,12 +223,33 @@ section .sectionH1{
 
 #works #worksGrid{
 	margin:40px 0 0 30px;
+	width: 100%;
+	max-width: 1610px;
+	height: 560px;
 }
 #works #worksGrid li{
 	float: left;
 	margin:0 20px 20px 0;
+	height: 260px;
 }
-
+#works #filter{
+ margin:40px 0 0 30px;
+}
+#works #filter li{
+ float: left;
+ margin-right: 10px;
+}
+#works #filter li a{
+ display: block;
+ color: white;
+ background: #cccccc;
+ border-radius: 3px;
+ padding:5px 15px;
+ font-size: 15px;
+}
+#works #filter .selected a{
+ background: #ae5da1;
+}
 #cliant #cliantGrid{
 	margin:40px 0 0 30px;	
 }

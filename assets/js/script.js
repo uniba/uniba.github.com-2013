@@ -56,6 +56,46 @@
    });
    
    timer = setInterval(rotateimg, 20);
+   
+  var $controls = $('#filter li'),
+      $list = $('#worksGrid'),
+      $data = $list.clone();
+    
+  var $preferences = {
+    duration: 800,
+    easing: 'easeInOutQuad',
+    adjustHeight: 'dynamic',
+    useScaling: true,
+    attribute: function(v) {
+                return $(v).find('img').attr('src');
+               }
+  };
+  
+  $controls.each(function(i) {
+    $(this).find('a').bind('click', function(e) {
+      var $button = $(this);
+      var $button_container = $button.parent();     
+
+      $('#filter li').removeClass('selected');
+      $button_container.addClass('selected');
+      var sorting_kind = $button.data('value');
+      
+      if(!$button.hasClass('selected')){
+        
+      if (sorting_kind == 'all') {
+        var $filtered_data = $data.find('li');
+      } else {
+        var $filtered_data = $data.find('li.' + sorting_kind);
+      }
+        
+      $list.quicksand($filtered_data, $preferences);
+      
+      }
+      
+      e.preventDefault();
+    });
+  }); 
+
 	  
   	$('a[href*=#]').click(function() {
   		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -75,73 +115,3 @@
 		 var vH = $('#visual').height();
 		 $('#header').css('height',vH);
 	});
-	$(window).on('load scroll',function(){
- 	 var offset = $('#about h1').offset();
-	});
-	
-
-(function($) {
-	$.fn.sorted = function(customOptions) {
-		var options = {
-			reversed: false,
-			by: function(a) {
-				return a.text();
-			}
-		};
-		$.extend(options, customOptions);
-	
-		$data = $(this);
-		arr = $data.get();
-		arr.sort(function(a, b) {
-			
-		   	var valA = options.by($(a));
-		   	var valB = options.by($(b));
-			if (options.reversed) {
-				return (valA < valB) ? 1 : (valA > valB) ? -1 : 0;				
-			} else {		
-				return (valA < valB) ? -1 : (valA > valB) ? 1 : 0;	
-			}
-		});
-		return $(arr);
-	};
-
-})(jQuery);
-
-$(function() {
-
-  var $controls = $('#filter li'),
-      $list = $('#worksGrid'),
-      $data = $list.clone();
-    
-  var $preferences = {
-    duration: 800,
-    easing: 'easeInOutQuad',
-    adjustHeight: false,
-    attribute: function(v) {
-                return $(v).find('img').attr('src');
-               }
-  };
-  
-  $controls.each(function(i) {
-    $(this).find('a').bind('click', function(e) {
-      var $button = $(this);
-      var $button_container = $button.parent();     
-
-      $button.parent().removeClass('selected');
-      $button_container.addClass('selected');
-        
-      var sorting_kind = $button.data('value');
-        
-      if (sorting_kind == 'all') {
-        var $filtered_data = $data.find('li');
-      } else {
-        var $filtered_data = $data.find('li.' + sorting_kind);
-      }
-        
-      $list.quicksand($filtered_data, $preferences);
-      
-      e.preventDefault();
-    });
-  }); 
-
-});
