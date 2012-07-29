@@ -351,7 +351,7 @@
     stats = new Stats();
 		stats.domElement.style.position	= 'absolute';
 		stats.domElement.style.bottom	= '0px';
-		document.body.appendChild(stats.domElement);
+		// document.body.appendChild(stats.domElement);
 		
 		// allow 'p' to make screenshot
 		THREEx.Screenshot.bindKey(renderer);
