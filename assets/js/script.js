@@ -1,9 +1,29 @@
 $(function() {
-    
-  $('#nav').parent().waypoint(function(event, direction) {
+  
+  var $window = $(window)
+    , $nav = $('#nav')
+    , $footer = $('#footer');
+  
+  /**
+   * Fixed navigation.
+   */
+  
+  $nav.parent().waypoint(function(event, direction) {
     $(this).toggleClass('fixed', direction === "down");
     event.stopPropagation();
   });
+  
+  /**
+   * Initialize footer size.
+   */
+  
+  $footer.css({
+      height: $window.height() - $nav.height()
+  });
+  
+  /**
+   * Scroll spy.
+   */
   
   $('section').waypoint(function(event, direction) {
     var $active = $(this);
@@ -14,7 +34,8 @@ $(function() {
     $('.active').removeClass('active');
     $('a[href=#'+$active.attr('id')+']').addClass('active');
   });
-    
+  
+  
   $('.scale img,#cliantGrid img').scale(0.9);
   
   $('.scale img,#cliantGrid img').hover(function() {
