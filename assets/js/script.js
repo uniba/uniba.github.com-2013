@@ -145,3 +145,24 @@ $(function() {
     }
   }).trigger('resize');  
 });
+
+/**
+ * Captures logo blended with background.
+ */
+
+$(window).on('keypress', function(e) {
+  if (115 == e.charCode) {
+    // on 's' key pressed
+    var offscreenCanvas = document.createElement('canvas')
+      , ctx = offscreenCanvas.getContext('2d')
+      , logo = $('#webglcontainer').find('canvas').get(0)
+      , background = $('#p5container').get(0);
+    
+    offscreenCanvas.width = background.width;
+    offscreenCanvas.height = background.height;
+    
+    ctx.drawImage(background, 0, 0, background.width, background.height);
+    ctx.drawImage(logo, 0, 0, logo.width, logo.height);
+    window.open(offscreenCanvas.toDataURL());
+  }
+})
