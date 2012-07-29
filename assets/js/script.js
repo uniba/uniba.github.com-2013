@@ -139,7 +139,7 @@ $(function() {
     if (renderer) {
       renderer.setSize(width, height);
     }
-    if (p5) {
+    if (window.p5) {
       // TODO: avoid flicking.
       p5.setSize(width, height);
     }
