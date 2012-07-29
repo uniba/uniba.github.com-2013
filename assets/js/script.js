@@ -127,3 +127,25 @@
 		 var vH = $('#visual').height();
 		 $('#header').css('height',vH);
 	});
+
+$(function() {
+  var $nav = $('nav#nav')
+    , $window = $(window);
+  
+  /**
+   * Resize logo and background.
+   */
+  
+  $window.on('resize', function(e) {
+    var width = $window.width()
+      , height = $window.height();
+    
+    if (renderer) {
+      renderer.setSize(width, height);
+    }
+    if (p5) {
+      // TODO: avoid flicking.
+      p5.setSize(width, height);
+    }
+  }).trigger('resize');	
+});
