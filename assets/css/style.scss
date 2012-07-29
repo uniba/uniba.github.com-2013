@@ -1,0 +1,315 @@
+$
+
+::selection,
+::-moz-selection,
+::-webkit-selection{
+	color:#000;
+	background:#ff0;
+}
+.cf:before,
+.cf:after{
+	content:"";
+	display:table;
+}
+.cf:after{
+	clear:both;
+}
+.cf{
+	zoom:1;
+}
+body{
+	font-family:Helvetica,Arial,Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-size:10px;
+	line-height:1.6em;
+	background: #f5f5f5;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	font-size:10px;
+	line-height:1.6em
+}
+
+#visual{
+	width: 100%;
+	min-width: 930px;
+	position: relative;
+}
+
+
+#console {
+  position:absolute;
+  left:10px;
+  top:10px;
+  z-index:100;
+}
+#webglcontainer { 
+  position:relative;
+  left:0px;
+  top:0px;
+  z-index:50;
+}
+#p5container { 
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:0;
+}
+
+
+#header,
+#header a{
+	color: white;
+}
+#header .hCont{
+	width: 290px;
+	line-height: 20px;
+	background: url(../img/h_cbg.png) repeat;
+	position: absolute;
+	z-index: 100;
+	left:30px;
+}
+#header #news{
+	padding:25px 0;
+	line-height: 20px;
+	background: url(../img/h_cbg.png) repeat;
+	top:10%;
+}
+#header #news h3{
+	text-align: center;
+	font-size: 24px;
+}
+#header ol{
+	width: 240px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+#header ol li{
+	margin-top: 5px;
+}
+#header ol li a:hover{
+	text-decoration: underline;
+}
+#header ol li span{
+	color: yellow;
+	display: block;
+}
+#header #close{
+	display: block;
+	position: absolute;
+	top:10px;
+	left:10px;
+	font-size: 15px;
+}
+#header .house{
+	height: 132px;
+	top:40%;
+}
+#header .house img{
+	position: absolute;
+	top:0;
+	right:10px;
+	z-index: 11;
+}
+#header .house h3 {
+	font-size: 21px;
+	padding: 21px 0 0 47px;
+	letter-spacing: 4px;
+	position: relative;
+	z-index: 20;
+}
+
+#nav{
+	width: 100%;
+	height: 59px;
+	line-height: 59px;
+	position: relative;
+	z-index: 100;
+	border-bottom: solid 1px #808080;
+	min-width: 960px;
+	background: #f5f5f5;
+}
+#nav #uniba,
+#nav ul,
+#nav ul li{
+	float: left;
+}
+#nav #uniba a{
+	display: block;
+	font-size: 18px;
+	width: 181px;
+	height: 59px;
+	padding-left:30px;
+	line-height: 59px;
+	color: #4d4d4d;
+}
+#nav #uniba a:hover{
+	background: #4d4d4d;
+	color: #f5f5f5;
+}
+#nav ul li a{
+	display: block;
+	font-size: 16px;
+	color: #4d4d4d;
+}
+#nav ul li a span{
+	padding:5px 20px;
+	border-left:solid 1px #808080;
+}
+#nav ul li a:hover{
+	background: #9b9b00;
+	color: #fff;
+}
+
+section .sectionH1{
+	margin: 80px 0 0 30px;
+	font-size: 60px;
+}
+section .fsch1{
+	margin-top: 40px;
+}
+
+#about{
+	width: 100%;
+	overflow: hidden;
+}
+#about #aRotation{
+	margin-top: 60px;
+	width: 9999px;
+	position: relative;
+	overflow: hidden;
+}
+#about #aRotation li{
+	float: left;
+	margin:0 30px;
+	position: relative;
+}
+#about #aText{
+	margin:40px 0 0 30px;
+	font-size: 20px;
+	line-height: 38px;
+}
+#about #aText p span{
+	background: #fff;
+	padding:3px;
+}
+#about #aBnr{
+	margin:40px 0 0 30px;
+}
+#about #aBnr dt{
+	font-size: 16px;
+}
+#about #aBnr dd{
+	margin-top: 20px;
+}
+
+#works #worksGrid{
+	margin:40px 0 0 30px;
+}
+#works #worksGrid li{
+	float: left;
+	margin:0 20px 20px 0;
+}
+
+#cliant #cliantGrid{
+	margin:40px 0 0 30px;	
+}
+
+#member #memberGrid{
+	margin:40px 0 0 30px;		
+	zoom:1;
+}
+#member #memberGrid:before,
+#member #memberGrid:after,
+#member #memberGrid li:before,
+#member #memberGrid li:after{
+	content:"";
+	display:table;
+}
+#member #memberGrid:after,
+#member #memberGrid li:after{
+	clear:both;
+}
+#member #memberGrid li{
+	float: left;
+	margin:0 30px 40px 0;
+	zoom:1;
+}
+#member #memberGrid li img{
+	display: block;
+	margin-right: 10px;
+	width: 80px;
+	height: 80px;
+}
+#member #memberGrid li div{
+	width: 190px;
+	height:176px;
+	background: #fff;
+	font-size: 14px;
+	color: #333333;
+	padding:0 10px;
+}
+#member #memberGrid li div a{
+	color: #333333;
+}
+#member #memberGrid li img,
+#member #memberGrid li div{
+	float: left;
+}
+#member #memberGrid li div h4{
+	font-size: 24px;
+	line-height: 30px;
+	margin-top: 5px;
+}
+#member #memberGrid li div h4 span{
+	display: block;
+	font-size: 18px;
+}
+#member #memberGrid li div p {
+	border: dotted 1px #999;
+	border-left: none;
+	border-right: none;
+	padding: 5px 0;
+	margin-top: 10px;
+}
+#member #memberGrid li div ul {
+	line-height: 21px;
+	margin: 5px 0;
+}
+#member #memberGrid li div ul li{
+	float: none;
+	margin:0;
+}
+
+#contactW{
+	margin:40px 0 0 30px;	
+	font-size: 30px;
+	line-height: 52px;	
+}
+#contactW span{
+	background: #fff;
+	padding:3px;
+}
+#jhaus{
+	margin-top: 30px;
+}
+#gMap{
+	font-size: 18px;
+	line-height: 20px;
+}
+#cct{
+	margin-top: 60px;
+}
+#la{
+	margin-bottom: 20px;
+}
+
+#footer {
+	background: #333;
+	line-height: 40px;
+	padding: 20px 0 20px 30px;
+	margin-top: 80px;
+}
+#footer p{
+	font-size: 30px;
+	color: #999999;
+}

@@ -1,0 +1,426 @@
+@font-face{ 
+    font-family: 'WebIconFonts';
+    src: url('../fonts/webiconfonts.eot');
+    src: url('../fonts/WebIconFonts.eot?') format('eot'),
+         url('../fonts/WebIconFonts.woff') format('woff'),
+         url('../fonts/WebIconFonts.ttf') format('truetype');
+}
+
+.icon {
+    font-family: WebIconFonts;
+}
+
+::selection,
+::-moz-selection,
+::-webkit-selection{
+	color:#000;
+	background:#ff0;
+}
+.cf:before,
+.cf:after{
+	content:"";
+	display:table;
+}
+.cf:after{
+	clear:both;
+}
+.cf{
+	zoom:1;
+}
+
+.scale img,
+#cliantGrid img{
+ transition: all 0.1s ease;
+ -webkit-transition: all 0.1s ease;
+ -moz-transition: all 0.1s ease;
+}
+
+a:active, a:focus{
+	outline:none;
+}
+
+body{
+	font-family:Helvetica,Arial,Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-size:10px;
+	background: #f5f5f5;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+}
+
+#visual{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index:100;
+}
+#console {
+ position:absolute;
+ left:10px;
+ top:10px;
+ z-index:50;
+}
+#webglcontainer { 
+ position:relative;
+ left:0px;
+ top:0px;
+ z-index:100;
+}
+#p5container { 
+ position:absolute;
+ left:0px;
+ top:0px;
+ z-index:0;
+}
+
+#header{
+ position: relative;
+ z-index: 100;
+}
+#header,
+#header a{
+	color: white;
+}
+#header .hCont{
+	width: 290px;
+	line-height: 20px;
+	background: url(../img/h_cbg.png) repeat;
+	position: absolute;
+	z-index: 100;
+	left:30px;
+}
+#header #news{
+	padding:25px 0;
+	line-height: 20px;
+	background: url(../img/h_cbg.png) repeat;
+	top:100px;
+}
+#header #news h3{
+	text-align: center;
+	font-size: 24px;
+}
+#header ol{
+	width: 240px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+#header ol li{
+	margin-top: 5px;
+}
+#header ol li a:hover{
+	text-decoration: underline;
+}
+#header ol li span{
+	color: yellow;
+	display: block;
+}
+#header .close{
+	display: block;
+	position: absolute;
+	top:10px;
+	left:10px;
+	z-index: 999;
+	font-size: 15px;
+	line-height: 1;
+}
+#header .house{
+	height: 132px;
+	top:410px;
+	line-height: 31px;
+}
+#header .house img{
+	position: absolute;
+	top:0;
+	right:10px;
+	z-index: 11;
+}
+#header .house h3 {
+	font-size: 21px;
+	padding: 21px 0 0 47px;
+	letter-spacing: 4px;
+	position: relative;
+	z-index: 20;
+}
+
+#nav{
+	width: 100%;
+	height: 61px;
+	line-height: 61px;
+	border-top: solid 1px #808080;
+	border-bottom: solid 1px #808080;
+	min-width: 960px;
+	background: rgba(245,245,245,0.9);
+	margin-top: -65px;
+	position: relative;
+	z-index: 200;
+}
+
+.fixed #nav{
+	position: fixed;
+	top:63px;
+	left:0;
+}
+
+.fixFoot #nav{
+ position: fixed;
+ bottom:0;
+}
+
+#nav #uniba,
+#nav ul,
+#nav ul li{
+	float: left;
+}
+#nav #uniba a{
+	display: block;
+	font-size: 18px;
+	width: 181px;
+	padding-left:30px;
+	color: #4d4d4d;
+}
+#nav #uniba a:hover{
+ background: rgba(255,0,255,0.6);
+}
+#nav ul li a{
+	display: block;
+	font-size: 16px;
+	color: #4d4d4d;
+}
+#nav ul li a span{
+	padding:5px 20px;
+	border-left:solid 1px #808080;
+}
+#nav ul li .active{
+ background: rgba(255,255,0,0.6);
+}
+
+section .sectionH1{
+	margin-left:30px;
+	margin-top: 20px;
+	padding-top: 80px;
+	font-size: 60px;
+}
+
+#about{
+	width: 100%;
+	overflow: hidden;
+}
+#about #aRotation{
+	margin-top: 60px;
+	position: relative;
+	overflow: hidden;
+	width: 99999px;
+}
+#about #aRotation li{
+	float: left;
+	margin:0 30px;
+	position: relative;
+}
+#about #aText{
+	margin:40px 0 0 30px;
+	font-size: 20px;
+	line-height: 38px;
+}
+#about #aText p span{
+	background: #fff;
+	padding:3px;
+}
+#about #aBnr{
+	margin:40px 0 0 30px;
+}
+#about #aBnr dl{
+ float: left;
+ margin-right: 20px;
+}
+#about #aBnr dt{
+	font-size: 16px;
+}
+.csstransitions #about #aBnr dt{
+	margin-left: 15px;
+}
+#about #aBnr dd{
+	margin-top: 10px;
+}
+.csstransitions #about #aBnr dd{
+	margin-top: 15px;
+}
+
+#works .worksGrid{
+	margin:40px 0 0 30px;
+	width: 100%;
+	max-width: 1610px;
+}
+#works .worksGrid li{
+	float: left;
+	margin:0 20px 20px 0;
+}
+#works #filter{
+ margin:40px 0 0 30px;
+}
+#works #filter .icon{
+ padding:3px 10px 0 0;
+ font-size: 20px;
+}
+#works #filter li{
+ float: left;
+ margin-right: 10px;
+}
+#works #filter li a{
+ display: block;
+ color: white;
+ background: #cccccc;
+ border-radius: 3px;
+ padding:5px 15px;
+ font-size: 15px;
+}
+#works #filter .selected a{
+ background: #ae5da1;
+}
+#cliant #cliantGrid{
+	margin:40px 0 0 30px;	
+}
+#cliant #cliantGrid li{
+ float: left;
+	margin:0 20px 30px 0;
+}
+
+
+#member #memberGrid{
+	margin:40px 0 0 30px;		
+	zoom:1;
+}
+#member #memberGrid:before,
+#member #memberGrid:after,
+#member #memberGrid li:before,
+#member #memberGrid li:after{
+	content:"";
+	display:table;
+}
+#member #memberGrid:after,
+#member #memberGrid li:after{
+	clear:both;
+}
+#member #memberGrid li{
+	float: left;
+	margin:0 30px 40px 0;
+	zoom:1;
+}
+#member #memberGrid li img{
+	display: block;
+	margin-right: 10px;
+	width: 80px;
+	height: 80px;
+}
+#member #memberGrid li div{
+	width: 190px;
+	height:188px;
+	background: #fff;
+	font-size: 14px;
+	color: #333333;
+	padding:0 10px;
+}
+#member #memberGrid li div a{
+	color: #333333;
+}
+#member #memberGrid li img,
+#member #memberGrid li div{
+	float: left;
+}
+#member #memberGrid li div h4{
+	font-size: 24px;
+	line-height: 30px;
+	margin-top: 5px;
+}
+#member #memberGrid li div h4 span{
+	display: block;
+	font-size: 18px;
+}
+#member #memberGrid li div p {
+	border: dotted 1px #999;
+	border-left: none;
+	border-right: none;
+	padding: 5px 0;
+	margin-top: 10px;
+}
+#member #memberGrid li div ul {
+	line-height: 21px;
+	margin: 5px 0;
+}
+#member #memberGrid li div ul li{
+	float: none;
+	margin:0;
+	line-height: 23px;
+}
+#member #memberGrid li div ul li .icon{
+ margin-right: 5px;
+}
+
+#contactW{
+	margin:40px 0 0 30px;	
+	font-size: 30px;
+	line-height: 52px;	
+}
+#contactW span{
+	background: #fff;
+	padding:3px;
+}
+#jhaus{
+	margin-top: 30px;
+}
+#contactW .gMap{
+	font-size: 18px;
+	line-height: 20px;
+	margin-top:8px;
+}
+#contactW .gMap .icon{
+ background: none;
+ padding-right:5px;
+}
+#cct{
+	margin-top: 60px;
+}
+#la{
+	margin-bottom: 20px;
+}
+
+#recruit #rText{
+	margin:40px 0 0 30px;
+	font-size: 20px;
+	line-height: 38px;
+}
+#recruit #rText p span{
+	background: #fff;
+	padding:3px;
+}
+
+#footer {
+	background: #333;
+	line-height: 40px;
+	padding: 20px 0 20px 30px;
+	margin-top: 80px;
+}
+#footerText{
+ margin-top: 30px;
+}
+#footer p{
+	font-size: 30px;
+	color: #999999;
+}
+#footer .icon a{
+ font-size: 40px;
+ padding:30px;
+ line-height: 100px;
+ background: white;
+ border-radius: 100px;
+ margin-right: 30px;
+ color: white;
+}
+#footer .icon #fbk{
+ padding:30px 41px;
+ background: #3b5998;
+}
+#footer .icon #twtr{
+ background: #00c0f7;
+}
+#footer .icon #tmbr{
+ background: #34536f;
+}
