@@ -351,7 +351,7 @@
     stats = new Stats();
 		stats.domElement.style.position	= 'absolute';
 		stats.domElement.style.bottom	= '0px';
-		document.body.appendChild(stats.domElement);
+		// document.body.appendChild(stats.domElement);
 		
 		// allow 'p' to make screenshot
 		THREEx.Screenshot.bindKey(renderer);
@@ -684,7 +684,7 @@
     
     function dividedBackgroundUpdate() {      
       // Initializing Processing.js Canvas
-      if (p5 && p5init) {
+      if (window.p5 && p5init) {
         for (i = 0; i < 4; i++) {
           var bgcolor = colorPristArray[colorPatternIndexNum][i];
           var r = parseInt(bgcolor.slice(2, 4), 16);
@@ -704,7 +704,7 @@
       }
       
       // Update Processing.js Canvas
-      if (p5) {
+      if (window.p5) {
         p5.updateBgAngle(camera.rotation.x, camera.rotation.y, camera.rotation.z);
       }
       
