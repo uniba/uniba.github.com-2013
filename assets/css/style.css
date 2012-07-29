@@ -152,12 +152,18 @@ body{
 	margin-top: -65px;
 	position: relative;
 	z-index: 200;
+	
 }
 
 .fixed #nav{
 	position: fixed;
 	top:63px;
 	left:0;
+	
+	/* TODO: add another vendor prefixes */
+	-webkit-transition-property: top left;
+	-webkit-transition-duration: 500ms;
+	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
 }
 
 .fixFoot #nav{
