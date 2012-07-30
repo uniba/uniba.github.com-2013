@@ -204,7 +204,6 @@ section .sectionH1{
 	margin-top: 20px;
 	padding-top: 80px;
 	font-size: 60px;
-	font-family:'DIN Next W01 Medium';
 }
 
 #about{
@@ -259,6 +258,40 @@ section .sectionH1{
 #works .worksGrid li{
 	float: left;
 	margin:0 20px 20px 0;
+	position: relative;
+}
+#works .worksGrid li .description{
+ background: rgba(0,160,233,0.9);
+ position: absolute;
+ bottom:0;
+ left:0;
+ z-index: 100;
+ width: 100%;
+ height: 100px;
+ color:white;
+}
+#works .worksGrid li .description h2{
+ font-size: 20px;
+ padding:7px 0 0 7px;
+}
+#works .worksGrid li .description .cf{
+ padding:7px 0 0 7px;
+}
+#works .worksGrid li .description .cf span{
+ color:#0191d3;
+ padding:5px;
+ background: white;
+ border-radius: 7px;
+ float: left;
+ margin: 0 10px 0 0;
+ position: static;
+ display: block;
+}
+#works .worksGrid li .description p{
+ position: absolute;
+ bottom:7px;
+ right: 7px;
+ font-size: 13px;
 }
 #works #filter{
  margin:40px 0 0 30px;
@@ -282,6 +315,13 @@ section .sectionH1{
 #works #filter .selected a{
  background: #ae5da1;
 }
+
+
+
+
+
+
+
 #cliant #cliantGrid{
 	margin:40px 0 0 30px;	
 }
