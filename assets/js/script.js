@@ -173,6 +173,7 @@ $(function() {
 	$('.worksGrid li').live(
 			'mouseenter',function(){
 				  $('.worksGrid li').not(this).addClass('workOther');
+					 $('.worksGrid li').removeClass('workActive');
 				  $(this).addClass('workActive');
 	});
   
