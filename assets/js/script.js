@@ -14,15 +14,16 @@ $(function() {
 
   $nav.parent().waypoint(function(event, direction) {
     $(this).toggleClass('fixed', direction === "down");
-    event.stopPropagation();
-  });
+    $(this).toggleClass('nonfixed', direction === "up");
+    event.stopPropagation(); 
+  },{offset:-62});
 
   /**
    * Initialize footer size.
    */
 
   $footer.css({
-      height: $window.height() - $nav.height()
+     height: $window.height() - $nav.height()
   });
 
   /**

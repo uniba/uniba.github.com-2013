@@ -149,21 +149,33 @@ body{
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
 	background: rgba(245,245,245,0.9);
-	margin-top: -65px;
+	margin-top: -51px;
 	position: relative;
 	z-index: 200;
-	
+	-webkit-transition-property: top left;
+	-webkit-transition-duration: 500ms;
+	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-moz-transition-property: top left;
+	-moz-transition-duration: 500ms;
+	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-o-transition-property: top left;
+	-o-transition-duration: 500ms;
+	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-ms-transition-property: top left;
+	-ms-transition-duration: 500ms;
+	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	transition-property: top left;
+	transition-duration: 500ms;
+	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 }
 
 .fixed #nav{
 	position: fixed;
-	top:63px;
+	top:51px;
 	left:0;
-	
-	/* TODO: add another vendor prefixes */
-	-webkit-transition-property: top left;
-	-webkit-transition-duration: 500ms;
-	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
+}
+.nonfixed #nav{
+	top:0px;
 }
 
 .fixFoot #nav{
