@@ -1,3 +1,15 @@
+  /**
+   * ready "fonts.com"
+   */
+
+ window.onload=function() {
+     var mtiTracking = document.createElement('link');
+     mtiTracking.type='text/css';
+     mtiTracking.rel='stylesheet';
+     mtiTracking.href=('https:'==document.location.protocol?'https:':'http:') + '//fast.fonts.com/t/1.css';
+     (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+}
+
 $(function() {
 
   /**
