@@ -140,8 +140,12 @@ $(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var $target = $(this.hash);
       $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-      if ($target.length) {
+      if($(this).attr('href') == '#header'){
+        var targetOffset = $target.offset().top;
+      } else {
         var targetOffset = $target.offset().top + 20;
+      }
+      if ($target.length) {
         $('html,body').animate({scrollTop: targetOffset}, {duration:500},'easeOutExpo');
         return false;
       }
