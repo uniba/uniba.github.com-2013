@@ -247,10 +247,6 @@ body{
 	padding-left:30px;
 	color: #4d4d4d;
 }
-#nav #uniba a:hover{
- background: rgba(33,33,33,0.6);
- color:white;
-}
 #nav ul li a{
 	display: block;
 	font-size: 16px;
@@ -260,11 +256,12 @@ body{
 	padding:5px 20px;
 	border-left:solid 1px #808080;
 }
+#nav #uniba a:hover,
 #nav ul li .active{
  background: rgba(33,33,33,0.6);
  color:white;
 }
-.external {
+#nav ul li a:focus{
  background: rgba(255, 255, 0, 0.4);
  height: 61px;
 }
