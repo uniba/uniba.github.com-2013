@@ -19,26 +19,17 @@ $(function() {
   },{offset:-62});
 
   /**
-   * Initialize footer size.
-   */
-
-  $footer.css({
-     height: $window.height() - $nav.height()
-  });
-
-  /**
    * Scroll spy.
    */
 
   $('section').waypoint(function(event, direction) {
     var $active = $(this);
-    var atr = $('a[href=#'+$active.attr('id')+']');
     if (direction === "up") {
       $active = $active.prev();
     }
     $('.active').removeClass('active');
     $('a[href=#'+$active.attr('id')+']').addClass('active');
-  });
+  },{offset:100});
 
 
   /**
@@ -74,7 +65,6 @@ $(function() {
       $rotateChild = $rotateCont.children();
       $rotateWidth = $('#aRotation').children().width();
 
-  console.log($rotateWidth);
   $rotateChild.clone().appendTo($rotateCont);
 
   function rotateimg () {
@@ -151,8 +141,8 @@ $(function() {
       var $target = $(this.hash);
       $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
       if ($target.length) {
-        var targetOffset = $target.offset().top;
-        $('html,body').animate({scrollTop: targetOffset}, {duration:500},'easeInOutQuad');
+        var targetOffset = $target.offset().top + 20;
+        $('html,body').animate({scrollTop: targetOffset}, {duration:500},'easeOutExpo');
         return false;
       }
     }

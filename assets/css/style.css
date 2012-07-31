@@ -40,7 +40,7 @@ a:active, a:focus{
 }
 
 body{
-	font-family:Helvetica,Arial,Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-family:'DIN Next W01 Medium';
 	font-size:10px;
 	background: #f5f5f5;
 	-webkit-font-smoothing: antialiased;
@@ -196,7 +196,8 @@ body{
 	color: #4d4d4d;
 }
 #nav #uniba a:hover{
- background: rgba(255,0,255,0.6);
+ background: rgba(33,33,33,0.6);
+ color:white;
 }
 #nav ul li a{
 	display: block;
@@ -208,13 +209,22 @@ body{
 	border-left:solid 1px #808080;
 }
 #nav ul li .active{
- background: rgba(255,255,0,0.6);
+ background: rgba(33,33,33,0.6);
+ color:white;
+}
+.external {
+ background: rgba(255, 255, 0, 0.4);
+ height: 61px;
+}
+.external bdo{
+ font-size: 10px;
 }
 
+section{
+	padding-top: 100px;
+}
 section .sectionH1{
 	margin-left:30px;
-	margin-top: 20px;
-	padding-top: 80px;
 	font-size: 60px;
 }
 
@@ -289,7 +299,7 @@ section .sectionH1{
 #works .worksGrid li .description .cf{
  padding:7px 0 0 7px;
 }
-#works .worksGrid li .description .cf span{
+#works .worksGrid li .description span{
  color:#0191d3;
  padding:5px;
  background: white;
