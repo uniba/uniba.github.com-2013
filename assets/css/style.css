@@ -40,7 +40,7 @@ a:active, a:focus{
 }
 
 body{
-	font-family:'DIN Next W01 Medium';
+ font-family:'DIN Next W01 Black','DINNextW01-BlackItalic','DINNextW01-BoldItalic','DINNextW01-CondensedMed','DIN Next W01 Medium';
 	font-size:10px;
 	background: #f5f5f5;
 	-webkit-font-smoothing: antialiased;
