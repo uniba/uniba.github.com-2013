@@ -549,6 +549,8 @@ section .sectionH1{
 #footer .icon #tmbr{
  background: #34536f;
 }
-#footer .icon a:active{
- background: black;
+#footer .icon #fbk:active,
+#footer .icon #twtr:active,
+#footer .icon #tmbr:active{
+ color: #333;;
 }
