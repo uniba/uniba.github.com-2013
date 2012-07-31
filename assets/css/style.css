@@ -347,7 +347,7 @@ section .sectionH1{
  -webkit-transition: all .1s ease-out;
 }
 #works .worksGrid .workOther{
- -webkit-filter: blur(10px);
+ -webkit-filter: blur(3px);
 }
 #works .worksGrid .workActive .description{
  bottom:0;
