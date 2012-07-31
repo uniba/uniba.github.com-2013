@@ -346,8 +346,11 @@ section .sectionH1{
  color:white;
  -webkit-transition: all .1s ease-out;
 }
-#works .gridActive .workOther{
+#works .gridActive li{
  -webkit-filter: blur(1px);
+}
+#works .worksGrid .workActive{
+ -webkit-filter:none; 
 }
 #works .worksGrid .workActive .description{
  bottom:0;
