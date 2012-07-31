@@ -194,7 +194,7 @@ body{
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
 	background: rgba(245,245,245,0.9);
-	margin-top: -51px;
+	margin-top: -66px;
 	position: relative;
 	z-index: 200;
 	-webkit-transition-property: top left;
@@ -216,7 +216,7 @@ body{
 
 .fixed #nav{
 	position: fixed;
-	top:51px;
+	top:66px;
 	left:0;
 }
 .nonfixed #nav{
