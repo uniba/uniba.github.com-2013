@@ -5,9 +5,53 @@
          url('../fonts/WebIconFonts.woff') format('woff'),
          url('../fonts/WebIconFonts.ttf') format('truetype');
 }
+@import url("http://fast.fonts.com/t/1.css?apiType=css&projectid=92e14719-2998-4333-9434-393ecca2f3ae");
+@font-face{
+font-family:"DIN Next W01 Black";
+src:url("../fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix") format("eot");}
+@font-face{
+font-family:"DIN Next W01 Black";
+src:url("../fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix");
+src:url("../fonts/9541b817-6a02-4e7a-af21-ce24b70d9ba3.woff") format("woff"),url("../fonts/c1a5af90-f79a-44b1-a4a4-5fd6d888c2f2.ttf") format("truetype"),url("../fonts/0c36e45b-5edd-4927-b9ad-2e46a30e5593.svg#0c36e45b-5edd-4927-b9ad-2e46a30e5593") format("svg");
+}
+@font-face{
+font-family:"DINNextW01-BlackItalic";
+src:url("../fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix") format("eot");}
+@font-face{
+font-family:"DINNextW01-BlackItalic";
+src:url("../fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix");
+src:url("../fonts/4cd37f64-b230-4162-88bf-f6cccde94e4b.woff") format("woff"),url("../fonts/10805f32-49cb-4842-b9ef-0d593ddb961c.ttf") format("truetype"),url("../fonts/1c343c91-343a-4326-84db-bcce4ce82979.svg#1c343c91-343a-4326-84db-bcce4ce82979") format("svg");
+}
+@font-face{
+font-family:"DINNextW01-BoldItalic";
+src:url("../fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix") format("eot");}
+@font-face{
+font-family:"DINNextW01-BoldItalic";
+src:url("../fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix");
+src:url("../fonts/140a0a6f-f218-4071-8eb8-f2bc45ed5121.woff") format("woff"),url("../fonts/ecbfe302-4f46-4fef-b823-83eedbc353e7.ttf") format("truetype"),url("../fonts/58f54e11-a0ac-4cfa-852e-3c73b93d74a8.svg#58f54e11-a0ac-4cfa-852e-3c73b93d74a8") format("svg");
+}
+@font-face{
+font-family:"DINNextW01-CondensedMed";
+src:url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix") format("eot");}
+@font-face{
+font-family:"DINNextW01-CondensedMed";
+src:url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix");
+src:url("../fonts/2613a064-2962-44af-ae6f-3640e06e8dc4.woff") format("woff"),url("../fonts/2889b152-497e-4ea3-a90d-02854d136a8d.ttf") format("truetype"),url("../fonts/4f311da1-9ec6-4379-9621-b45be0e23abd.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg");
+}
+@font-face{
+font-family:"DIN Next W01 Medium";
+src:url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix") format("eot");}
+@font-face{
+font-family:"DIN Next W01 Medium";
+src:url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix");
+src:url("../fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"),url("../fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"),url("../fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
+}
 
 .icon {
-    font-family: WebIconFonts;
+ font-family: 'WebIconFonts';
+}
+.fontType{
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 
 ::selection,
@@ -40,7 +84,7 @@ a:active, a:focus{
 }
 
 body{
- font-family:'DIN Next W01 Black','DINNextW01-BlackItalic','DINNextW01-BoldItalic','DINNextW01-CondensedMed','DIN Next W01 Medium';
+ font-family: 'DIN Next W01 Medium';
 	font-size:10px;
 	background: #f5f5f5;
 	-webkit-font-smoothing: antialiased;
@@ -102,6 +146,7 @@ body{
 	width: 240px;
 	margin: 0 auto;
 	font-size: 14px;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #header ol li{
 	margin-top: 5px;
@@ -153,19 +198,19 @@ body{
 	position: relative;
 	z-index: 200;
 	-webkit-transition-property: top left;
-	-webkit-transition-duration: 500ms;
+	-webkit-transition-duration: 1000ms;
 	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	-moz-transition-property: top left;
-	-moz-transition-duration: 500ms;
+	-moz-transition-duration: 1000ms;
 	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	-o-transition-property: top left;
-	-o-transition-duration: 500ms;
+	-o-transition-duration: 1000ms;
 	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	-ms-transition-property: top left;
-	-ms-transition-duration: 500ms;
+	-ms-transition-duration: 1000ms;
 	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	transition-property: top left;
-	transition-duration: 500ms;
+	transition-duration: 1000ms;
 	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 }
 
@@ -226,6 +271,7 @@ section{
 section .sectionH1{
 	margin-left:30px;
 	font-size: 60px;
+	font-family: 'DINNextW01-BlackItalic';
 }
 
 #about{
@@ -247,6 +293,7 @@ section .sectionH1{
 	margin:40px 0 0 30px;
 	font-size: 20px;
 	line-height: 38px;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #about #aText p span{
 	background: #fff;
@@ -254,6 +301,7 @@ section .sectionH1{
 }
 #about #aBnr{
 	margin:40px 0 0 30px;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #about #aBnr dl{
  float: left;
@@ -294,7 +342,7 @@ section .sectionH1{
 }
 #works .worksGrid li .description h2{
  font-size: 20px;
- padding:7px 0 0 7px;
+ padding:7px 7px 0 7px;
 }
 #works .worksGrid li .description .cf{
  padding:7px 0 0 7px;
@@ -398,6 +446,7 @@ section .sectionH1{
 	font-size: 24px;
 	line-height: 30px;
 	margin-top: 5px;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #member #memberGrid li div h4 span{
 	display: block;

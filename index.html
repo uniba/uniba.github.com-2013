@@ -26,7 +26,16 @@
 <title>Uniba Inc.</title>
 <link type="text/css" href="assets/css/reset.css" rel="stylesheet" media="all">
 <link type="text/css" href="assets/css/style.css" rel="stylesheet" media="all">
-<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/92e14719-2998-4333-9434-393ecca2f3ae.css"/>
+<script type="text/javascript">
+    window.onload=function() {
+        var mtiTracking = document.createElement('link');
+        mtiTracking.type='text/css';
+        mtiTracking.rel='stylesheet';
+        mtiTracking.href=('https:'==document.location.protocol?'https:':'http:') + '//fast.fonts.com/t/1.css';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+   }
+</script>
+<script src="http://typesquare.com/accessor/script/typesquare.js?QBFWygYczgk%3D" charset="utf-8"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="assets/js/libs/modernizr.js"></script> 
 <script src="assets/js/libs/waypoints.min.js"></script>
@@ -486,13 +495,13 @@
 		<p id="cMail"><a href="mailto:info@uniba.jp"><span>info@uniba.jp</span></a></p>
 		<div id="jhaus">
 			<p><span>150-0001</span></p>
-			<p><span>東京都渋谷区神宮前5-34-4 ジェイハウス B1F</span></p>
+			<p><span class="fontType">東京都渋谷区神宮前5-34-4 ジェイハウス B1F</span></p>
 			<p class="gMap"><span class="icon">:</span><a href="http://goo.gl/YIe1S" target="_blank">Google Map</a></p>
 		</div>
 		<div id="cct">
 			<p id="la">Circuit Lab.</p>
 			<p><span>150-0002</span></p>
-			<p><span>東京都渋谷区渋谷1-3-18 ビラ・モデルナ A307</span></p>
+			<p><span class="fontType">東京都渋谷区渋谷1-3-18 ビラ・モデルナ A307</span></p>
 			<p class="gMap"><span class="icon">:</span><a href="http://goo.gl/29h84" target="_blank">Google Map</a></p>
 		</div>
 	</div>
