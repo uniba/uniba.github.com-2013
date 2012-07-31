@@ -167,6 +167,7 @@ $(function() {
 	$('.worksGrid li').live(
 			'mouseleave',function(){
 					 $('.worksGrid li').removeClass('workActive');
+			   $('.worksGrid').removeClass('gridActive');
 	});
 
 	$('.worksGrid li').live(
@@ -178,7 +179,7 @@ $(function() {
 	
 		$('.gridActive').live(
 			'mouseleave',function(){
-			   $('.worksGrid').removeClass('gridActive');
+
 		}); 
 	
 });
