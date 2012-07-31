@@ -347,7 +347,7 @@ section .sectionH1{
 #works .worksGrid li .description h2{
  font-size: 20px;
  padding:7px 7px 0 7px;
-	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
+	font-family: 'DIN Next W01 Medium', '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #works .worksGrid li .description .cf{
  padding:7px 0 0 7px;
