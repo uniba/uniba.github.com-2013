@@ -167,16 +167,20 @@ $(function() {
 	$('.worksGrid li').live(
 			'mouseleave',function(){
 					 $('.worksGrid li').removeClass('workActive');
-					 $('.worksGrid li').removeClass('workOther');
 	});
 
 	$('.worksGrid li').live(
 			'mouseenter',function(){
-				  $('.worksGrid li').not(this).addClass('workOther');
+			   $('.worksGrid').addClass('gridActive');
 					 $('.worksGrid li').removeClass('workActive');
 				  $(this).addClass('workActive');
 	});
-  
+	
+		$('.gridActive').live(
+			'mouseleave',function(){
+			   $('.worksGrid').removeClass('gridActive');
+		}); 
+	
 });
 
 $(function() {

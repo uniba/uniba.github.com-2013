@@ -346,7 +346,7 @@ section .sectionH1{
  color:white;
  -webkit-transition: all .1s ease-out;
 }
-#works .worksGrid .workOther{
+#works .gridActive .workOther{
  -webkit-filter: blur(1px);
 }
 #works .worksGrid .workActive .description{
