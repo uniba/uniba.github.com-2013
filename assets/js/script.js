@@ -50,22 +50,15 @@ $(function() {
    * TODO: may be it is obtrusive script. should move to stylesheets.
    */
 
-  $('.scale img,#cliantGrid img').scale(0.9);
-
-  $('.scale img,#cliantGrid img').hover(function() {
-    $(this).scale(1);
-    },function(){
-      $(this).scale(0.9);
-    });
     $('.gMap a').hover(function(){
       $(this).prev().css('color','green');
     },function(){
       $(this).prev().css('color','black');
     });
 
-  $('.close').click(function(){
-    $(this).parent().hide();
-  });
+    $('.close').click(function(){
+      $(this).parent().hide();
+    });
 
   /**
    * Rotation images.
@@ -164,22 +157,21 @@ $(function() {
     }
   });
 
-	$('.worksGrid li').live(
+	 $('.worksGrid li').live(
 			'mouseleave',function(){
 					 $('.worksGrid li').removeClass('workActive');
-			   $('.worksGrid').removeClass('gridActive');
-	});
+  });
 
-	$('.worksGrid li').live(
+	 $('.worksGrid li').live(
 			'mouseenter',function(){
 			   $('.worksGrid').addClass('gridActive');
 					 $('.worksGrid li').removeClass('workActive');
 				  $(this).addClass('workActive');
-	});
+	 });
 	
 		$('.gridActive').live(
 			'mouseleave',function(){
-
+			   $('.worksGrid').removeClass('gridActive');
 		}); 
 	
 });
