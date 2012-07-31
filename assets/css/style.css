@@ -523,15 +523,12 @@ section .sectionH1{
 #footerText{
  margin-top: 30px;
 }
-#footer .gMap a:active{
+#contact .gMap a:active{
  color: green;
 }
 #footer p{
 	font-size: 30px;
 	color: #999999;
-}
-#footer .icon a:active{
- background: white;
 }
 #footer .icon a{
  font-size: 40px;
@@ -551,4 +548,7 @@ section .sectionH1{
 }
 #footer .icon #tmbr{
  background: #34536f;
+}
+#footer .icon a:active{
+ background: black;
 }
