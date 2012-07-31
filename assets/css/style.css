@@ -256,14 +256,13 @@ body{
 	padding:5px 20px;
 	border-left:solid 1px #808080;
 }
-#nav #uniba a:hover,
+#nav a:active{
+ background: rgba(255, 255, 0, 0.4);
+ height: 61px;
+}
 #nav ul li .active{
  background: rgba(33,33,33,0.6);
  color:white;
-}
-#nav ul li a:focus{
- background: rgba(255, 255, 0, 0.4);
- height: 61px;
 }
 .external bdo{
  font-size: 10px;
@@ -524,9 +523,15 @@ section .sectionH1{
 #footerText{
  margin-top: 30px;
 }
+#footer .gMap a:active{
+ color: green;
+}
 #footer p{
 	font-size: 30px;
 	color: #999999;
+}
+#footer .icon a:active{
+ background: white;
 }
 #footer .icon a{
  font-size: 40px;
