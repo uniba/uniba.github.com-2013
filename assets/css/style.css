@@ -233,6 +233,8 @@ body{
 .fixed #nav{
 	position: fixed;
 	top:66px;
+	height: 30px;
+	line-height: 30px;
 	left:0;
 }
 .nonfixed #nav{
@@ -267,7 +269,7 @@ body{
 }
 #nav a:active{
  background: rgba(255, 255, 0, 0.4);
- height: 61px;
+ height: 29px;
 }
 #nav ul li .active{
  background: rgba(33,33,33,0.6);
@@ -342,7 +344,10 @@ section .sectionH1{
 	margin:0 20px 20px 0;
 	position: relative;
 	overflow: hidden;
- -webkit-transition: all .1s ease-out;
+ -webkit-transition: -webkit-filter .1s ease-out;
+ -moz-transition: -moz-filter .1s ease-out;
+ -ms-transition: -ms-filter .1s ease-out;
+ transition: filter .1s ease-out;
 }
 #works .worksGrid li .description{
  background: rgba(0,160,233,0.9);
@@ -353,19 +358,19 @@ section .sectionH1{
  width: 100%;
  height: 100px;
  color:white;
-	-webkit-transition-property: top left;
+	-webkit-transition-property: bottom;
 	-webkit-transition-duration: .2s;
 	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
-	-moz-transition-property: top left;
+	-moz-transition-property: bottom;
 	-moz-transition-duration: 1000ms;
 	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
-	-o-transition-property: top left;
+	-o-transition-property: bottom;
 	-o-transition-duration: 1000ms;
 	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
-	-ms-transition-property: top left;
+	-ms-transition-property: bottom;
 	-ms-transition-duration: 1000ms;
 	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
-	transition-property: top left;
+	transition-property: bottom;
 	transition-duration: 1000ms;
 	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
 }
@@ -377,7 +382,11 @@ section .sectionH1{
  filter: blur(1px);
 }
 #works .gridActive .workActive{
- -webkit-filter:none; 
+ -webkit-filter:none;
+ -moz-filter:none;
+ -o-filter:none;
+ -ms-filter:none;
+ filter:none; 
 }
 #works .worksGrid .workActive .description{
  bottom:0;
