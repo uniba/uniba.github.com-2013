@@ -40,7 +40,7 @@ a:active, a:focus{
 }
 
 body{
-	font-family:Helvetica,Arial,Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-family:'DIN Next W01 Medium';
 	font-size:10px;
 	background: #f5f5f5;
 	-webkit-font-smoothing: antialiased;
@@ -149,21 +149,33 @@ body{
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
 	background: rgba(245,245,245,0.9);
-	margin-top: -65px;
+	margin-top: -51px;
 	position: relative;
 	z-index: 200;
-	
+	-webkit-transition-property: top left;
+	-webkit-transition-duration: 500ms;
+	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-moz-transition-property: top left;
+	-moz-transition-duration: 500ms;
+	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-o-transition-property: top left;
+	-o-transition-duration: 500ms;
+	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-ms-transition-property: top left;
+	-ms-transition-duration: 500ms;
+	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	transition-property: top left;
+	transition-duration: 500ms;
+	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 }
 
 .fixed #nav{
 	position: fixed;
-	top:63px;
+	top:51px;
 	left:0;
-	
-	/* TODO: add another vendor prefixes */
-	-webkit-transition-property: top left;
-	-webkit-transition-duration: 500ms;
-	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
+}
+.nonfixed #nav{
+	top:0px;
 }
 
 .fixFoot #nav{
@@ -184,7 +196,8 @@ body{
 	color: #4d4d4d;
 }
 #nav #uniba a:hover{
- background: rgba(255,0,255,0.6);
+ background: rgba(33,33,33,0.6);
+ color:white;
 }
 #nav ul li a{
 	display: block;
@@ -196,13 +209,22 @@ body{
 	border-left:solid 1px #808080;
 }
 #nav ul li .active{
- background: rgba(255,255,0,0.6);
+ background: rgba(33,33,33,0.6);
+ color:white;
+}
+.external {
+ background: rgba(255, 255, 0, 0.4);
+ height: 61px;
+}
+.external bdo{
+ font-size: 10px;
 }
 
+section{
+	padding-top: 100px;
+}
 section .sectionH1{
 	margin-left:30px;
-	margin-top: 20px;
-	padding-top: 80px;
 	font-size: 60px;
 }
 
@@ -277,7 +299,7 @@ section .sectionH1{
 #works .worksGrid li .description .cf{
  padding:7px 0 0 7px;
 }
-#works .worksGrid li .description .cf span{
+#works .worksGrid li .description span{
  color:#0191d3;
  padding:5px;
  background: white;
