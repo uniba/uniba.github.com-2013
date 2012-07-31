@@ -332,11 +332,12 @@ section .sectionH1{
 	float: left;
 	margin:0 20px 20px 0;
 	position: relative;
+	overflow: hidden;
 }
 #works .worksGrid li .description{
  background: rgba(0,160,233,0.9);
  position: absolute;
- bottom:0;
+ bottom: -100px;
  left:0;
  z-index: 100;
  width: 100%;
@@ -441,6 +442,9 @@ section .sectionH1{
 }
 #member #memberGrid li div a{
 	color: #333333;
+}
+#member #memberGrid li div a:hover{
+ text-decoration: underline;
 }
 #member #memberGrid li img,
 #member #memberGrid li div{

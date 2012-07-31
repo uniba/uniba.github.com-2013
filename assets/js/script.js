@@ -163,6 +163,34 @@ $(function() {
       }
     }
   });
+
+	$('.max #visual #pNav li').live(
+		{
+			'mouseenter':function(){
+				$('#pNavWall').show();
+				$(this).find('.under').show();
+				$(this).addClass('hover');
+			},
+			'mouseleave':function(){
+				$(this).find('.under').hide();
+				$(this).removeClass('hover');
+			}
+	});
+
+	$('.worksGrid li').live(
+			'mouseleave',function(){
+					$('.worksGrid li').delay(100).animate({opacity:'1'},200);
+					$('.worksGrid li').find('.description').animate({bottom:'-100px'},100,'easeOutExpo');
+	});
+
+	$('.worksGrid li').live(
+			'mouseenter',function(){
+				$('.worksGrid li').stop(true,true).not(this).animate({opacity:'0.7'},200);
+				$(this).animate({opacity:'1'},200);
+					$(this).find('.description').animate({bottom:'0px'},100,'easeOutExpo');
+	});
+  
+  
 });
 
 $(function() {
