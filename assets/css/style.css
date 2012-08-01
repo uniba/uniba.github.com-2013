@@ -113,6 +113,7 @@ body{
  left:10px;
  top:10px;
  z-index:50;
+ display: none;
 }
 #webglcontainer { 
  position:relative;
@@ -302,7 +303,7 @@ section .sectionH1{
 
 #about .aboutContainer {
   position: relative;
-  height: 500px;
+  height: 462px;
 }
 
 #about #aRotation{
@@ -310,17 +311,17 @@ section .sectionH1{
 	position: absolute;
 	overflow: hidden;
 	width: 100%;
-	/* width: 99999px; */
 	height: 402px;
+	/* width: 99999px; */
 }
 #about #aRotation li{
 	float: left;
 	position: relative;
-	-webkit-filter: brightness(-10%);
+	/* -webkit-filter: brightness(-10%); */
 }
 #about #aText{
-	position: absolute;
-	top: 60px;
+	/* position: absolute; */
+	/* top: 60px; */
 	left: 0;
 	margin:40px 0 0 30px;
 	font-size: 20px;
@@ -328,9 +329,9 @@ section .sectionH1{
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #about #aText p span{
-	background: rgba(255, 255, 255, 0.8);
-	/* padding:3px; */
-	padding: 6px;
+	/* background: rgba(255, 255, 255, 0.8); */
+	background-color: #fff;
+	padding:3px;
 	z-index: 10;
 }
 #about #aBnr{
