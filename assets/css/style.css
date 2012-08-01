@@ -227,7 +227,7 @@ body{
 	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	transition-property: top left;
 	transition-duration: 1000ms;
-	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);                      
 }
 
 .fixed #nav{
@@ -236,6 +236,13 @@ body{
 	height: 30px;
 	line-height: 30px;
 	left:0;
+ background: rgba(33,33,33,0.9);
+ color:white;
+ border:none;
+}
+.fixed #nav li a,
+.fixed #nav #uniba a{
+ color: white;
 }
 .nonfixed #nav{
 	top:0px;
@@ -272,8 +279,8 @@ body{
  height: 29px;
 }
 #nav ul li .active{
- background: rgba(33,33,33,0.6);
- color:white;
+	background: rgba(245,245,245,0.1);
+	color:#333;
 }
 bdo{
  font-size: 10px;
@@ -344,10 +351,10 @@ section .sectionH1{
 	margin:0 20px 20px 0;
 	position: relative;
 	overflow: hidden;
- -webkit-transition: -webkit-filter .1s ease-out;
- -moz-transition: -moz-filter .1s ease-out;
- -ms-transition: -ms-filter .1s ease-out;
- transition: filter .1s ease-out;
+ -webkit-transition: -webkit-filter .3s ease-out;
+ -moz-transition: -moz-filter .3s ease-out;
+ -ms-transition: -ms-filter .3s ease-out;
+ transition: filter .3s ease-out;
 }
 #works .worksGrid li .description{
  background: rgba(0,160,233,0.9);
@@ -375,11 +382,11 @@ section .sectionH1{
 	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
 }
 #works .gridActive li{
- -webkit-filter: blur(1px);
- -moz-filter: blur(1px);
- -o-filter: blur(1px);
- -ms-filter: blur(1px);
- filter: blur(1px);
+ -webkit-filter: grayscale();
+ -moz-filter: grayscale();
+ -o-filter: grayscale();
+ -ms-filter: grayscale();
+ filter: grayscale();
 }
 #works .gridActive .workActive{
  -webkit-filter:none;
