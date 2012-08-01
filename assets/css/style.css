@@ -299,26 +299,39 @@ section .sectionH1{
 	width: 100%;
 	overflow: hidden;
 }
+
+#about .aboutContainer {
+  position: relative;
+  height: 500px;
+}
+
 #about #aRotation{
 	margin-top: 60px;
-	position: relative;
+	position: absolute;
 	overflow: hidden;
-	width: 99999px;
+	width: 100%;
+	/* width: 99999px; */
+	height: 402px;
 }
 #about #aRotation li{
 	float: left;
-	margin:0 30px;
 	position: relative;
+	-webkit-filter: brightness(-10%);
 }
 #about #aText{
+	position: absolute;
+	top: 60px;
+	left: 0;
 	margin:40px 0 0 30px;
 	font-size: 20px;
 	line-height: 38px;
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #about #aText p span{
-	background: #fff;
-	padding:3px;
+	background: rgba(255, 255, 255, 0.8);
+	/* padding:3px; */
+	padding: 6px;
+	z-index: 10;
 }
 #about #aBnr{
 	margin:40px 0 0 30px;

@@ -10,6 +10,61 @@
      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
 }
 
+/**
+ * Rotation plugin.
+ */
+
+$.fn.rotator = function(options) {
+  var animated
+    , width = 0
+    , rotator = new Rotator()
+    , $cloned
+    , $this = $(this);
+  
+  function Rotator() {
+    
+  }
+  
+  Rotator.prototype.start = function() {
+    animated = true;
+    (function() {
+      if (animated) {
+        if (parseInt($this.css('left'), 10) < -width) {
+          $this.css({ left: width + parseInt($cloned.css('left')) });
+        }
+        if (parseInt($cloned.css('left'), 10) < -width) {
+          $cloned.css({ left: width + parseInt($this.css('left')) });
+        }
+        $cloned.animate({ left: '-=600px' }, 10000, 'linear');
+        $this.animate({ left: '-=600px' }, 10000, 'linear', arguments.callee);
+      }
+    })();
+  };
+  
+  Rotator.prototype.stop = function() {
+    animated = false;
+  };
+  
+  $this.find('li img').each(function() {
+    width += 600; // FIXME: magic number (image width)
+  });
+  
+  $this.width(width);
+  $cloned = $this.clone();
+  
+  /**
+   * Clone list.
+   */
+  
+  $cloned.css({ left: width }).appendTo($this.parent());
+  
+  
+  rotator.start();
+  
+  return $this.data('rotator', rotator);
+};
+
+
 $(function() {
 
   /**
@@ -66,6 +121,7 @@ $(function() {
    * TODO: migrate to jquery plugin pattern. it may be better.
    */
 
+  /*
   var $rotateCont = $('#aRotation'),
       $rotateChild = $rotateCont.children();
       $rotateWidth = $('#aRotation').children().width();
@@ -94,6 +150,8 @@ $(function() {
   });
 
   timer = setInterval(rotateimg, 20);
+  */
+  
 
   /**
    * Works category filtring.
@@ -217,4 +275,8 @@ $(window).on('keypress', function(e) {
     ctx.drawImage(logo, 0, 0, logo.width, logo.height);
     window.open(offscreenCanvas.toDataURL());
   }
-})
+});
+
+$(function() {
+  $('#aRotation').rotator({});
+});
