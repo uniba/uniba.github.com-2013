@@ -4,10 +4,10 @@
 
 @font-face{ 
  font-family: 'WebIconFonts';
- src: url('../fonts/webiconfonts.eot');
- src: url('../fonts/WebIconFonts.eot?') format('eot'),
-      url('../fonts/WebIconFonts.woff') format('woff'),
-      url('../fonts/WebIconFonts.ttf') format('truetype');
+ src: url('webiconfonts.eot');
+ src: url('WebIconFonts.eot?') format('eot'),
+      url('WebIconFonts.woff') format('woff'),
+      url('WebIconFonts.ttf') format('truetype');
 }
 @import url("http://fast.fonts.com/t/1.css?apiType=css&projectid=92e14719-2998-4333-9434-393ecca2f3ae");
 
