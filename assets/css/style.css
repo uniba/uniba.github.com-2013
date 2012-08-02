@@ -206,14 +206,15 @@ body{
 
 #nav{
 	width: 100%;
-	height: 61px;
-	line-height: 61px;
+	height: 60px;
+	line-height: 60px;
 	border-top: solid 1px #808080;
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
 	background: rgba(245,245,245,0.9);
-	margin-top: -63px;
+	margin-top: -60px;
 	position: relative;
+	top:0;
 	z-index: 200;
 	-webkit-transition-property: top left;
 	-webkit-transition-duration: 1000ms;
@@ -234,7 +235,7 @@ body{
 
 .fixed #nav{
 	position: fixed;
-	top:63px;
+	margin-top:0px;
 	height: 30px;
 	line-height: 30px;
 	left:0;
@@ -253,6 +254,10 @@ body{
 .fixFoot #nav{
  position: fixed;
  bottom:0;
+}
+#nav ul li .active{
+	background: rgba(245,245,245,1);
+	color:#333;
 }
 
 #nav #uniba,
@@ -278,14 +283,11 @@ body{
 }
 #nav a:active{
  background: rgba(255, 255, 0, 0.4);
- height: 29px;
-}
-#nav ul li .active{
-	background: rgba(245,245,245,1);
-	color:#333;
 }
 bdo{
  font-size: 10px;
+ position: relative;
+ bottom: 2px;
 }
 
 section{
