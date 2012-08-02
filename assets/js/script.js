@@ -30,10 +30,10 @@ $.fn.rotator = function(options) {
     (function() {
       if (animated) {
         if (parseInt($this.css('left'), 10) < -width) {
-          $this.css({ left: width + parseInt($cloned.css('left')) });
+          $this.css({ left: (width + parseInt($cloned.css('left'))) - 5 });
         }
         if (parseInt($cloned.css('left'), 10) < -width) {
-          $cloned.css({ left: width + parseInt($this.css('left')) });
+          $cloned.css({ left: (width + parseInt($this.css('left'))) - 5 });
         }
         $cloned.animate({ left: '-=600px' }, 10000, 'linear');
         $this.animate({ left: '-=600px' }, 10000, 'linear', arguments.callee);
