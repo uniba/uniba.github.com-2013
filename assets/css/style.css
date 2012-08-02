@@ -350,9 +350,6 @@ section .sectionH1{
 #about #aBnr dt{
 	font-size: 16px;
 }
-.csstransitions #about #aBnr dt{
-	margin-left: 15px;
-}
 #about #aBnr dd{
 	margin-top: 15px;
 	width: 290px;
@@ -370,28 +367,28 @@ section .sectionH1{
 #about #aBnr .fb a{
  background: #666;
 }
+#about #aBnr .cctla a{
+ background: #666;
+ background: -moz-linear-gradient(left,  #666 0%, #666 100%);
+ background: -webkit-gradient(linear, left top, right top, color-stop(0%,#666), color-stop(100%,#666));
+ background: -webkit-linear-gradient(left,  #666 0%,#666 100%);
+ background: -o-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: -ms-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: linear-gradient(to right,  #0068b7 0%,#ffff00 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0068b7', endColorstr='#ffff00',GradientType=1 );
+}
 #about #aBnr .fb a:hover{
  background: #0068b7;
 }
-#about #aBnr .cctla a{
- background: #0068b7; /* Old browsers */
- background: -moz-linear-gradient(left,  #0068b7 0%, #ffff00 100%); /* FF3.6+ */
- background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0068b7), color-stop(100%,#ffff00)); /* Chrome,Safari4+ */
- background: -webkit-linear-gradient(left,  #0068b7 0%,#ffff00 100%); /* Chrome10+,Safari5.1+ */
- background: -o-linear-gradient(left,  #0068b7 0%,#ffff00 100%); /* Opera 11.10+ */
- background: -ms-linear-gradient(left,  #0068b7 0%,#ffff00 100%); /* IE10+ */
- background: linear-gradient(to right,  #0068b7 0%,#ffff00 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0068b7', endColorstr='#ffff00',GradientType=1 ); /* IE6-9 */
-}
-#about #aBnr .cctla:hover a{
- background: #ffff00; /* Old browsers */
- background: -moz-linear-gradient(left,  #ffff00 0%, #0068b7 100%); /* FF3.6+ */
- background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffff00), color-stop(100%,#0068b7)); /* Chrome,Safari4+ */
- background: -webkit-linear-gradient(left,  #ffff00 0%,#0068b7 100%); /* Chrome10+,Safari5.1+ */
- background: -o-linear-gradient(left,  #ffff00 0%,#0068b7 100%); /* Opera 11.10+ */
- background: -ms-linear-gradient(left,  #ffff00 0%,#0068b7 100%); /* IE10+ */
- background: linear-gradient(to right,  #ffff00 0%,#0068b7 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#0068b7',GradientType=1 ); /* IE6-9 */
+#about #aBnr .cctla a:hover{
+ background: #0068b7;
+ background: -moz-linear-gradient(left,  #0068b7 0%, #ffff00 100%);
+ background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0068b7), color-stop(100%,#ffff00));
+ background: -webkit-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: -o-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: -ms-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: linear-gradient(to right,  #0068b7 0%,#ffff00 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0068b7', endColorstr='#ffff00',GradientType=1 );
 }
 #works .worksGrid{
 	margin:40px 0 0 30px;
@@ -480,6 +477,7 @@ section .sectionH1{
 #works #filter .icon{
  padding:3px 10px 0 0;
  font-size: 20px;
+ line-height: 24px;
 }
 #works #filter li{
  float: left;
