@@ -21,8 +21,8 @@ $.fn.rotator = function(options) {
     , $cloned
     , $this = $(this);
   
-  function Rotator() {
-    
+  function Rotator($el) {
+    this.$el = $el;
   }
   
   Rotator.prototype.start = function() {
@@ -46,7 +46,7 @@ $.fn.rotator = function(options) {
   };
   
   $this.find('li img').each(function() {
-    width += 600; // FIXME: magic number (image width)
+    width += $(this).width();
   });
   
   $this.width(width);
