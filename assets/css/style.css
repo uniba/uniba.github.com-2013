@@ -46,13 +46,13 @@
 }
 
 @font-face{ 
- font-family: 'WebIconFonts';
+ font-family: "WebIconFonts";
  src: url("../fonts/WebIconFonts.eot");
  src: url("../fonts/WebIconFonts.eot?") format('eot'),url("../fonts/WebIconFonts.woff") format("woff"),url("../fonts/WebIconFonts.ttf") format("truetype");
 }
 
 .icon {
- font-family: 'WebIconFonts';
+ font-family: "WebIconFonts";
 }
 .fontType{
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB',sans-serif;
@@ -111,7 +111,6 @@ body{
 	min-height: 600px;
 	position: relative;
 	z-index:100;
-	background-color:cyan;
 }
 #console {
  position:absolute;
@@ -376,6 +375,14 @@ section .sectionH1{
 	line-height: 85px;
  text-align: center;
 }
+.ie7 #about #aBnr .fb img{
+ position: relative;
+ top:20px;
+}
+.ie7 #about #aBnr .cctla img{
+ position: relative;
+ top:28px;
+}
 #about #aBnr dd a{
  display: block;
  -webkit-transition: all .3s ease-out;
@@ -535,6 +542,7 @@ section .sectionH1{
 }
 #member #memberGrid .members{
  height: 188px;
+ width: 300px;
 }
 #member #memberGrid li{
 	float: left;
@@ -598,8 +606,10 @@ section .sectionH1{
 	margin:40px 0 0 30px;	
 	font-size: 30px;
 	line-height: 52px;
-	color: #333;
-		
+	color: #333;	
+}
+#cMail a:hover{
+ text-decoration: underline;
 }
 #contactW span{
 	background: #fff;
