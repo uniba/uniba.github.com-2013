@@ -112,6 +112,15 @@ body{
 	position: relative;
 	z-index:100;
 }
+#webglcontainer img{
+ display: none;
+ width: 100%;
+}
+.no-webgl #webglcontainer img,
+.no-canvas #webglcontainer img{
+ display: block;
+ 
+}
 #console {
  position:absolute;
  left:10px;
