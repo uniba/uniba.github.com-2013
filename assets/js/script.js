@@ -158,7 +158,6 @@ $(function() {
   timer = setInterval(rotateimg, 20);
   */
   
-
   /**
    * Works category filtring.
    *
@@ -172,7 +171,7 @@ $(function() {
   var $preferences = {
     duration: 600,
     easing: 'easeInOutQuad',
-    adjustHeight: 'dynamic',
+    adjustHeight: 'auto',
     useScaling: true,
     attribute: function(v) {
       return $(v).find('img').attr('src');
@@ -222,18 +221,12 @@ $(function() {
   });
 
 	 $('.worksGrid li').live(
-			'mouseleave',function(){
-					 $('.worksGrid li').removeClass('workActive');
-  });
-
-	 $('.worksGrid li').live(
 			'mouseenter',function(){
 			   $('.worksGrid').addClass('gridActive');
-					 $('.worksGrid li').removeClass('workActive');
 				  $(this).addClass('workActive');
 	 });
 	
-		$('.gridActive').live(
+		$('.worksGrid li').live(
 			'mouseleave',function(){
 			   $('.worksGrid').removeClass('gridActive');
 		}); 

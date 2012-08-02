@@ -440,19 +440,24 @@ section .sectionH1{
  color:white;
 	-webkit-transition-property: bottom;
 	-webkit-transition-duration: .2s;
-	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
+	-webkit-animation-play-state: paused;
 	-moz-transition-property: bottom;
 	-moz-transition-duration: 1000ms;
 	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-moz-animation-play-state: paused;
 	-o-transition-property: bottom;
 	-o-transition-duration: 1000ms;
 	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-o-animation-play-state: paused;
 	-ms-transition-property: bottom;
 	-ms-transition-duration: 1000ms;
 	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
+	-ms-animation-play-state: paused;
 	transition-property: bottom;
 	transition-duration: 1000ms;
 	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
+	animation-play-state: paused;
 }
 #works .gridActive li{
  -webkit-filter: grayscale();
