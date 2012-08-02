@@ -662,6 +662,7 @@ section .sectionH1{
 	font-size: 50px;
 	font-family: 'DINNextW01-BoldItalic';
 	letter-spacing: 2px;
+	line-height: 70px;
 }
 #footer .icon a{
  font-size: 40px;
