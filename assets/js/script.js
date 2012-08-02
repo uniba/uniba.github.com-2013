@@ -228,7 +228,7 @@ $(function() {
 	
 		$('.worksGrid li').live(
 			'mouseleave',function(){
-			   $('.worksGrid').removeClass('gridActive');
+			   $('.worksGrid li').removeClass('workActive');
 		}); 
 	
 });
