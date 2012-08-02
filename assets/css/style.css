@@ -442,22 +442,27 @@ section .sectionH1{
 	-webkit-transition-duration: .2s;
 	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
 	-webkit-animation-play-state: paused;
+	-webkit-animation-delay: 0.5s;
 	-moz-transition-property: bottom;
 	-moz-transition-duration: 1000ms;
 	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	-moz-animation-play-state: paused;
+	-moz-animation-delay: 0.5s;
 	-o-transition-property: bottom;
 	-o-transition-duration: 1000ms;
 	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	-o-animation-play-state: paused;
+	-o-animation-delay: 0.5s;
 	-ms-transition-property: bottom;
 	-ms-transition-duration: 1000ms;
 	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */	
 	-ms-animation-play-state: paused;
+	-ms-animation-delay: 0.5s;
 	transition-property: bottom;
 	transition-duration: 1000ms;
 	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);  /* ease-out-expo */
 	animation-play-state: paused;
+	animation-delay: 0.5s;
 }
 #works .gridActive li{
  -webkit-filter: grayscale();

@@ -171,7 +171,7 @@ $(function() {
   var $preferences = {
     duration: 600,
     easing: 'easeInOutQuad',
-    adjustHeight: 'auto',
+    adjustHeight: 'dynamic',
     useScaling: true,
     attribute: function(v) {
       return $(v).find('img').attr('src');
@@ -228,6 +228,7 @@ $(function() {
 	
 		$('.worksGrid li').live(
 			'mouseleave',function(){
+			   $('.worksGrid').removeClass('gridActive');
 			   $('.worksGrid li').removeClass('workActive');
 		}); 
 	
