@@ -248,7 +248,7 @@ $(function() {
    * Resize logo and background.
    */
 
-  $window.on('resize', function(e) {
+  $window.on('resize orientationchange', function(e) {
     var width = $window.width()
       , height = $window.height();
 
