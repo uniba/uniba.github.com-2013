@@ -579,9 +579,10 @@ section .sectionH1{
 	margin-top: 10px;
 }
 #member #memberGrid li div ul {
-	line-height: 21px;
-	margin: 5px 0;
-	border-top: dotted 1px #999;
+ line-height: 21px;
+ margin: 0 0 5px 0;
+ border-top: dotted 1px #999;
+ padding: 5px 0 0 0;
 }
 #member #memberGrid li div ul li{
 	float: none;
