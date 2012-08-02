@@ -293,6 +293,7 @@ section{
 section .sectionH1{
 	margin-left:30px;
 	font-size: 60px;
+	color: #333;
 	font-family: 'DINNextW01-BlackItalic';
 }
 
@@ -326,9 +327,10 @@ section .sectionH1{
 	margin:40px 0 0 30px;
 	font-size: 20px;
 	line-height: 38px;
+	color: #333;
 	font-family: 'A1明朝', 'A1 Mincho';
 }
-#about #aText p span{
+#about ## p span{
 	/* background: rgba(255, 255, 255, 0.8); */
 	background-color: #fff;
 	padding:3px;
@@ -584,7 +586,9 @@ section .sectionH1{
 #contactW{
 	margin:40px 0 0 30px;	
 	font-size: 30px;
-	line-height: 52px;	
+	line-height: 52px;
+	color: #333;
+		
 }
 #contactW span{
 	background: #fff;
@@ -597,6 +601,7 @@ section .sectionH1{
 	font-size: 18px;
 	line-height: 20px;
 	margin-top:8px;
+	color: #333;
 }
 #contactW .gMap .icon{
  background: none;
