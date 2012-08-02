@@ -108,7 +108,7 @@ body{
 	width: 100%;
 	min-width: 100%;
 	height: 100%;
-	min-height: 500px;
+	min-height: 600px;
 	position: relative;
 	z-index:100;
 }
@@ -532,6 +532,9 @@ section .sectionH1{
 #member #memberGrid li:after{
 	clear:both;
 }
+#member #memberGrid .members{
+ height: 188px;
+}
 #member #memberGrid li{
 	float: left;
 	margin:0 30px 40px 0;
@@ -545,7 +548,6 @@ section .sectionH1{
 }
 #member #memberGrid li div{
 	width: 190px;
-	height:188px;
 	background: #fff;
 	font-size: 14px;
 	color: #333333;
@@ -572,15 +574,14 @@ section .sectionH1{
 	font-size: 18px;
 }
 #member #memberGrid li div p {
-	border: dotted 1px #999;
-	border-left: none;
-	border-right: none;
+	border-top: dotted 1px #999;
 	padding: 5px 0;
 	margin-top: 10px;
 }
 #member #memberGrid li div ul {
 	line-height: 21px;
 	margin: 5px 0;
+	border-top: dotted 1px #999;
 }
 #member #memberGrid li div ul li{
 	float: none;
