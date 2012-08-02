@@ -676,6 +676,7 @@ section .sectionH1{
 #footer .icon a{
  font-size: 40px;
  padding:30px;
+ padding-top: 50px;
  line-height: 100px;
  background: black;
  border-radius: 100px;
