@@ -656,7 +656,7 @@ section .sectionH1{
 #footer {
 	background: #333;
 	line-height: 40px;
-	padding: 30px 0 20px 30px;
+	padding: 50px 0 20px 30px;
 	margin-top: 80px;
 }
 #footerText{
@@ -676,7 +676,6 @@ section .sectionH1{
 #footer .icon a{
  font-size: 40px;
  padding:30px;
- padding-top: 50px;
  line-height: 100px;
  background: black;
  border-radius: 100px;
