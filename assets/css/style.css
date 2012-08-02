@@ -127,6 +127,7 @@ body{
  top:0px;
  z-index:0;
  width: 100%;
+ height: 100%;
  overflow: hidden;
 }
 
@@ -165,7 +166,7 @@ body{
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #header ol li{
-	margin-top: 5px;
+	margin-top: 1em;
 }
 #header ol li a:hover{
 	text-decoration: underline;
@@ -211,7 +212,7 @@ body{
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
 	background: rgba(245,245,245,0.9);
-	margin-top: -66px;
+	margin-top: -63px;
 	position: relative;
 	z-index: 200;
 	-webkit-transition-property: top left;
@@ -233,7 +234,7 @@ body{
 
 .fixed #nav{
 	position: fixed;
-	top:66px;
+	top:63px;
 	height: 30px;
 	line-height: 30px;
 	left:0;
@@ -627,7 +628,7 @@ section .sectionH1{
 #footer {
 	background: #333;
 	line-height: 40px;
-	padding: 20px 0 20px 30px;
+	padding: 30px 0 20px 30px;
 	margin-top: 80px;
 }
 #footerText{
