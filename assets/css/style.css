@@ -47,8 +47,8 @@
 
 @font-face{ 
  font-family: 'WebIconFonts';
- src: url('../fonts/WebIconFonts.eot?iefix');
- src: url('../fonts/WebIconFonts.eot?iefix') format('eot'),url('../fonts/WebIconFonts.woff') format('woff'),url('../fonts/WebIconFonts.ttf') format('truetype');
+ src: url("../fonts/WebIconFonts.eot");
+ src: url("../fonts/WebIconFonts.eot?") format('eot'),url("../fonts/WebIconFonts.woff") format("woff"),url("../fonts/WebIconFonts.ttf") format("truetype");
 }
 
 .icon {
@@ -111,6 +111,7 @@ body{
 	min-height: 600px;
 	position: relative;
 	z-index:100;
+	background-color:cyan;
 }
 #console {
  position:absolute;
@@ -368,7 +369,7 @@ section .sectionH1{
 #about #aBnr dt{
 	font-size: 16px;
 }
-#about #aBnr dd{
+#about #aBnr dd a{
 	margin-top: 15px;
 	width: 290px;
 	height: 85px;
@@ -387,7 +388,7 @@ section .sectionH1{
  background: #0068b7;
 }
 #about #aBnr .cctla a:hover{
- background: #0068b7;
+ background: #ffff00;
  background: -moz-linear-gradient(left,  #0068b7 0%, #ffff00 100%);
  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0068b7), color-stop(100%,#ffff00));
  background: -webkit-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
