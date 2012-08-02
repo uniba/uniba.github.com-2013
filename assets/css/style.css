@@ -659,6 +659,9 @@ section .sectionH1{
 #footer p{
 	font-size: 30px;
 	color: #999999;
+	font-size: 50px;
+	font-family: 'DINNextW01-BoldItalic';
+	letter-spacing: 2px;
 }
 #footer .icon a{
  font-size: 40px;
