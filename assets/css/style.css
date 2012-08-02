@@ -101,6 +101,9 @@ body{
  width: 100%;
  overflow-x: hidden;
 }
+#visual:hover{
+ cursor: move;
+}
 #visual{
 	width: 100%;
 	min-width: 100%;
@@ -204,6 +207,16 @@ body{
 	position: relative;
 	z-index: 20;
 }
+#header .attention{
+ top: 422px;
+ left: 30px;
+}
+#header .attention p{
+ padding: 20px 0;
+ text-align: center;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
+	font-size: 15px;
+}
 
 #nav{
 	width: 100%;
@@ -302,6 +315,7 @@ section .sectionH1{
 	font-size: 60px;
 	color: #333;
 	font-family: 'DINNextW01-BoldItalic';
+	letter-spacing: 4px;
 }
 
 #about{
