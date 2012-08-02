@@ -151,7 +151,7 @@ body{
 	padding:25px 0;
 	line-height: 20px;
 	background: url(../img/h_cbg.png) repeat;
-	top:100px;
+	top:30px;
 }
 #header #news h3{
 	text-align: center;
@@ -185,7 +185,7 @@ body{
 }
 #header .house{
 	height: 132px;
-	top:365px;
+	top:260px;
 	line-height: 31px;
 	font-family: 'DINNextW01-BoldItalic';
 }
