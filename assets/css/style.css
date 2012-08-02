@@ -2,57 +2,57 @@
 *font-face
 */
 
-@font-face{ 
-    font-family: 'WebIconFonts';
-    src: url('../fonts/webiconfonts.eot');
-    src: url('../fonts/WebIconFonts.eot?') format('eot'),
-         url('../fonts/WebIconFonts.woff') format('woff'),
-         url('../fonts/WebIconFonts.ttf') format('truetype');
-}
 @import url("http://fast.fonts.com/t/1.css?apiType=css&projectid=92e14719-2998-4333-9434-393ecca2f3ae");
+
 @font-face{
-font-family:"DIN Next W01 Black";
-src:url("../fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix") format("eot");}
+ font-family:"DIN Next W01 Black";
+ src:url("../fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix") format("eot");}
 @font-face{
-font-family:"DIN Next W01 Black";
-src:url("../fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix");
-src:url("../fonts/9541b817-6a02-4e7a-af21-ce24b70d9ba3.woff") format("woff"),url("../fonts/c1a5af90-f79a-44b1-a4a4-5fd6d888c2f2.ttf") format("truetype"),url("../fonts/0c36e45b-5edd-4927-b9ad-2e46a30e5593.svg#0c36e45b-5edd-4927-b9ad-2e46a30e5593") format("svg");
+ font-family:"DIN Next W01 Black";
+ src:url("../fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix");
+ src:url("../fonts/9541b817-6a02-4e7a-af21-ce24b70d9ba3.woff") format("woff"),url("../fonts/c1a5af90-f79a-44b1-a4a4-5fd6d888c2f2.ttf") format("truetype"),url("../fonts/0c36e45b-5edd-4927-b9ad-2e46a30e5593.svg#0c36e45b-5edd-4927-b9ad-2e46a30e5593") format("svg");
 }
 @font-face{
-font-family:"DINNextW01-BlackItalic";
-src:url("../fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix") format("eot");}
+ font-family:"DINNextW01-BlackItalic";
+ src:url("../fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix") format("eot");}
 @font-face{
-font-family:"DINNextW01-BlackItalic";
-src:url("../fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix");
-src:url("../fonts/4cd37f64-b230-4162-88bf-f6cccde94e4b.woff") format("woff"),url("../fonts/10805f32-49cb-4842-b9ef-0d593ddb961c.ttf") format("truetype"),url("../fonts/1c343c91-343a-4326-84db-bcce4ce82979.svg#1c343c91-343a-4326-84db-bcce4ce82979") format("svg");
+ font-family:"DINNextW01-BlackItalic";
+ src:url("../fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix");
+ src:url("../fonts/4cd37f64-b230-4162-88bf-f6cccde94e4b.woff") format("woff"),url("../fonts/10805f32-49cb-4842-b9ef-0d593ddb961c.ttf") format("truetype"),url("../fonts/1c343c91-343a-4326-84db-bcce4ce82979.svg#1c343c91-343a-4326-84db-bcce4ce82979") format("svg");
 }
 @font-face{
-font-family:"DINNextW01-BoldItalic";
-src:url("../fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix") format("eot");}
+ font-family:"DINNextW01-BoldItalic";
+ src:url("../fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix") format("eot");}
 @font-face{
-font-family:"DINNextW01-BoldItalic";
-src:url("../fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix");
-src:url("../fonts/140a0a6f-f218-4071-8eb8-f2bc45ed5121.woff") format("woff"),url("../fonts/ecbfe302-4f46-4fef-b823-83eedbc353e7.ttf") format("truetype"),url("../fonts/58f54e11-a0ac-4cfa-852e-3c73b93d74a8.svg#58f54e11-a0ac-4cfa-852e-3c73b93d74a8") format("svg");
+ font-family:"DINNextW01-BoldItalic";
+ src:url("../fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix");
+ src:url("../fonts/140a0a6f-f218-4071-8eb8-f2bc45ed5121.woff") format("woff"),url("../fonts/ecbfe302-4f46-4fef-b823-83eedbc353e7.ttf") format("truetype"),url("../fonts/58f54e11-a0ac-4cfa-852e-3c73b93d74a8.svg#58f54e11-a0ac-4cfa-852e-3c73b93d74a8") format("svg");
 }
 @font-face{
-font-family:"DINNextW01-CondensedMed";
-src:url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix") format("eot");}
+ font-family:"DINNextW01-CondensedMed";
+ src:url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix") format("eot");}
 @font-face{
-font-family:"DINNextW01-CondensedMed";
-src:url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix");
-src:url("../fonts/2613a064-2962-44af-ae6f-3640e06e8dc4.woff") format("woff"),url("../fonts/2889b152-497e-4ea3-a90d-02854d136a8d.ttf") format("truetype"),url("../fonts/4f311da1-9ec6-4379-9621-b45be0e23abd.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg");
+ font-family:"DINNextW01-CondensedMed";
+ src:url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix");
+ src:url("../fonts/2613a064-2962-44af-ae6f-3640e06e8dc4.woff") format("woff"),url("../fonts/2889b152-497e-4ea3-a90d-02854d136a8d.ttf") format("truetype"),url("../fonts/4f311da1-9ec6-4379-9621-b45be0e23abd.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg");
 }
 @font-face{
-font-family:"DIN Next W01 Medium";
-src:url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix") format("eot");}
+ font-family:"DIN Next W01 Medium";
+ src:url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix") format("eot");}
 @font-face{
-font-family:"DIN Next W01 Medium";
-src:url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix");
-src:url("../fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"),url("../fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"),url("../fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
+ font-family:"DIN Next W01 Medium";
+ src:url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix");
+ src:url("../fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"),url("../fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"),url("../fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
+}
+
+@font-face{ 
+ font-family: "WebIconFonts";
+ src: url("../fonts/WebIconFonts.eot");
+ src: url("../fonts/WebIconFonts.eot?") format('eot'),url("../fonts/WebIconFonts.woff") format("woff"),url("../fonts/WebIconFonts.ttf") format("truetype");
 }
 
 .icon {
- font-family: 'WebIconFonts';
+ font-family: "WebIconFonts";
 }
 .fontType{
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB',sans-serif;
@@ -101,10 +101,14 @@ body{
  width: 100%;
  overflow-x: hidden;
 }
+#visual:hover{
+ cursor: move;
+}
 #visual{
 	width: 100%;
-	max-width: 100%;
+	min-width: 100%;
 	height: 100%;
+	min-height: 600px;
 	position: relative;
 	z-index:100;
 }
@@ -127,6 +131,7 @@ body{
  top:0px;
  z-index:0;
  width: 100%;
+ height: 100%;
  overflow: hidden;
 }
 
@@ -151,12 +156,12 @@ body{
 	padding:25px 0;
 	line-height: 20px;
 	background: url(../img/h_cbg.png) repeat;
-	top:100px;
+	top:30px;
 }
 #header #news h3{
 	text-align: center;
 	font-size: 24px;
-	font-family: 'DINNextW01-BlackItalic';
+	font-family: 'DINNextW01-BoldItalic';
 }
 #header ol{
 	width: 240px;
@@ -165,7 +170,7 @@ body{
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #header ol li{
-	margin-top: 5px;
+	margin-top: 1em;
 }
 #header ol li a:hover{
 	text-decoration: underline;
@@ -185,9 +190,9 @@ body{
 }
 #header .house{
 	height: 132px;
-	top:365px;
+	top:260px;
 	line-height: 31px;
-	font-family: 'DINNextW01-BlackItalic';
+	font-family: 'DINNextW01-BoldItalic';
 }
 #header .house img{
 	position: absolute;
@@ -202,17 +207,29 @@ body{
 	position: relative;
 	z-index: 20;
 }
+#header .attention{
+ top: 422px;
+ left: 30px;
+}
+#header .attention p{
+ padding: 20px 0;
+ text-align: center;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
+	font-size: 15px;
+}
 
 #nav{
 	width: 100%;
-	height: 61px;
-	line-height: 61px;
+	height: 60px;
+	line-height: 60px;
 	border-top: solid 1px #808080;
 	border-bottom: solid 1px #808080;
 	min-width: 960px;
+	background: #f5f5f5;
 	background: rgba(245,245,245,0.9);
-	margin-top: -66px;
+	margin-top: -60px;
 	position: relative;
+	top:0;
 	z-index: 200;
 	-webkit-transition-property: top left;
 	-webkit-transition-duration: 1000ms;
@@ -233,10 +250,11 @@ body{
 
 .fixed #nav{
 	position: fixed;
-	top:66px;
+	margin-top:0px;
 	height: 30px;
 	line-height: 30px;
 	left:0;
+	background: #333;
  background: rgba(33,33,33,0.9);
  color:white;
  border:none;
@@ -252,6 +270,11 @@ body{
 .fixFoot #nav{
  position: fixed;
  bottom:0;
+}
+#nav ul li .active{
+ background: #f5f5f5;
+	background: rgba(245,245,245,1);
+	color:#333;
 }
 
 #nav #uniba,
@@ -277,23 +300,22 @@ body{
 }
 #nav a:active{
  background: rgba(255, 255, 0, 0.4);
- height: 29px;
-}
-#nav ul li .active{
-	background: rgba(245,245,245,1);
-	color:#333;
 }
 bdo{
  font-size: 10px;
+ position: relative;
+ bottom: 2px;
 }
 
 section{
-	padding-top: 100px;
+	padding-top: 150px;
 }
 section .sectionH1{
 	margin-left:30px;
 	font-size: 60px;
-	font-family: 'DINNextW01-BlackItalic';
+	color: #333;
+	font-family: 'DINNextW01-BoldItalic';
+	letter-spacing: 4px;
 }
 
 #about{
@@ -326,7 +348,8 @@ section .sectionH1{
 	margin:40px 0 0 30px;
 	font-size: 20px;
 	line-height: 38px;
-	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
+	color: #333;
+	font-family: 'A1明朝', 'A1 Mincho';
 }
 #about #aText p span{
 	/* background: rgba(255, 255, 255, 0.8); */
@@ -345,15 +368,20 @@ section .sectionH1{
 #about #aBnr dt{
 	font-size: 16px;
 }
-.csstransitions #about #aBnr dt{
-	margin-left: 15px;
-}
-#about #aBnr dd{
+#about #aBnr dd a{
 	margin-top: 15px;
 	width: 290px;
 	height: 85px;
 	line-height: 85px;
  text-align: center;
+}
+.ie7 #about #aBnr .fb img{
+ position: relative;
+ top:20px;
+}
+.ie7 #about #aBnr .cctla img{
+ position: relative;
+ top:28px;
 }
 #about #aBnr dd a{
  display: block;
@@ -361,37 +389,24 @@ section .sectionH1{
  -moz-transition: all .3s ease-out;
  -ms-transition: all .3s ease-out;
  transition: all .3s ease-out;
-}
-#about #aBnr .fb a{
  background: #666;
 }
 #about #aBnr .fb a:hover{
  background: #0068b7;
 }
-#about #aBnr .cctla a{
- background: #0068b7; /* Old browsers */
- background: -moz-linear-gradient(left,  #0068b7 0%, #ffff00 100%); /* FF3.6+ */
- background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0068b7), color-stop(100%,#ffff00)); /* Chrome,Safari4+ */
- background: -webkit-linear-gradient(left,  #0068b7 0%,#ffff00 100%); /* Chrome10+,Safari5.1+ */
- background: -o-linear-gradient(left,  #0068b7 0%,#ffff00 100%); /* Opera 11.10+ */
- background: -ms-linear-gradient(left,  #0068b7 0%,#ffff00 100%); /* IE10+ */
- background: linear-gradient(to right,  #0068b7 0%,#ffff00 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0068b7', endColorstr='#ffff00',GradientType=1 ); /* IE6-9 */
-}
-#about #aBnr .cctla:hover a{
- background: #ffff00; /* Old browsers */
- background: -moz-linear-gradient(left,  #ffff00 0%, #0068b7 100%); /* FF3.6+ */
- background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffff00), color-stop(100%,#0068b7)); /* Chrome,Safari4+ */
- background: -webkit-linear-gradient(left,  #ffff00 0%,#0068b7 100%); /* Chrome10+,Safari5.1+ */
- background: -o-linear-gradient(left,  #ffff00 0%,#0068b7 100%); /* Opera 11.10+ */
- background: -ms-linear-gradient(left,  #ffff00 0%,#0068b7 100%); /* IE10+ */
- background: linear-gradient(to right,  #ffff00 0%,#0068b7 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#0068b7',GradientType=1 ); /* IE6-9 */
+#about #aBnr .cctla a:hover{
+ background: #ffff00;
+ background: -moz-linear-gradient(left,  #0068b7 0%, #ffff00 100%);
+ background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0068b7), color-stop(100%,#ffff00));
+ background: -webkit-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: -o-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: -ms-linear-gradient(left,  #0068b7 0%,#ffff00 100%);
+ background: linear-gradient(to right,  #0068b7 0%,#ffff00 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0068b7', endColorstr='#ffff00',GradientType=1 );
 }
 #works .worksGrid{
 	margin:40px 0 0 30px;
 	width: 100%;
-	max-width: 1610px;
 }
 #works .worksGrid li{
 	float: left;
@@ -404,6 +419,7 @@ section .sectionH1{
  transition: filter .3s ease-out;
 }
 #works .worksGrid li .description{
+ background: cyan;
  background: rgba(0,160,233,0.9);
  position: absolute;
  bottom: -100px;
@@ -475,6 +491,7 @@ section .sectionH1{
 #works #filter .icon{
  padding:3px 10px 0 0;
  font-size: 20px;
+ line-height: 24px;
 }
 #works #filter li{
  float: left;
@@ -522,6 +539,10 @@ section .sectionH1{
 #member #memberGrid li:after{
 	clear:both;
 }
+#member #memberGrid .members{
+ height: 188px;
+ width: 300px;
+}
 #member #memberGrid li{
 	float: left;
 	margin:0 30px 40px 0;
@@ -535,7 +556,6 @@ section .sectionH1{
 }
 #member #memberGrid li div{
 	width: 190px;
-	height:188px;
 	background: #fff;
 	font-size: 14px;
 	color: #333333;
@@ -562,15 +582,15 @@ section .sectionH1{
 	font-size: 18px;
 }
 #member #memberGrid li div p {
-	border: dotted 1px #999;
-	border-left: none;
-	border-right: none;
+	border-top: dotted 1px #999;
 	padding: 5px 0;
 	margin-top: 10px;
 }
 #member #memberGrid li div ul {
-	line-height: 21px;
-	margin: 5px 0;
+ line-height: 21px;
+ margin: 0 0 5px 0;
+ border-top: dotted 1px #999;
+ padding: 5px 0 0 0;
 }
 #member #memberGrid li div ul li{
 	float: none;
@@ -584,7 +604,11 @@ section .sectionH1{
 #contactW{
 	margin:40px 0 0 30px;	
 	font-size: 30px;
-	line-height: 52px;	
+	line-height: 52px;
+	color: #333;	
+}
+#cMail a:hover{
+ text-decoration: underline;
 }
 #contactW span{
 	background: #fff;
@@ -597,6 +621,7 @@ section .sectionH1{
 	font-size: 18px;
 	line-height: 20px;
 	margin-top:8px;
+	color: #333;
 }
 #contactW .gMap .icon{
  background: none;
@@ -622,7 +647,7 @@ section .sectionH1{
 #footer {
 	background: #333;
 	line-height: 40px;
-	padding: 20px 0 20px 30px;
+	padding: 30px 0 20px 30px;
 	margin-top: 80px;
 }
 #footerText{
@@ -639,23 +664,30 @@ section .sectionH1{
  font-size: 40px;
  padding:30px;
  line-height: 100px;
- background: white;
+ background: black;
  border-radius: 100px;
  margin-right: 30px;
  color: white;
+ -webkit-transition: background 0.3s ease;
+ -moz-transition: background 0.3s ease;
+ -o-transition: background 0.3s ease;
+ -ms-transition: background 0.3s ease;
 }
 #footer .icon #fbk{
- padding:30px 41px;
+ padding:30px 41px; 
+}
+#footer .icon #fbk:hover{
  background: #3b5998;
 }
-#footer .icon #twtr{
+#footer .icon #twtr:hover{
  background: #00c0f7;
 }
-#footer .icon #tmbr{
+#footer .icon #tmbr:hover{
  background: #34536f;
 }
-#footer .icon #fbk:active,
-#footer .icon #twtr:active,
-#footer .icon #tmbr:active{
+#footer .icon #gthb:hover{
+ background: #cfcfcf;
+}
+#footer .icon a:active{
  color: #333;;
 }
