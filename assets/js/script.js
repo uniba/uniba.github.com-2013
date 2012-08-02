@@ -114,6 +114,12 @@ $(function() {
     $('.close').click(function(){
       $(this).parent().hide();
     });
+    $('.house').on('mouseenter',function(){
+      $(this).animate({opacity:0.7},0,function(){
+      $(this).animate({opacity:1},300);
+      });
+      
+    });
 
   /**
    * Rotation images.

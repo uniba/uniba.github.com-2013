@@ -645,23 +645,30 @@ section .sectionH1{
  font-size: 40px;
  padding:30px;
  line-height: 100px;
- background: white;
+ background: black;
  border-radius: 100px;
  margin-right: 30px;
  color: white;
+ -webkit-transition: background 0.3s ease;
+ -moz-transition: background 0.3s ease;
+ -o-transition: background 0.3s ease;
+ -ms-transition: background 0.3s ease;
 }
 #footer .icon #fbk{
- padding:30px 41px;
+ padding:30px 41px; 
+}
+#footer .icon #fbk:hover{
  background: #3b5998;
 }
-#footer .icon #twtr{
+#footer .icon #twtr:hover{
  background: #00c0f7;
 }
-#footer .icon #tmbr{
+#footer .icon #tmbr:hover{
  background: #34536f;
 }
-#footer .icon #fbk:active,
-#footer .icon #twtr:active,
-#footer .icon #tmbr:active{
+#footer .icon #gthb:hover{
+ background: #cfcfcf;
+}
+#footer .icon a:active{
  color: #333;;
 }
