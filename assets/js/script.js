@@ -171,7 +171,7 @@ $(function() {
   var $preferences = {
     duration: 600,
     easing: 'easeInOutQuad',
-    adjustHeight: 'auto',
+    adjustHeight: 'dynamic',
     useScaling: true,
     attribute: function(v) {
       return $(v).find('img').attr('src');

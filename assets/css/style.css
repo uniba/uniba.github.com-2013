@@ -319,6 +319,7 @@ bdo{
 section{
  padding-top: 100px;
  padding-bottom: 50px;
+ clear: both;
 }
 section .sectionH1{
 	margin-left:30px;
