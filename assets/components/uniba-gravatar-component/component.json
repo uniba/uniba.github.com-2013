@@ -1,0 +1,13 @@
+{
+  "name": "gravatar-component",
+  "description": "Simple browser implementation of the Gravatar API",
+  "version": "0.0.2",
+  "dependencies": {
+    "uniba/md5-component": "*",
+    "uniba/jsonp": "*"
+  },
+  "scripts": [
+    "gravatar.js"
+  ],
+  "repo": "https://github.com/uniba/gravatar-component"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "jsonp",
+  "description": "A sane JSONP implementation.",
+  "version": "0.0.1",
+  "dependencies": {
+    "uniba/debug": "*"
+  },
+  "scripts": [
+    "jsonp.js"
+  ],
+  "repo": "https://github.com/uniba/jsonp"
+}

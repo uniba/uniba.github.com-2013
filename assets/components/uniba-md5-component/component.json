@@ -1,0 +1,9 @@
+{
+  "name": "md5-component",
+  "description": "MD5 client-side component",
+  "version": "0.0.1",
+  "scripts": [
+    "index.js"
+  ],
+  "repo": "https://github.com/uniba/md5-component"
+}
