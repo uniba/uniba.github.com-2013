@@ -243,3 +243,7 @@ $(window).on('keypress', function(e) {
 $(function() {
   $('#aRotation').rotator({});
 });
+
+$(function() {
+  $('a.facebook').pageslide({ direction: 'left' });
+});

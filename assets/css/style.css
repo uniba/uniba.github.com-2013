@@ -51,6 +51,22 @@
  src: url("../fonts/WebIconFonts.eot?") format('eot'),url("../fonts/WebIconFonts.woff") format("woff"),url("../fonts/WebIconFonts.ttf") format("truetype");
 }
 
+#pageslide {
+    /* Specify the width of your pageslide here */
+    width: 292px;
+    padding: 0;
+    
+    /* These styles are optional, and describe how the pageslide will look */
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 0 2px 2px #eee;
+    -moz-shadow: inset 0 0 2px 2px #eee;
+    box-shadow: inset 0 0 2px 2px #eee;
+}
+
+iframe #stream_content {
+  height: 20% !important;
+}
+
 .icon {
  font-family: "WebIconFonts";
 }
