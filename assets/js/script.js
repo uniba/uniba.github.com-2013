@@ -120,43 +120,6 @@ $(function() {
       });
       
     });
-
-  /**
-   * Rotation images.
-   *
-   * TODO: migrate to jquery plugin pattern. it may be better.
-   */
-
-  /*
-  var $rotateCont = $('#aRotation'),
-      $rotateChild = $rotateCont.children();
-      $rotateWidth = $('#aRotation').children().width();
-
-  $rotateChild.clone().appendTo($rotateCont);
-
-  function rotateimg () {
-    $rotateCont.stop().animate({right: '+=' + 1 + 'px' },0);
-  }
-
-  function startTimer () {
-    timer = setInterval(rotateimg, 20);
-  }
-
-  function stopTimer () {
-    clearInterval(timer);
-  }
-
-  $rotateCont.on({
-    mouseenter: function () {
-      stopTimer();
-    },
-    mouseleave: function () {
-      startTimer();
-    }
-  });
-
-  timer = setInterval(rotateimg, 20);
-  */
   
   /**
    * Works category filtring.
