@@ -240,10 +240,34 @@ $(window).on('keypress', function(e) {
   }
 });
 
+/**
+ * Apply homebrew rotation plugin.
+ */
+
 $(function() {
   $('#aRotation').rotator({});
 });
 
+/**
+ * Apply pageSlide plugin.
+ */
+ 
 $(function() {
   $('a.facebook').pageslide({ direction: 'left' });
+});
+
+/**
+ * Gravatar.
+ */
+
+$(function() {
+  var gravatar = require('gravatar-component/gravatar.js');
+  
+  $('[data-gravatar-id]').each(function(el, index) {
+    var $this = $(this)
+      , id = $this.data('gravatar-id')
+      , avatar = gravatar.img(id);
+    
+    this.src = avatar.src;
+  });
 });
