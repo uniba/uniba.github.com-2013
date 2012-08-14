@@ -209,6 +209,26 @@ $(function() {
     var width = $window.width()
       , height = $window.height();
 
+    /**
+     * Half stage height for portrait view.
+     */
+    
+    if ('orientation' in window && 0 === window.orientation) {
+      height /= 2;
+    }
+    
+    /**
+     * FIXME: p5 stage height does not smaller than 600px. workaround :-P
+     */
+    
+    if (height < 600) {
+      height = 600;
+    }
+    
+    /**
+     * Apply size.
+     */
+    
     if (renderer) {
       renderer.setSize(width, height);
     }
