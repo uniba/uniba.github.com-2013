@@ -741,4 +741,9 @@ section .sectionH1{
   #nav h1 {
     display: none;
   }
+  #about #aText {
+    /* scale by 0.8x */
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
