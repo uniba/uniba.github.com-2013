@@ -732,3 +732,13 @@ section .sectionH1{
 #footer .icon a:active{
  color: #333;;
 }
+
+/**
+ * CSS declaration for mobile devices.
+ */
+
+@media screen and (max-width: 730px) {
+  #nav h1 {
+    display: none;
+  }
+}
