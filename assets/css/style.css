@@ -233,7 +233,7 @@ body{
 	z-index: 20;
 }
 #header .attention{
- top: 422px;
+ top: 260px;
  left: 30px;
 }
 #header .attention p{
@@ -640,7 +640,7 @@ section .sectionH1{
 
 #contactW{
 	margin:40px 0 0 30px;	
-	font-size: 30px;
+	font-size: 26px;
 	line-height: 52px;
 	color: #333;	
 }
