@@ -280,7 +280,7 @@ body{
 	line-height: 30px;
 	left:0;
 	background: #333;
- background: rgba(33,33,33,0.9);
+ background: rgba(33,33,33);
  color:white;
  border:none;
 }
@@ -609,14 +609,14 @@ section .sectionH1{
 	float: left;
 }
 #member #memberGrid li div h4{
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 30px;
 	margin-top: 5px;
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 }
 #member #memberGrid li div h4 span{
 	display: block;
-	font-size: 18px;
+	font-size: 16px;
 }
 #member #memberGrid li div p {
 	border-top: dotted 1px #999;
