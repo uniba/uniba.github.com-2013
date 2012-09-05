@@ -1,0 +1,154 @@
+* {
+	margin: 0; padding: 0;
+}
+
+body  {
+	background-color:#f0f0f0;
+	margin: auto;
+}
+
+
+.top{
+	width: 100%;
+	background-color: #333333;
+	height: 80px;
+	top: 0;
+	overflow: hidden;
+}
+
+/*-------------- title ----------------*/
+
+.title {
+	text-align: center;
+	font-size: 24px;
+	letter-spacing: 0.1em;
+	font-family: sans-serif;
+	color: #4c4c4c;
+	margin-top: 20px;
+	font-style: italic;
+}
+
+.title .typeYU {
+	font-size: 24px;
+	color: #00b7ee;
+	font-weight: 500
+}
+
+.title .typeNI {
+	font-size: 24px;
+	color: #e60012;
+	font-weight: 500
+}
+.title .typeBA {
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 500
+}
+.title .typeDO {
+	font-size: 24px;
+	color: #fff100;
+	font-weight: 500
+}
+.title .typeGA {
+	font-size: 24px;
+	color: #00b7ee;
+	font-weight: 500
+}
+.title .typeMA {
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 500
+}
+.title .typeTO {
+	font-size: 24px;
+	color: #e60012;
+	font-weight: 500
+}
+.title .typeME {
+	font-size: 24px;
+	color: #fff100;
+	font-weight: 500
+}
+.title .typeL {
+	font-size: 26px;
+	color: #ffffff;
+	font-weight: 500
+}
+
+/*-------------- contents ----------------*/
+
+
+.service {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align:  center;
+	font-size: 18px;
+	font-family: sans-serif;
+	color: #4c4c4c;
+	
+}
+
+.content {
+	text-align:center;
+}
+#movie1 {
+	position: relative;
+	background-color: #f0f0f0;
+}
+#movie2 {
+	position: relative;
+	margin-top: 10px;
+	background-color: #e5e5e5;
+}
+#movie3 {
+	position: relative;
+	background-color: #d6d6d6;
+}
+
+.block {
+	overflow: hidden;
+
+}
+.block ul {
+	margin: 0 auto;
+	width: 960px;
+	border-bottom: 1px solid #cccccc;
+	position: relative;
+	margin:0 auto;
+}
+
+.block ul li{
+	list-style-type: none;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+	position: relative;
+}
+
+.block ul .left  {
+	list-style-type: none;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-left: 30px;
+	text-align: center;
+	position: relative;
+}
+
+
+.block ul li p{
+	float: left;
+	margin-top: 5px;
+	font-size: 14px;
+	color: #4c4c4c;
+	font-family: sans-serif;
+	letter-spacing: 0.1em;
+	width: 300px;
+	
+}
+
+.block ul li span p {
+	background: #ffffff;
+	
+}
