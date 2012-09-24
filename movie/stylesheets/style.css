@@ -3,14 +3,13 @@
 }
 
 body  {
-	background-color:#808080;
+	background-color:#f0f0f0;
 	margin: auto;
 }
 
 
 .top{
 	width: 100%;
-	background-color: #333333;
 	height: 80px;
 	top: 0;
 	overflow: hidden;
@@ -18,10 +17,10 @@ body  {
 
 /*-------------- title ----------------*/
 
-.title {
+.title p {
 	text-align: center;
 	font-size: 24px;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.2em;
 	font-family: sans-serif;
 	color: #4c4c4c;
 	margin-top: 20px;
@@ -32,7 +31,6 @@ body  {
 
 p{
 	float: left;
-	margin-top: 5px;
 	font-size: 14px;
 	color: #4c4c4c;
 	font-family: sans-serif;
@@ -50,6 +48,8 @@ p span {
 
 .isotope-item {
   z-index: 2;
+  margin-left: 40px;
+  margin-bottom: 30px;
 }
 
 .isotope-hidden.isotope-item {

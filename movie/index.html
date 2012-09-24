@@ -5,8 +5,8 @@
 		<meta charset="UTF-8"/>
 		<title>ユニバ動画まとめ</title>
 		<script type="text/javascript" src="js/jquery-1.8.1.js"></script>
-		<divnk rel="stylesheet" href="stylesheets/style.css" />
-		<divnk rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.0" media="screen" />
+		<link rel="stylesheet" href="stylesheets/style.css" />
+		<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.0" media="screen" />
 		<script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script>
 		<script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
 		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
@@ -34,7 +34,7 @@
 
 			<div class="youtube"><a class="fancybox" href="http://www.youtube.com/watch?v=OMmEnOSz1B0&feature=plcp"><img src="img/youtube/mom12-uniba-device-team.jpg" width="300" height="169" alt="" /></a><br><p><span>MOM12 - Uniba☆DeviceTeam demo前</span></p>
 			</div>
-			<div class="youtube"><a class="fancybox" href="http://www.youtube.com/watch?v=TwLE7owbIfA&feature=plcp"><img src="img/youtube/uniba-house-making-movie.jpg" width="300" height="169" alt="" /></a><br><span>Uniba House: Making Movie</span></p>
+			<div class="youtube"><a class="fancybox" href="http://www.youtube.com/watch?v=TwLE7owbIfA&feature=plcp"><img src="img/youtube/uniba-house-making-movie.jpg" width="300" height="169" alt="" /></a><br><p><span>Uniba House: Making Movie</span></p>
 			</div>
 			<div class="youtube"><a lass="fancybox" href="http://www.youtube.com/watch?v=56b-jsi5jyI&feature=plcp"><img src="img/youtube/realtime-web-logging-test.jpg" width="300" height="169" alt="" /></a><br><p><span>Realtime Web Logging Test</span></p>
 			</div>	
@@ -180,18 +180,16 @@
 						'transitionIn' : 'none',
 						'transitionOut' : 'none',
 						'padding' : '0px',
-						helpers : {
-						media : {}
+						'helpers' : {
+						'media' : {}
 						}
 					});
 				});
 		</script>
-		<script type='text/javascript'>
-		
-			var $container = $('#container'); 
+		<script type='text/javascript'> 
 			 
 			$(function(){
-				$container.isotope({
+				$('#container').isotope({
 				// options
 				//   itemSelector : '.item',
 				layoutMode : 'fitRows'
