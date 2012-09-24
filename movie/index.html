@@ -26,7 +26,7 @@
 			<button onclick="vimeo()">vimeo</button>
 			<button onclick="screenr()">screenr</button>
 		
-		<div id="container" class="clearfix">
+		<div id="container">
 		
 <!----------------[youtube]------------------>
 
@@ -152,7 +152,7 @@
 			</div>
 			<div class="vimeo"><a class="fancybox" href="https://vimeo.com/37464503"><img src="img/vimeo/scaling-socket.jpg" width="300" height="169" alt="" /></a><br><span><p>Scaling Socket.IO demo</p></span>
 			</div>
-			<a class="fancybox" href="https://vimeo.com/36229857"><img src="img/vimeo/browser-based-video-chat.jpg" width="300" height="169" alt="" /></a><br><span><p>Browser based video chat (Node + Socket.IO + WebRTC)</p></span>
+			<div class="vimeo"><a class="fancybox" href="https://vimeo.com/36229857"><img src="img/vimeo/browser-based-video-chat.jpg" width="300" height="169" alt="" /></a><br><span><p>Browser based video chat (Node + Socket.IO + WebRTC)</p></span>
 			</div>
 			<div class="vimeo"><a class="fancybox" href="https://vimeo.com/40347973"><img src="img/vimeo/typographic-perfume-in-web-browser.jpg" width="300" height="169" alt="" /></a><br><span><p>Typographic Perfume in Web Browser</p></span>
 			</div>
@@ -174,7 +174,7 @@
 					$("a.fancybox").fancybox({
 						'width' : '80%',
 						'height' : '80%',
-						'autoScale' : false,
+						'autoScale' : true,
 						'transitionIn' : 'none',
 						'transitionOut' : 'none',
 						'padding' : '0px',
@@ -183,7 +183,7 @@
 						}
 					});
 				});
-			</script>
+		</script>
 		<script type='text/javascript'>
 			$(function(){
 				$('#container').isotope({
