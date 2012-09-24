@@ -3,7 +3,7 @@
 }
 
 body  {
-	background-color:#f0f0f0;
+	background-color:#808080;
 	margin: auto;
 }
 
@@ -28,56 +28,7 @@ body  {
 	font-style: italic;
 }
 
-.title .typeYU {
-	font-size: 24px;
-	color: #00b7ee;
-	font-weight: 500
-}
-
-.title .typeNI {
-	font-size: 24px;
-	color: #e60012;
-	font-weight: 500
-}
-.title .typeBA {
-	font-size: 24px;
-	color: #ffffff;
-	font-weight: 500
-}
-.title .typeDO {
-	font-size: 24px;
-	color: #fff100;
-	font-weight: 500
-}
-.title .typeGA {
-	font-size: 24px;
-	color: #00b7ee;
-	font-weight: 500
-}
-.title .typeMA {
-	font-size: 24px;
-	color: #ffffff;
-	font-weight: 500
-}
-.title .typeTO {
-	font-size: 24px;
-	color: #e60012;
-	font-weight: 500
-}
-.title .typeME {
-	font-size: 24px;
-	color: #fff100;
-	font-weight: 500
-}
-.title .typeL {
-	font-size: 26px;
-	color: #ffffff;
-	font-weight: 500
-}
-
 /*-------------- contents ----------------*/
-
-
 
 p{
 	float: left;
@@ -90,7 +41,7 @@ p{
 	
 }
 
-span p {
+p span {
 	background: #ffffff;
 	
 }
