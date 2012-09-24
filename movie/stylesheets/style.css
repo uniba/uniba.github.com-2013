@@ -89,60 +89,10 @@ body  {
 	
 }
 
-.content {
-	text-align:center;
-}
-#movie1 {
-	position: relative;
-	background-color: #f0f0f0;
-	padding-bottom: 30px;
-}
-#movie2 {
-	position: relative;
-	margin-top: 10px;
-	background-color: #e5e5e5;
-	padding-bottom: 30px;
-	
-}
-#movie3 {
-	position: relative;
-	background-color: #d6d6d6;
-	padding-bottom: 60px;
+#container {
 }
 
-.block {
-	overflow: hidden;
-
-}
-.block ul {
-	margin: 0 auto;
-	width: 960px;
-	border-bottom: 1px solid #cccccc;
-	position: relative;
-	margin:0 auto;
-}
-
-.block ul li{
-	list-style-type: none;
-	float: left;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	text-align: center;
-	position: relative;
-}
-
-.block ul .left  {
-	list-style-type: none;
-	float: left;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	margin-left: 30px;
-	text-align: center;
-	position: relative;
-}
-
-
-.block ul li p{
+p{
 	float: left;
 	margin-top: 5px;
 	font-size: 14px;
@@ -153,7 +103,57 @@ body  {
 	
 }
 
-.block ul li span p {
+span p {
 	background: #ffffff;
 	
+}
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
 }
