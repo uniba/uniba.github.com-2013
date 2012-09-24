@@ -14,21 +14,20 @@
 	<body>
 		<header>
 			<div class="top">
-				<div class="title"><P>ユニバ動画まとめ！</P>
+				<P class="title">ユニバ動画まとめ！</P>
+				</div>
+				<div id="sort-by" class="option-set clearfix" >
+					<button onclick="youtube()">all</button>
+					<button onclick="youtube()">youtube</button>
+					<button onclick="vimeo()">vimeo</button>
+					<button onclick="screenr()">screenr</button>
+					<button onclick="screenr()">screenr</button>
+					<button onclick="screenr()">screenr</button>
+					<button onclick="screenr()">screenr</button>
+					<button onclick="screenr()">screenr</button>
 				</div>
 			</div>
 		</header>
-		<div id="sort-by" class="option-set clearfix" >
-			
-			<button onclick="youtube()">all</button>
-			<button onclick="youtube()">youtube</button>
-			<button onclick="vimeo()">vimeo</button>
-			<button onclick="screenr()">screenr</button>
-			<button onclick="screenr()">screenr</button>
-			<button onclick="screenr()">screenr</button>
-			<button onclick="screenr()">screenr</button>
-			<button onclick="screenr()">screenr</button>
-		</div>
 		
 		<div id="container">
 		
@@ -198,15 +197,12 @@
 				});
 			});
 				function youtube(){
-					alert();
 					$('#container').isotope({ filter: ".youtube" });
 			}
 				function vimeo(){
-					alert();
 					$('#container').isotope({ filter: ".vimeo" });
 			}
 				function screenr(){
-					alert();
 					$('#container').isotope({ filter: ".screenr" });
 			}
 	

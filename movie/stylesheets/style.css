@@ -17,18 +17,18 @@ body  {
 
 /*-------------- title ----------------*/
 
-.title p {
-	text-align: center;
+.top p.title {
 	font-size: 24px;
 	letter-spacing: 0.2em;
 	font-family: sans-serif;
 	color: #4c4c4c;
-	margin-top: 20px;
 	font-style: italic;
+	text-align: center;
+	margin-top: 20px;
 }
 
 #sort-by {
-	margin-left: 20px;
+	text-align: center;
 }
 
 /*-------------- contents ----------------*/
@@ -38,17 +38,14 @@ body  {
 	margin-top: 20px;
 }
 
-p{
+
+p span {
 	float: left;
 	font-size: 14px;
 	color: #4c4c4c;
 	font-family: sans-serif;
 	letter-spacing: 0.1em;
 	width: 300px;
-	
-}
-
-p span {
 	background: #ffffff;
 	
 }
