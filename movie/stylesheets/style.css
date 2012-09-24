@@ -27,7 +27,16 @@ body  {
 	font-style: italic;
 }
 
+#sort-by {
+	margin-left: 20px;
+}
+
 /*-------------- contents ----------------*/
+
+#container {
+	margin-left: -20px;
+	margin-top: 20px;
+}
 
 p{
 	float: left;
