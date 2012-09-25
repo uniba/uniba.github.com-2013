@@ -3,7 +3,7 @@
 }
 
 body  {
-	background-color:#f0f0f0;
+	background-color:#cccccc;
 	margin: auto;
 }
 
@@ -18,17 +18,18 @@ body  {
 /*-------------- title ----------------*/
 
 .top p.title {
-	font-size: 24px;
+	font-size: 30px;
 	letter-spacing: 0.2em;
-	font-family: sans-serif;
-	color: #4c4c4c;
-	font-style: italic;
-	text-align: center;
+	font-family: "futura",sans-serif;
+	color: #00ffff;
 	margin-top: 20px;
+	margin-left: 20px;
 }
 
 #sort-by {
-	text-align: center;
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 /*-------------- contents ----------------*/
@@ -39,11 +40,15 @@ body  {
 }
 
 
+
+
 p span {
 	float: left;
 	font-size: 14px;
 	color: #4c4c4c;
+	font-family: Futura;
 	font-family: sans-serif;
+	font-family: 
 	letter-spacing: 0.1em;
 	width: 300px;
 	background: #ffffff;
