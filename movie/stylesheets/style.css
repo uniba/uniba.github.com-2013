@@ -24,6 +24,15 @@ body  {
 	color: #00ffff;
 	margin-top: 20px;
 	margin-left: 20px;
+	overflow: hidden;
+}
+.top p.title span{
+	font-size: 18px;
+	letter-spacing: 0.2em;
+	font-family: "futura-medium",sans-serif;
+	color: #ffff00;
+	margin-top: 20px;
+	margin-left: 10px;
 }
 
 #sort-by {
@@ -35,14 +44,14 @@ body  {
 /*-------------- contents ----------------*/
 
 #container {
-	margin-left: -10px;
+	margin-left: -5px;
 	margin-top: 20px;
 }
 
 
 
 
-p span {
+#container p span {
 	float: left;
 	font-size: 14px;
 	color: #4c4c4c;
