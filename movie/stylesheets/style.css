@@ -39,7 +39,6 @@ body  {
 	float: left;
 	margin-left: 20px;
 	margin-bottom: 20px;
-	clear: both;
 }
 
 /*-------------- contents ----------------*/
@@ -47,6 +46,7 @@ body  {
 #container {
 	margin-left: -5px;
 	margin-top: 20px;
+	clear: both;
 }
 
 
