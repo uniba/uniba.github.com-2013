@@ -2,7 +2,8 @@
 <html lang="ja">
 
 	<head>
-		<meta charset="UTF-8"/>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=660">
 		<title>Prototyping Movie</title>
 		<script type="text/javascript" src="js/jquery-1.8.1.js"></script>
 		<link rel="stylesheet" href="stylesheets/style.css" />
@@ -13,9 +14,8 @@
 	</head>
 	<body>
 		<header>
-			<div class="top">
-				<P class="title">Prototyping Movie<span>by Uniba Inc.</span></P>
-				</div>
+			<div class="sticky">Prototyping Movie<small>by Uniba Inc.</small>
+			
 				<div id="sort-by" class="option-set clearfix" >
 					<button onclick="showAll()">All</button>
 					<button onclick="Arduino()">Arduino</button>
@@ -34,12 +34,15 @@
 					<button onclick="MaxMSP()">MaxMSP</button>
 					<button onclick="Camera()">Camera</button>
 				</div>
+				
 			</div>
 		</header>
-		
+
 		<div id="container">
 		
 <!----------------[youtube]------------------>
+
+<div class="Nodejs HTML5"><a class="fancybox" href="https://vimeo.com/49835640"><img src="http://b.vimeocdn.com/ts/343/629/343629504_640.jpg" width="300" height="169"></a><br><p><span>HTML5-Tweaker-Proxy</span></p></div>
 
 			<div class="Device"><a class="fancybox" href="http://www.youtube.com/watch?v=Jb8VBUjE5u0&feature=plcp"><img src="http://i.ytimg.com/vi/Jb8VBUjE5u0/0.jpg" width="300" height="169" alt="" /></a><br><p><span>あえてのピンぼけ</span></p></div>
 			<div class="Device"><a class="fancybox" href="http://www.youtube.com/watch?v=AQ_WCzhDzFA&feature=plcp"><img src="http://i.ytimg.com/vi/AQ_WCzhDzFA/0.jpg" width="300" height="169" alt="" /></a><br><p><span>回路と回路。水と電気と竹と光。</span></p></div>
@@ -91,7 +94,7 @@
 			</div>
 			<div class="Device Motor"><a class="fancybox" href="http://www.youtube.com/watch?v=3mbxhHOknYc&feature=plcp"><img src="img/youtube/joints-test.jpg" width="300" height="169" alt="" /></a><br><p><span>根本の関節のテスト</span></p>
 			</div>
-			<div class="MaxMSP Device Realtime"><a class="fancybox" href="http://www.youtube.com/watch?v=5wd0dShHaaY&feature=plcp"><img src="img/youtube/circulator-cyberpaktest.jpg" width="304" height="169" alt="" /></a><br><p><span>Circulator + Cyber Pak Test</span></p>
+			<div class="MaxMSP Device Realtime"><a class="fancybox" href="http://www.youtube.com/watch?v=5wd0dShHaaY&feature=plcp"><img src="img/youtube/circulator-cyberpaktest.jpg" width="300" height="169" alt="" /></a><br><p><span>Circulator + Cyber Pak Test</span></p>
 			</div>
 					
 			<div class="MaxMSP Device"><a class="fancybox" href="http://www.youtube.com/watch?v=AWX98_GfJ5c&feature=plcp"><img src="img/youtube/altosc-cyberpak4ch-lightcontrol.jpg" width="300" height="169" alt="" /></a><br><p><span>ALT OSC + Cyber Pak : 4ch Light Control</span></p>
@@ -175,11 +178,11 @@
 								
 <!----------------[screenr]------------------>
 
-			<div class="Threejs Nodejs"><a class="fancybox" href="http://www.screenr.com/8648"><img src="img/screenr/three-js-for-node-js.jpg" width="300" height="169" alt="" /></a><br><p><span>Three.js for Node.js</span></p>
+			<div class="Threejs Nodejs"><a class="fancybox" href="http://www.screenr.com/embed/8648"><img src="img/screenr/three-js-for-node-js.jpg" width="300" height="169" alt="" /></a><br><p><span>Three.js for Node.js</span></p>
 			</div>
-			<div class="JavaScript"><a class="fancybox" href="http://www.screenr.com/8sn8"><img src="img/screenr/I-like-bacons.jpg" width="300" height="169" alt="" /></a><br><p><span>I like bacons.</span></p>
+			<div class="JavaScript"><a class="fancybox" href="http://www.screenr.com/embed/8sn8"><img src="img/screenr/I-like-bacons.jpg" width="300" height="169" alt="" /></a><br><p><span>I like bacons.</span></p>
 			</div>
-			<div class="JavaScript"><a class="fancybox" href="http://www.screenr.com/wzjs"><img src="img/screenr/yoshi-on-terminal.jpg" width="300" height="169" alt="" /></a><br><p><span>Yoshi on Terminal (powered by TooTallNate's ansi.js)</span></p>
+			<div class="JavaScript"><a class="fancybox" href="http://www.screenr.com/embed/wzjs"><img src="img/screenr/yoshi-on-terminal.jpg" width="300" height="169" alt="" /></a><br><p><span>Yoshi on Terminal (powered by TooTallNate's ansi.js)</span></p>
 			</div>
 		</div>
 		
@@ -204,7 +207,8 @@
 				$('#container').isotope({
 				// options
 				//   itemSelector : '.item',
-				layoutMode : 'fitRows'
+				containerStyle: { position: 'relative' },
+				layoutMode : 'masonry'
 				});
 			});
 				function showAll(){
@@ -255,6 +259,20 @@
 				function Camera(){
 					$('#container').isotope({ filter: ".Camera" });
 			}
+	
+			$(function() {
+				$(window).on('resize', function() {
+					var width = $('.isotope-item').first().outerWidth(true);
+					$('#container').width(Math.floor($(window).width() / width) * width);
+				});
+				
+				$(window).trigger('resize');
+				
+				$('#sort-by').on('click', function() {
+					$('html, body').stop().animate({ scrollTop: 0 }, 500, 'swing');
+				});
+			});
+	
 	
 		</script>
 	</body>

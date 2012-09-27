@@ -1,56 +1,41 @@
 * {
-	margin: 0; padding: 0;
+	margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-body  {
-	background-color:#cccccc;
-	margin: auto;
+body {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  color: #666;
+	background-color: #333;
+  background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png);
+	margin: auto auto;
+  overflow-x: hidden;
 }
 
-
-.top{
-	width: 100%;
-	height: 80px;
-	top: 0;
-	overflow: hidden;
+header .sticky {
+  padding-left: 0.5em;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  background-image: url(http://subtlepatterns.com/patterns/diamond_upholstery.png);
 }
 
-/*-------------- title ----------------*/
-
-.top p.title {
-	font-size: 30px;
-	letter-spacing: 0.2em;
-	font-family: "futura",sans-serif;
-	color: #00ffff;
-	margin-top: 20px;
-	margin-left: 20px;
-	overflow: hidden;
-}
-.top p.title span{
-	font-size: 18px;
-	letter-spacing: 0.2em;
-	font-family: "futura-medium",sans-serif;
-	color: #ffff00;
-	margin-top: 20px;
-	margin-left: 10px;
-}
-
-#sort-by {
-	float: left;
-	margin-left: 20px;
-	margin-bottom: 20px;
+header .sticky small {
+  margin-left: 0.5em;
+  font-size: 12px;
 }
 
 /*-------------- contents ----------------*/
 
 #container {
-	margin-left: -5px;
-	margin-top: 20px;
-	clear: both;
+  top: 45px;
+  margin: auto;
 }
-
-
-
 
 #container p span {
 	float: left;
@@ -62,15 +47,20 @@ body  {
 	letter-spacing: 0.1em;
 	width: 300px;
 	background: #ffffff;
-	
+}
+
+button {
+  cursor: pointer;
 }
 
 /**** Isotope Filtering ****/
 
 .isotope-item {
   z-index: 2;
-  margin-left: 25px;
-  margin-bottom: 40px;
+  margin: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: inset 0 0 5px #eee;
 }
 
 .isotope-hidden.isotope-item {
