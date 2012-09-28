@@ -207,10 +207,11 @@
 				$('#container').isotope({
 				containerStyle: { position: 'relative' },
 				layoutMode : 'masonry',
-				onLayout: function() {
-					console.log(this.find('.isotope-item').css('-webkit-transition-delay', '0s').not('.isotope-hidden').each(function(i) {
-						$(this).css({ webkitTransitionDelay: i * 0.05 + 's' })
-					}));
+				onLayout: function($filtered, isotope) {
+          isotope.$allAtoms.css('-webkit-transition-delay', 0);
+          $filtered.each(function(i, el) {
+            $(this).css('-webkit-transition-delay', i * 0.01 + 's');
+          });
 				}
 				});
 			});
