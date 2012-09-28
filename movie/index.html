@@ -51,7 +51,7 @@
 			</div>
 			<div class="Device Arduino Realtime Nodejs Motor"><a class="fancybox" href="http://www.youtube.com/watch?v=TwLE7owbIfA&feature=plcp"><img src="img/youtube/uniba-house-making-movie.jpg" width="300" height="169" alt="" /></a><br><p><span>Uniba House: Making Movie</span></p>
 			</div>
-			<div class="Realtime Sensor Nodejs"><a lass="fancybox" href="http://www.youtube.com/watch?v=56b-jsi5jyI&feature=plcp"><img src="img/youtube/realtime-web-logging-test.jpg" width="300" height="169" alt="" /></a><br><p><span>Realtime Web Logging Test</span></p>
+			<div class="Realtime Sensor Nodejs"><a class="fancybox" href="http://www.youtube.com/watch?v=56b-jsi5jyI&feature=plcp"><img src="img/youtube/realtime-web-logging-test.jpg" width="300" height="169" alt="" /></a><br><p><span>Realtime Web Logging Test</span></p>
 			</div>	
 			<div class="Processing"><a class="fancybox" href="http://www.youtube.com/watch?v=WtBfabWm2RM&feature=plcp"><img src="img/youtube/music-boxel-prototype.jpg" width="300" height="169" alt="" /></a><br><p><span>Music Boxel Prototype</span></p>
 			</div>
@@ -197,18 +197,21 @@
 						'padding' : '0px',
 						'helpers' : {
 						'media' : {}
-						}
+						},
+						type: 'iframe'
 					});
 				});
 		</script>
 		<script type='text/javascript'> 
-			 
 			$(function(){
 				$('#container').isotope({
-				// options
-				//   itemSelector : '.item',
 				containerStyle: { position: 'relative' },
-				layoutMode : 'masonry'
+				layoutMode : 'masonry',
+				onLayout: function() {
+					console.log(this.find('.isotope-item').css('-webkit-transition-delay', '0s').not('.isotope-hidden').each(function(i) {
+						$(this).css({ webkitTransitionDelay: i * 0.05 + 's' })
+					}));
+				}
 				});
 			});
 				function showAll(){
