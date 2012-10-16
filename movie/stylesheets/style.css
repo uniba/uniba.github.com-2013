@@ -1,3 +1,56 @@
+/**
+*font-face
+*/
+
+@import url("http://fast.fonts.com/t/1.css?apiType=css&projectid=92e14719-2998-4333-9434-393ecca2f3ae");
+
+@font-face{
+ font-family:"DIN Next W01 Black";
+ src:url("../../assets/fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix") format("eot");}
+@font-face{
+ font-family:"DIN Next W01 Black";
+ src:url("../../assets/fonts/abcc85a3-c3f7-49d9-a80a-f79267998ec7.eot?iefix");
+ src:url("../../assets/fonts/9541b817-6a02-4e7a-af21-ce24b70d9ba3.woff") format("woff"),url("../../assets/fonts/c1a5af90-f79a-44b1-a4a4-5fd6d888c2f2.ttf") format("truetype"),url("../../assets/fonts/0c36e45b-5edd-4927-b9ad-2e46a30e5593.svg#0c36e45b-5edd-4927-b9ad-2e46a30e5593") format("svg");
+}
+@font-face{
+ font-family:"DINNextW01-BlackItalic";
+ src:url("../../assets/fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix") format("eot");}
+@font-face{
+ font-family:"DINNextW01-BlackItalic";
+ src:url("../../assets/fonts/df1e59d8-ad9a-4792-868c-bb82a81b7d9d.eot?iefix");
+ src:url("../../assets/fonts/4cd37f64-b230-4162-88bf-f6cccde94e4b.woff") format("woff"),url("../../assets/fonts/10805f32-49cb-4842-b9ef-0d593ddb961c.ttf") format("truetype"),url("../../assets/fonts/1c343c91-343a-4326-84db-bcce4ce82979.svg#1c343c91-343a-4326-84db-bcce4ce82979") format("svg");
+}
+@font-face{
+ font-family:"DINNextW01-BoldItalic";
+ src:url("../../assets/fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix") format("eot");}
+@font-face{
+ font-family:"DINNextW01-BoldItalic";
+ src:url("../../assets/fonts/d7c339aa-46b7-4f31-8573-7ea230bfcbbb.eot?iefix");
+ src:url("../../assets/fonts/140a0a6f-f218-4071-8eb8-f2bc45ed5121.woff") format("woff"),url("../../assets/fonts/ecbfe302-4f46-4fef-b823-83eedbc353e7.ttf") format("truetype"),url("../../assets/fonts/58f54e11-a0ac-4cfa-852e-3c73b93d74a8.svg#58f54e11-a0ac-4cfa-852e-3c73b93d74a8") format("svg");
+}
+@font-face{
+ font-family:"DINNextW01-CondensedMed";
+ src:url("../../assets/fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix") format("eot");}
+@font-face{
+ font-family:"DINNextW01-CondensedMed";
+ src:url("../../assets/fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?iefix");
+ src:url("../../assets/fonts/2613a064-2962-44af-ae6f-3640e06e8dc4.woff") format("woff"),url("../../assets/fonts/2889b152-497e-4ea3-a90d-02854d136a8d.ttf") format("truetype"),url("../../assets/fonts/4f311da1-9ec6-4379-9621-b45be0e23abd.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg");
+}
+@font-face{
+ font-family:"DIN Next W01 Medium";
+ src:url("../../assets/fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix") format("eot");}
+@font-face{
+ font-family:"DIN Next W01 Medium";
+ src:url("../../assets/fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?iefix");
+ src:url("../../assets/fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"),url("../../assets/fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"),url("../../assets/fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
+}
+
+@font-face{ 
+ font-family: "WebIconFonts";
+ src: url("../../assets/fonts/WebIconFonts.eot");
+ src: url("../../assets/fonts/WebIconFonts.eot?") format('eot'),url("../../assets/fonts/WebIconFonts.woff") format("woff"),url("../../assets/fonts/WebIconFonts.ttf") format("truetype");
+}
+
 * {
 	margin: 0;
   padding: 0;
@@ -5,7 +58,7 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'DIN Next W01 Medium';
   font-weight: 200;
   color: #666;
   background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/wp-content/themes/tweaker6/images/bgnoise.png);
@@ -14,40 +67,50 @@ body {
 }
 
 header .sticky {
-  padding-left: 0.5em;
+  padding: 0.5em;
   position: fixed;
-  height: 40px;
+  height: 50px;/*40px*/
   width: 100%;
   z-index: 10;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(192, 192, 192, 1);
   background-image: url(http://subtlepatterns.com/patterns/diamond_upholstery.png);
+  font-family: 'DINNextW01-BoldItalic';
+  font-size: 24px;
 }
 
 header .sticky small {
   margin-left: 0.5em;
   font-size: 12px;
+  letter-spacing: 0.1em;
 }
 
 /*-------------- contents ----------------*/
 
 #container {
-  top: 45px;
+  top: 70px;
   margin: auto;
 }
 
 #container p span {
 	float: left;
-	font-size: 14px;
-	color: #4c4c4c;
-  font-family: "Helvetica Neue", Helvetica;
-	letter-spacing: 0.1em;
+	font-size: 12px;
+	color: #333;
+	/*font-family: "Helvetica Neue", Helvetica;*/
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 	width: 300px;
 	background: #ffffff;
 }
 
 button {
-  cursor: pointer;
+	padding: 3px 5px;
+	cursor: pointer;
+	background: #cccccc;
+	border-radius: 3px;
+}
+
+button:hover {
+	background-color: yellow;
 }
 
 /**** Isotope Filtering ****/
@@ -55,7 +118,7 @@ button {
 .isotope-item {
   z-index: 2;
   margin: 5px;
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #fff;
   box-shadow: 1px 1px 5px #eee;
   border-radius: 1px;
