@@ -52,7 +52,7 @@
 }
 
 * {
-	margin: 0;
+  margin: 0;
   padding: 0;
   border: 0;
 }
@@ -62,14 +62,13 @@ body {
   font-weight: 200;
   color: #666;
   background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/wp-content/themes/tweaker6/images/bgnoise.png);
-	margin: auto auto;
+  margin: auto;
   overflow-x: hidden;
 }
 
 header .sticky {
-  padding: 0.5em;
+  padding: 0.5em;/*0.5em*/
   position: fixed;
-  height: 50px;/*40px*/
   width: 100%;
   z-index: 10;
   background-color: #fff;
@@ -80,10 +79,26 @@ header .sticky {
 }
 
 header .sticky small {
-  margin-left: 0.5em;
+  margin-left: 0.5em;/*0.5em*/
   font-size: 12px;
   letter-spacing: 0.1em;
 }
+
+header #sort-by {
+	
+}
+button {
+	padding: 3px 5px;
+	margin: 0;
+	cursor: pointer;
+	background: #cccccc;
+	border-radius: 3px;
+}
+
+button:hover {
+	background-color: yellow;
+}
+
 
 /*-------------- contents ----------------*/
 
@@ -101,17 +116,6 @@ header .sticky small {
 	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
 	width: 300px;
 	background: #ffffff;
-}
-
-button {
-	padding: 3px 5px;
-	cursor: pointer;
-	background: #cccccc;
-	border-radius: 3px;
-}
-
-button:hover {
-	background-color: yellow;
 }
 
 /**** Isotope Filtering ****/
