@@ -232,8 +232,22 @@ body{
 	position: relative;
 	z-index: 20;
 }
-#header .attention{
+#header .movie{
  top: 260px;
+ left: 30px;
+	font-family: 'DIN Next W01 Medium';
+}
+#header .movie p{
+ padding: 20px 0;
+ text-align: center;
+	font-family: 'DIN Next W01 Medium';
+	font-size: 15px;
+}
+#header .movie p a:hover{
+	text-decoration: underline;
+}
+#header .attention{
+ top: 352px;
  left: 30px;
 }
 #header .attention p{
