@@ -619,48 +619,49 @@
       }
       
       for (var i in depth) {
-        var dp = depth[i];
+        var dp = depth[i]
+          , dpv = dp.geometry.vertices;
         dp.geometry.verticesNeedUpdate = true;
         
         if (dp.bang) {       
           var ax, ay, az, bx, by, bz;
-          ax = (depthDefaultPos[i][2].x - dp.geometry.vertices[2].x) * spring;
+          ax = (depthDefaultPos[i][2].x - dpv[2].x) * spring;
           dp.speedX += ax;
           dp.speedX *= friction;
-          dp.geometry.vertices[2].x += dp.speedX;
+          dpv[2].x += dp.speedX;
           
-          ay = (depthDefaultPos[i][2].y - dp.geometry.vertices[2].y) * spring;
+          ay = (depthDefaultPos[i][2].y - dpv[2].y) * spring;
           dp.speedY += ay;
           dp.speedY *= friction;
-          dp.geometry.vertices[2].y += dp.speedY;
+          dpv[2].y += dp.speedY;
           
-          az = (depthDefaultPos[i][2].z - dp.geometry.vertices[2].z) * spring;
+          az = (depthDefaultPos[i][2].z - dpv[2].z) * spring;
           dp.speedZ += az;
           dp.speedZ *= friction;
-          dp.geometry.vertices[2].z += dp.speedZ;
+          dpv[2].z += dp.speedZ;
           
-          bx = (depthDefaultPos[i][3].x - dp.geometry.vertices[3].x) * spring;
+          bx = (depthDefaultPos[i][3].x - dpv[3].x) * spring;
           dp.speedX += bx;
           dp.speedX *= friction;
-          dp.geometry.vertices[3].x += dp.speedX;
+          dpv[3].x += dp.speedX;
           
-          by = (depthDefaultPos[i][3].y - dp.geometry.vertices[3].y) * spring;
+          by = (depthDefaultPos[i][3].y - dpv[3].y) * spring;
           dp.speedY += by;
           dp.speedY *= friction;
-          dp.geometry.vertices[3].y += dp.speedY;
+          dpv[3].y += dp.speedY;
           
-          bz = (depthDefaultPos[i][3].z - dp.geometry.vertices[3].z) * spring;
+          bz = (depthDefaultPos[i][3].z - dpv[3].z) * spring;
           dp.speedZ += bz;
           dp.speedZ *= friction;
-          dp.geometry.vertices[3].z += dp.speedZ;         
+          dpv[3].z += dp.speedZ;         
         } else {
           var ddp = depthDefaultPos[i];
-          dp.geometry.vertices[2].x = ddp[0].x;
-          dp.geometry.vertices[2].y = ddp[0].y;
-          dp.geometry.vertices[2].z = ddp[0].z;
-          dp.geometry.vertices[3].x = ddp[1].x;
-          dp.geometry.vertices[3].y = ddp[1].y;
-          dp.geometry.vertices[3].z = ddp[1].z;
+          dpv[2].x = ddp[0].x;
+          dpv[2].y = ddp[0].y;
+          dpv[2].z = ddp[0].z;
+          dpv[3].x = ddp[1].x;
+          dpv[3].y = ddp[1].y;
+          dpv[3].z = ddp[1].z;
         }
       }
     }
