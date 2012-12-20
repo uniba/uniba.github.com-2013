@@ -50,6 +50,8 @@
     , speed              = {x:0, y:0, z:0};
       
   // Color Preset Array
+  // default
+  /*
   var colorPatternIndexNum = Math.floor( Math.random() * 4 )
     , colorPristArray = [
       [
@@ -72,6 +74,16 @@
         rgb2hex(253, 251, 222),
         rgb2hex(131, 106,  74),
         rgb2hex(209, 163,  87)]
+      ];
+  */
+  // 2012 winter
+  var colorPatternIndexNum = 0
+    , colorPristArray = [
+      [
+        rgb2hex(  7, 114,  57),
+        rgb2hex(231,  31,  25),
+        rgb2hex(255,  31,  25),
+        rgb2hex(251, 251, 251)]
       ];
 
   setup();
@@ -693,11 +705,14 @@
     function dividedBackgroundUpdate() {      
       // Initializing Processing.js Canvas
       if (window.p5 && p5init) {
+      
+        var cpa = colorPristArray[colorPatternIndexNum];
+      
         for (var i=0, imax=4; i<imax; i++) {
-          var bgcolor = colorPristArray[colorPatternIndexNum][i];
-          var r = parseInt(bgcolor.slice(2, 4), 16);
-          var g = parseInt(bgcolor.slice(4, 6), 16);
-          var b = parseInt(bgcolor.slice(6, 8), 16);
+          var bgcolor = cpa.splice(Math.floor(Math.random() * cpa.length), 1)
+            , r = parseInt(bgcolor[0].slice(2, 4), 16)
+            , g = parseInt(bgcolor[0].slice(4, 6), 16)
+            , b = parseInt(bgcolor[0].slice(6, 8), 16);
           p5.setBgColor(r, g, b, i);
         }
         
