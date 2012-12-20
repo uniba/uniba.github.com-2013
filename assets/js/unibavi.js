@@ -156,7 +156,7 @@
     
     stroke = new THREE.Line(strokeGeom, material);
     stroke.type = THREE.Lines;                
-    for (i in stroke.geometry.vertices) {
+    for (var i in stroke.geometry.vertices) {
       var lv = {};
       lv.x = stroke.geometry.vertices[i].x;
       lv.y = stroke.geometry.vertices[i].y;
@@ -174,7 +174,7 @@
     strokeVertex = new THREE.Object3D();
     strokeVertex.rotation.x = Math.PI;
     
-    for (var i=0, il=stroke.geometry.vertices.length; i<il; i++) {
+    for (var i=0, maxi=stroke.geometry.vertices.length; i<maxi; i++) {
       var lv = {}
         , mesh = new THREE.Mesh(strokeVertexGeometry, strokeVertexMaterial);
 
@@ -320,7 +320,7 @@
     depth.push(f15);
     depth.push(f16);       
            
-    for (i in depth) {
+    for (var i in depth) {
       depth[i].doubleSided = true;
       depth[i].rotation.x = Math.PI;
       depth[i].bang  = false;
@@ -331,12 +331,13 @@
       scene.add(depth[i]);
       
       // making array will be called like this 'depthDefaultPos[i][j].x' ...
-      var fv = [];
-      for (j in depth[i].geometry.vertices) {
+      var fv = [],
+          dv = depth[i].geometry.vertices;
+      for (var j in dv) {
         var fgv = {};
-        fgv.x = depth[i].geometry.vertices[j].x;
-        fgv.y = depth[i].geometry.vertices[j].y;
-        fgv.z = depth[i].geometry.vertices[j].z;
+        fgv.x = dv[j].x;
+        fgv.y = dv[j].y;
+        fgv.z = dv[j].z;
         fv.push(fgv);
       }
       
@@ -516,15 +517,16 @@
         
         stroke.geometry.verticesNeedUpdate = true;
         
-        for (i=0; i<stroke.geometry.vertices.length; i++) {
+        for (var i=0, imax=stroke.geometry.vertices.length; i<imax; i++) {
+          var sv = stroke.geometry.vertices[i];
           if (i <= currentVertice) {
-            stroke.geometry.vertices[i].x = strokeDefaultPos[i].x;
-            stroke.geometry.vertices[i].y = strokeDefaultPos[i].y;
-            stroke.geometry.vertices[i].z = strokeDefaultPos[i].z;
+            sv.x = strokeDefaultPos[i].x;
+            sv.y = strokeDefaultPos[i].y;
+            sv.z = strokeDefaultPos[i].z;
           } else {
-            stroke.geometry.vertices[i].x = targetPosX;
-            stroke.geometry.vertices[i].y = targetPosY;
-            stroke.geometry.vertices[i].z = targetPosZ;
+            sv.x = targetPosX;
+            sv.y = targetPosY;
+            sv.z = targetPosZ;
           }
         }
         
@@ -535,15 +537,16 @@
         } else {
           targetScale = 1.0;
         }
-        for (i=0; i<strokeVertex.children.length; i++) {
+        for (var i=0, imax = strokeVertex.children.length; i<imax; i++) {
+          var vc = strokeVertex.children[i];
           if (i <= currentVertice) {
-            strokeVertex.children[i].scale.x = targetScale;
-            strokeVertex.children[i].scale.y = targetScale;
-            strokeVertex.children[i].scale.z = targetScale;
+            vc.scale.x = targetScale;
+            vc.scale.y = targetScale;
+            vc.scale.z = targetScale;
           } else {
-            strokeVertex.children[i].scale.x = 0.001;
-            strokeVertex.children[i].scale.y = 0.001;
-            strokeVertex.children[i].scale.z = 0.001;
+            vc.scale.x = 0.001;
+            vc.scale.y = 0.001;
+            vc.scale.z = 0.001;
           }
         }
         
@@ -558,13 +561,15 @@
         }
         
         // Stroke Vertex
-        for (i=0; i<strokeVertex.children.length; i++) {
+        for (var i=0, iamx=strokeVertex.children.length; i<imax; i++) {
           strokeVertexTarget[i] = 0.001;
         }
-        for (i=0; i<strokeVertex.children.length; i++) {
-          strokeVertex.children[i].scale.x += (strokeVertexTarget[i] - strokeVertex.children[i].scale.x) * 0.05;
-          strokeVertex.children[i].scale.y += (strokeVertexTarget[i] - strokeVertex.children[i].scale.y) * 0.05;
-          strokeVertex.children[i].scale.z += (strokeVertexTarget[i] - strokeVertex.children[i].scale.z) * 0.05;
+        for (var i=0, imax=strokeVertex.children.length; i<imax; i++) {
+          var cs = strokeVertex.children[i].scale
+            , vt = strokeVertexTarget[i];
+          cs.x += (vt - cs.x) * 0.05;
+          cs.y += (vt - cs.y) * 0.05;
+          cs.z += (vt - cs.z) * 0.05;
         }
         
       }
@@ -613,47 +618,49 @@
         }
       }
       
-      for (i in depth) {      
-        depth[i].geometry.verticesNeedUpdate = true;
+      for (var i in depth) {
+        var dp = depth[i];
+        dp.geometry.verticesNeedUpdate = true;
         
-        if (depth[i].bang) {       
+        if (dp.bang) {       
           var ax, ay, az, bx, by, bz;
-          ax = (depthDefaultPos[i][2].x - depth[i].geometry.vertices[2].x) * spring;
-          depth[i].speedX += ax;
-          depth[i].speedX *= friction;
-          depth[i].geometry.vertices[2].x += depth[i].speedX;
+          ax = (depthDefaultPos[i][2].x - dp.geometry.vertices[2].x) * spring;
+          dp.speedX += ax;
+          dp.speedX *= friction;
+          dp.geometry.vertices[2].x += dp.speedX;
           
-          ay = (depthDefaultPos[i][2].y - depth[i].geometry.vertices[2].y) * spring;
-          depth[i].speedY += ay;
-          depth[i].speedY *= friction;
-          depth[i].geometry.vertices[2].y += depth[i].speedY;
+          ay = (depthDefaultPos[i][2].y - dp.geometry.vertices[2].y) * spring;
+          dp.speedY += ay;
+          dp.speedY *= friction;
+          dp.geometry.vertices[2].y += dp.speedY;
           
-          az = (depthDefaultPos[i][2].z - depth[i].geometry.vertices[2].z) * spring;
-          depth[i].speedZ += az;
-          depth[i].speedZ *= friction;
-          depth[i].geometry.vertices[2].z += depth[i].speedZ;
+          az = (depthDefaultPos[i][2].z - dp.geometry.vertices[2].z) * spring;
+          dp.speedZ += az;
+          dp.speedZ *= friction;
+          dp.geometry.vertices[2].z += dp.speedZ;
           
-          bx = (depthDefaultPos[i][3].x - depth[i].geometry.vertices[3].x) * spring;
-          depth[i].speedX += bx;
-          depth[i].speedX *= friction;
-          depth[i].geometry.vertices[3].x += depth[i].speedX;
+          bx = (depthDefaultPos[i][3].x - dp.geometry.vertices[3].x) * spring;
+          dp.speedX += bx;
+          dp.speedX *= friction;
+          dp.geometry.vertices[3].x += dp.speedX;
           
-          by = (depthDefaultPos[i][3].y - depth[i].geometry.vertices[3].y) * spring;
-          depth[i].speedY += by;
-          depth[i].speedY *= friction;
-          depth[i].geometry.vertices[3].y += depth[i].speedY;
+          by = (depthDefaultPos[i][3].y - dp.geometry.vertices[3].y) * spring;
+          dp.speedY += by;
+          dp.speedY *= friction;
+          dp.geometry.vertices[3].y += dp.speedY;
           
-          bz = (depthDefaultPos[i][3].z - depth[i].geometry.vertices[3].z) * spring;
-          depth[i].speedZ += bz;
-          depth[i].speedZ *= friction;
-          depth[i].geometry.vertices[3].z += depth[i].speedZ;         
-        } else {    
-          depth[i].geometry.vertices[2].x = depthDefaultPos[i][0].x;
-          depth[i].geometry.vertices[2].y = depthDefaultPos[i][0].y;
-          depth[i].geometry.vertices[2].z = depthDefaultPos[i][0].z;
-          depth[i].geometry.vertices[3].x = depthDefaultPos[i][1].x;
-          depth[i].geometry.vertices[3].y = depthDefaultPos[i][1].y;
-          depth[i].geometry.vertices[3].z = depthDefaultPos[i][1].z;
+          bz = (depthDefaultPos[i][3].z - dp.geometry.vertices[3].z) * spring;
+          dp.speedZ += bz;
+          dp.speedZ *= friction;
+          dp.geometry.vertices[3].z += dp.speedZ;         
+        } else {
+          var ddp = depthDefaultPos[i];
+          dp.geometry.vertices[2].x = ddp[0].x;
+          dp.geometry.vertices[2].y = ddp[0].y;
+          dp.geometry.vertices[2].z = ddp[0].z;
+          dp.geometry.vertices[3].x = ddp[1].x;
+          dp.geometry.vertices[3].y = ddp[1].y;
+          dp.geometry.vertices[3].z = ddp[1].z;
         }
       }
     }
@@ -685,7 +692,7 @@
     function dividedBackgroundUpdate() {      
       // Initializing Processing.js Canvas
       if (window.p5 && p5init) {
-        for (i = 0; i < 4; i++) {
+        for (var i=0, imax=4; i<imax; i++) {
           var bgcolor = colorPristArray[colorPatternIndexNum][i];
           var r = parseInt(bgcolor.slice(2, 4), 16);
           var g = parseInt(bgcolor.slice(4, 6), 16);
@@ -697,7 +704,7 @@
         p5init = false;
         console.log("p5 initialized");
         // this code have to replace in future from
-        for (i in depth) {
+        for (var i in depth) {
           depth[i].bang = false;
         }
         // this code have to replace in future to
