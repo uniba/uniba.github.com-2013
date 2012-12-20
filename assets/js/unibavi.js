@@ -31,6 +31,9 @@
     , depth              = []
     , Renderer           = Modernizr.webgl && !forceUseCanvas ? THREE.WebGLRenderer : THREE.CanvasRenderer
     , MeshMaterial       = Modernizr.webgl && !forceUseCanvas ? THREE.MeshLambertMaterial : THREE.MeshBasicMaterial;
+    
+  // 2012 winter
+  var particles;
   
   if (Detector.webgl) {
     document.getElementById('console').innerHTML	+= "WebGL Rendrer<br />";
@@ -128,7 +131,7 @@
     pointLights.add(pointLight3);
     pointLights.add(pointLight4);
     
-    scene.add(pointLights);
+    scene.add(pointLights);  	
     
     // Stroke
     var strokeGeom = new THREE.Geometry();
@@ -440,6 +443,20 @@
       
       return g;
     }
+  	
+    // 2012 winter particle 
+    var particle = new THREE.Geometry()
+      , material = new THREE.ParticleBasicMaterial( { color: 0xffffff, size: 0.1 } );
+    
+  	for (var i=0, imax=1000; i<imax; i++) {
+      particle.vertices.push(new THREE.Vector3(Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10));
+  	}
+  	particle.dynamic = true;
+  	
+  	particles = new THREE.ParticleSystem(particle, material);
+  	
+  	scene.add(particles);
+  	
   }
   
   function animate() {
@@ -454,6 +471,9 @@
     dividedBackgroundUpdate();
     lightsUpdte();
     counterUpdate();
+    
+    // 2012 winter
+    snowUpdate();
     
     if (mouseControl) {
       controls.update();
@@ -729,9 +749,28 @@
       // Update Processing.js Canvas
       if (window.p5) {
         p5.updateBgAngle(camera.rotation.x, camera.rotation.y, camera.rotation.z);
-      }
-      
+      }  
     }
+    
+    // 2012 winter
+    function snowUpdate() {
+      for (var i=0, imax=particles.geometry.vertices.length; i<imax; i++) {
+        var particle = particles.geometry.vertices[i];
+        
+        particle.x += Math.random() * 0.004 - 0.002;
+        particle.y -= Math.random() * 0.009;
+        particle.z += Math.random() * 0.004 - 0.002;
+        
+        if (particle.y < -10) {
+          particle.x = Math.random() * 20 - 10;
+          particle.y = 10;
+          particle.z = Math.random() * 20 - 10;
+        }
+      }
+      particles.geometry.verticesNeedUpdate = true;
+    }
+    
+    
   }
   
   function rgb2hex(r, g, b) {
