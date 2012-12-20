@@ -622,8 +622,8 @@
         var dp = depth[i]
           , dpv = dp.geometry.vertices;
         dp.geometry.verticesNeedUpdate = true;
-        
-        if (dp.bang) {       
+                
+        if (dp.bang && Math.abs(depthDefaultPos[i][2].x - dpv[2].x) > 0.0001) {
           var ax, ay, az, bx, by, bz;
           ax = (depthDefaultPos[i][2].x - dpv[2].x) * spring;
           dp.speedX += ax;
@@ -654,7 +654,7 @@
           dp.speedZ += bz;
           dp.speedZ *= friction;
           dpv[3].z += dp.speedZ;         
-        } else {
+        } else if (!dp.bang) {
           var ddp = depthDefaultPos[i];
           dpv[2].x = ddp[0].x;
           dpv[2].y = ddp[0].y;
