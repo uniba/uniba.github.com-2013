@@ -564,6 +564,13 @@ section .sectionH1{
 #works #filter .selected a{
   background: #ae5da1;
 }
+#movie #movieGrid{
+  margin:40px 0 0 30px;	
+}
+#movie #movieGrid li{
+  float: left;
+  margin: 0 20px 30px 0;
+}
 #cliant #cliantGrid{
   margin:40px 0 0 30px;	
 }
