@@ -62,8 +62,7 @@
 body {
   font-family: 'DIN Next W01 Medium';
   font-weight: 200;
-  color: #666;
-  background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/wp-content/themes/tweaker6/images/bgnoise.png);
+  background-color: #f0f0f0; 
 }
 
 header {
@@ -76,9 +75,8 @@ header .sticky {
   height: 74px;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 0 1px 1px rgba(192, 192, 192, 1);
-  background-image: url(http://subtlepatterns.com/patterns/diamond_upholstery.png);
-  font-family: 'DINNextW01-BoldItalic';
+  background-color: #e5e5e5;
+  font-family: 'DINNextW01-CondensedMed';
 }
 
 header .sticky h1 {
@@ -152,7 +150,7 @@ header .gotohome {
   background-color: #fff;
   box-shadow: 1px 1px 5px #eee;
   border-radius: 1px;
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0;
 }
 
 .isotope-hidden.isotope-item {
