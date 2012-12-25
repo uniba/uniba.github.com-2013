@@ -88,9 +88,24 @@
         rgb2hex(255,  31,  25),
         rgb2hex(251, 251, 251)]
       ];
+      
+  setup();
+  animate();
+      
+  // 2013 winter
+  /*
+  var colorPatternIndexNum = 0
+    , colorPristArray = [
+      [
+        rgb2hex(247, 228,  228),
+        rgb2hex(193, 173, 132),
+        rgb2hex(229,   0,  28),
+        rgb2hex(251, 251, 251)]
+      ];
 
   setup();
   animate();
+  */
   
   function setup() {
     // Scene
