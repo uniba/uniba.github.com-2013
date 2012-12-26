@@ -80,6 +80,7 @@
       ];
   */
   // 2012 winter
+  /*
   var colorPatternIndexNum = 0
     , colorPristArray = [
       [
@@ -91,21 +92,21 @@
       
   setup();
   animate();
+  */
       
   // 2013 winter
-  /*
+  
   var colorPatternIndexNum = 0
     , colorPristArray = [
       [
+        rgb2hex(229,   0,  28),
         rgb2hex(247, 228,  228),
         rgb2hex(193, 173, 132),
-        rgb2hex(229,   0,  28),
         rgb2hex(251, 251, 251)]
       ];
 
   setup();
   animate();
-  */
   
   function setup() {
     // Scene
@@ -316,6 +317,7 @@
     g15 = setFParams(g15);
     g16 = setFParams(g16);
     
+<<<<<<< HEAD
     f1 = new THREE.Mesh(g1, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
     f2 = new THREE.Mesh(g2, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
     f3 = new THREE.Mesh(g3, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
@@ -332,6 +334,24 @@
     f14 = new THREE.Mesh(g14, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
     f15 = new THREE.Mesh(g15, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
     f16 = new THREE.Mesh(g16, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));  
+=======
+    f1 = new THREE.Mesh(g1, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f2 = new THREE.Mesh(g2, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f3 = new THREE.Mesh(g3, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f4 = new THREE.Mesh(g4, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f5 = new THREE.Mesh(g5, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f6 = new THREE.Mesh(g6, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f7 = new THREE.Mesh(g7, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f8 = new THREE.Mesh(g8, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f9 = new THREE.Mesh(g9, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f10 = new THREE.Mesh(g10, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f11 = new THREE.Mesh(g11, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f12 = new THREE.Mesh(g12, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f13 = new THREE.Mesh(g13, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f14 = new THREE.Mesh(g14, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f15 = new THREE.Mesh(g15, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));
+    f16 = new THREE.Mesh(g16, new MeshMaterial({ color: colorPristArray[colorPatternIndexNum][0], overdraw: true }));  
+>>>>>>> ロゴを正月仕様に変更
     
     depth.push(f1);
     depth.push(f2);
@@ -461,7 +481,7 @@
   	
     // 2012 winter particle 
     var particle = new THREE.Geometry()
-      , material = new THREE.ParticleBasicMaterial( { color: 0xffffff, size: 0.1 } );
+      , material = new THREE.ParticleBasicMaterial( { color: 0xC1AD84, size: 0.1 } );
     
   	for (var i=0, imax=1000; i<imax; i++) {
       particle.vertices.push(new THREE.Vector3(Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10));
@@ -772,9 +792,9 @@
       for (var i=0, imax=particles.geometry.vertices.length; i<imax; i++) {
         var particle = particles.geometry.vertices[i];
         
-        particle.x += Math.random() * 0.004 - 0.002;
+        particle.x += Math.random() * 0.004 - 0.003;
         particle.y -= Math.random() * 0.009;
-        particle.z += Math.random() * 0.004 - 0.002;
+        particle.z += Math.random() * 0.004 - 0.003;
         
         if (particle.y < -10) {
           particle.x = Math.random() * 20 - 10;

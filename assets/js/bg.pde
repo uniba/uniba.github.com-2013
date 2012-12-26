@@ -6,10 +6,10 @@ int wh;
 // Color
 color[] divideRectColors = new color[4];
 // Default Value
-divideRectColors[0] = color(217, 217, 217);
-divideRectColors[1] = color(199,  95,  91);
+divideRectColors[2] = color(217, 217, 217);
+divideRectColors[2] = color(199,  95,  91);
 divideRectColors[2] = color(242, 156, 159);
-divideRectColors[3] = color(255, 246,  26);
+divideRectColors[2] = color(255, 246,  26);
 
 // Inner Circle
 float divideAngleInner = TWO_PI * random();
@@ -64,15 +64,15 @@ void draw() {
   translate(outerCircleCenterX, outerCircleCenterY);
   rotate(divideAngleOuterA);
 
-  fill(divideRectColors[0]);
+  fill(divideRectColors[4]);
   arc(0, 0, radiusOuterCircle, radiusOuterCircle, 0, divideAngleOuterB);
   
-  fill(divideRectColors[1]);
+  fill(divideRectColors[4]);
   arc(0, 0, radiusOuterCircle, radiusOuterCircle, divideAngleOuterB, PI);
   
-  fill(divideRectColors[2]);
+  fill(divideRectColors[4]);
   arc(0, 0, radiusOuterCircle, radiusOuterCircle, PI, divideAngleOuterB + PI);
     
-  fill(divideRectColors[3]);  
+  fill(divideRectColors[4]);  
   arc(0, 0, radiusOuterCircle, radiusOuterCircle, divideAngleOuterB + PI, TWO_PI);
 }
