@@ -13,9 +13,9 @@
   // Counters
   var firstTime          = true
     , strokeCounter      =   0
-    , strokeDuration     = 180
+    , strokeDuration     = Modernizr.webgl ? 180 : 900
     , globalCounter      =   0
-    , globalRoopDuration = 360;
+    , globalRoopDuration = Modernizr.webgl ? 360 : 1800;
       
   // Processing.js
   var p5init             = true;
@@ -731,17 +731,25 @@
     }
     
     function counterUpdate() {
-      if (autoAnimation) {
+      if (autoAnimation) {        
         globalCounter++;
         strokeCounter++;
       }
+      if (!Detector.webgl) {
+        globalCounter += 4;
+        strokeCounter += 4;
+      } 
       if (strokeCounter > strokeDuration) {
         strokeCounter = strokeDuration;
       }
       if (!firstTime && globalCounter > globalRoopDuration) {
         globalCounter = 0;
         strokeCounter = 0;
-      } else if (globalCounter > 400) {
+      } else if (Detector.webgl && globalCounter > 400) {
+        globalCounter = 0;
+        strokeCounter = 0;
+        firstTime = false;
+      } else if (!Detector.webgl && globalCounter > 2000) {
         globalCounter = 0;
         strokeCounter = 0;
         firstTime = false;
