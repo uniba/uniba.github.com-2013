@@ -100,9 +100,9 @@
     , colorPristArray = [
       [
         rgb2hex(229,   0,  28),
-        rgb2hex(247, 228,  228),
-        rgb2hex(193, 173, 132),
-        rgb2hex(251, 251, 251)]
+        rgb2hex(255, 255, 255),
+        rgb2hex(251, 251, 251),
+        rgb2hex(255, 255, 255)]
       ];
 
   setup();
@@ -198,25 +198,31 @@
     
     scene.add(stroke);
     
-    // Stroke Vertex
-    var strokeVertexGeometry = new THREE.SphereGeometry(0.02, 6, 6)
-      , strokeVertexMaterial = new THREE.MeshBasicMaterial({color: 0x000000});
-    
-    strokeVertex = new THREE.Object3D();
-    strokeVertex.rotation.x = Math.PI;
-    
-    for (var i=0, maxi=stroke.geometry.vertices.length; i<maxi; i++) {
-      var lv = {}
-        , mesh = new THREE.Mesh(strokeVertexGeometry, strokeVertexMaterial);
-
-      mesh.position.x = stroke.geometry.vertices[i].x;
-      mesh.position.y = stroke.geometry.vertices[i].y;
-      mesh.position.z = stroke.geometry.vertices[i].z;
-      
-      strokeVertex.add(mesh);
+    if (!Detector.webgl) {
+      stroke.position.z = 0.0001;
     }
     
-    scene.add(strokeVertex);
+    // Stroke Vertex
+    if (Detector.webgl) {
+      var strokeVertexGeometry = new THREE.SphereGeometry(0.02, 6, 6)
+        , strokeVertexMaterial = new THREE.MeshBasicMaterial({color: 0x000000});
+      
+      strokeVertex = new THREE.Object3D();
+      strokeVertex.rotation.x = Math.PI;
+      
+      for (var i=0, maxi=stroke.geometry.vertices.length; i<maxi; i++) {
+        var lv = {}
+          , mesh = new THREE.Mesh(strokeVertexGeometry, strokeVertexMaterial);
+  
+        mesh.position.x = stroke.geometry.vertices[i].x;
+        mesh.position.y = stroke.geometry.vertices[i].y;
+        mesh.position.z = stroke.geometry.vertices[i].z;
+        
+        strokeVertex.add(mesh);
+      }
+      
+      scene.add(strokeVertex);
+    }
    
     // Depth Rhombus
     var g1 = new THREE.Geometry();
@@ -578,23 +584,25 @@
           }
         }
         
-        // Stroke Vertex
-        var targetScale;
-        if (firstTime) {
-          targetScale = 2.0;
-        } else {
-          targetScale = 1.0;
-        }
-        for (var i=0, imax = strokeVertex.children.length; i<imax; i++) {
-          var vc = strokeVertex.children[i];
-          if (i <= currentVertice) {
-            vc.scale.x = targetScale;
-            vc.scale.y = targetScale;
-            vc.scale.z = targetScale;
+        if (Detector.webgl) {
+          // Stroke Vertex
+          var targetScale;
+          if (firstTime) {
+            targetScale = 2.0;
           } else {
-            vc.scale.x = 0.001;
-            vc.scale.y = 0.001;
-            vc.scale.z = 0.001;
+            targetScale = 1.0;
+          }
+          for (var i=0, imax = strokeVertex.children.length; i<imax; i++) {
+            var vc = strokeVertex.children[i];
+            if (i <= currentVertice) {
+              vc.scale.x = targetScale;
+              vc.scale.y = targetScale;
+              vc.scale.z = targetScale;
+            } else {
+              vc.scale.x = 0.001;
+              vc.scale.y = 0.001;
+              vc.scale.z = 0.001;
+            }
           }
         }
         
@@ -608,16 +616,18 @@
           stroke.geometry.vertices[i].z = strokeDefaultPos[i].z;    
         }
         
-        // Stroke Vertex
-        for (var i=0, iamx=strokeVertex.children.length; i<imax; i++) {
-          strokeVertexTarget[i] = 0.001;
-        }
-        for (var i=0, imax=strokeVertex.children.length; i<imax; i++) {
-          var cs = strokeVertex.children[i].scale
-            , vt = strokeVertexTarget[i];
-          cs.x += (vt - cs.x) * 0.05;
-          cs.y += (vt - cs.y) * 0.05;
-          cs.z += (vt - cs.z) * 0.05;
+        if (Detector.webgl) {
+          // Stroke Vertex
+          for (var i=0, iamx=strokeVertex.children.length; i<imax; i++) {
+            strokeVertexTarget[i] = 0.001;
+          }
+          for (var i=0, imax=strokeVertex.children.length; i<imax; i++) {
+            var cs = strokeVertex.children[i].scale
+              , vt = strokeVertexTarget[i];
+            cs.x += (vt - cs.x) * 0.05;
+            cs.y += (vt - cs.y) * 0.05;
+            cs.z += (vt - cs.z) * 0.05;
+          }
         }
         
       }
@@ -722,8 +732,13 @@
     
     function counterUpdate() {
       if (autoAnimation) {
-        globalCounter++;
-        strokeCounter++;
+        if (Detector.webgl) {
+          globalCounter++;
+          strokeCounter++;
+        } else {
+          globalCounter += 10;
+          strokeCounter += 10;
+        } 
       }
       if (strokeCounter > strokeDuration) {
         strokeCounter = strokeDuration;
@@ -743,7 +758,9 @@
       if (window.p5 && p5init) {
       
         var cpa = colorPristArray[colorPatternIndexNum];
-      
+
+        /*
+        //random
         for (var i=0, imax=4; i<imax; i++) {
           var bgcolor = cpa.splice(Math.floor(Math.random() * cpa.length), 1)
             , r = parseInt(bgcolor[0].slice(2, 4), 16)
@@ -751,6 +768,13 @@
             , b = parseInt(bgcolor[0].slice(6, 8), 16);
           p5.setBgColor(r, g, b, i);
         }
+        */
+        
+        // 2012 winter
+        p5.setBgColor(255, 255, 255, 0);
+        p5.setBgColor(251, 251, 251, 1);
+        p5.setBgColor(255, 255, 255, 2);
+        p5.setBgColor(251, 251, 251, 3);
         
         p5.setSize(ww, wh);
         p5init = false;
