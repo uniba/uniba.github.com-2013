@@ -732,13 +732,8 @@
     
     function counterUpdate() {
       if (autoAnimation) {
-        if (Detector.webgl) {
-          globalCounter++;
-          strokeCounter++;
-        } else {
-          globalCounter += 10;
-          strokeCounter += 10;
-        } 
+        globalCounter++;
+        strokeCounter++;
       }
       if (strokeCounter > strokeDuration) {
         strokeCounter = strokeDuration;
