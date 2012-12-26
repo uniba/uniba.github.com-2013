@@ -443,9 +443,9 @@ THREE.TrackballControls = function ( object, domElement ) {
 	//this.domElement.addEventListener( 'mousewheel', mousewheel, false );
 	//this.domElement.addEventListener( 'DOMMouseScroll', mousewheel, false ); // firefox
 
-	this.domElement.addEventListener( 'touchstart', touchstart, false );
-	this.domElement.addEventListener( 'touchend', touchstart, false );
-	this.domElement.addEventListener( 'touchmove', touchmove, false );
+	//this.domElement.addEventListener( 'touchstart', touchstart, false );
+	//this.domElement.addEventListener( 'touchend', touchstart, false );
+	//this.domElement.addEventListener( 'touchmove', touchmove, false );
 
 	window.addEventListener( 'keydown', keydown, false );
 	window.addEventListener( 'keyup', keyup, false );
