@@ -56,8 +56,9 @@
       
   // Color Preset Array
   // default
-  
+  /*
   var colorPatternIndexNum = Math.floor( Math.random() * 4 )
+  	colorPatternIndexNumRow = Math.floor( Math.random() * 4 )
     , colorPristArray = [
       [
         rgb2hex( 77,  77,  77),
@@ -82,6 +83,7 @@
       ];
   setup();
   animate();
+  */
   
   // 2012 winter
   /*
@@ -97,8 +99,7 @@
   setup();
   animate();
   */
-  
-  /*    
+      
   // 2013 winter
   
   var colorPatternIndexNum = 0
@@ -111,7 +112,6 @@
       ];
   setup();
   animate();
-  */
   
   function setup() {
     // Scene
