@@ -232,7 +232,7 @@ body{
   z-index: 20;
 }
 #header .attention{
-  top: 246px;
+  top: 190px;
   left: 30px;
 }
 #header .attention p{
@@ -245,7 +245,7 @@ body{
   background: url(../img/a_prototyping.png) no-repeat;
   width: 290px;
   height: 80px;
-  top: 338px;
+  top: 290px;
   left: 30px;
   cursor: pointer;
   display: block;

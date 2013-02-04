@@ -104,9 +104,9 @@
         rgb2hex(251, 251, 251),
         rgb2hex(255, 255, 255)]
       ];
-  */
   setup();
   animate();
+  */
   
   function setup() {
     // Scene
