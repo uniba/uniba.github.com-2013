@@ -5,18 +5,19 @@ int wh;
 
 // Color
 color[] divideRectColors = new color[4];
-/*
+
 // Default Value
 divideRectColors[0] = color(217, 217, 217);
 divideRectColors[1] = color(199,  95,  91);
 divideRectColors[2] = color(242, 156, 159);
 divideRectColors[3] = color(255, 246,  26);
-*/
+/*
 // 2012 winter
 divideRectColors[0] = color(255, 255, 255);
 divideRectColors[1] = color(251, 251, 251);
 divideRectColors[2] = color(255, 255, 255);
 divideRectColors[3] = color(251, 251, 251);
+*/
 
 
 

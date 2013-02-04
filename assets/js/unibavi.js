@@ -33,6 +33,7 @@
     , MeshMaterial       = Modernizr.webgl && !forceUseCanvas ? THREE.MeshLambertMaterial : THREE.MeshBasicMaterial;
     
   // 2012 winter
+  /*
   var particles;
   
   if (Detector.webgl) {
@@ -40,6 +41,7 @@
   } else {
     document.getElementById('console').innerHTML	+= "Canvas Renderer<br />";
   }
+  */
       
   // Value Holders
   var strokeDefaultPos   = []
@@ -78,6 +80,9 @@
         rgb2hex(131, 106,  74),
         rgb2hex(209, 163,  87)]
       ];
+  setup();
+  animate();
+  
   // 2012 winter
   /*
   var colorPatternIndexNum = 0
