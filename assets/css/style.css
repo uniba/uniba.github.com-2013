@@ -242,7 +242,7 @@ body{
  font-size: 15px;
 }
 #header .movieimg {
-  background: url(../img/a_prototyping.png) no-repeat;
+  background: url(../img/a_prototyping.jpg) no-repeat;
   width: 290px;
   height: 80px;
   top: 290px;
@@ -261,8 +261,8 @@ body{
   background/*\**/: #fff\9;
   filter:alpha(opacity=0);
 }
-#header .movieimg:hover{
-  background-position: 0 -80px;
+	#header .movieimg:hover{
+	background-position: 0 -80px;
 }
 #nav{
   width: 100%;
@@ -570,6 +570,16 @@ section .sectionH1{
 #movie #movieGrid li{
   float: left;
   margin: 0 20px 30px 0;
+}
+.moviebanner {
+	margin-left: 30px;
+}
+.moviebanner dl dt {
+	font-size: 16px;
+	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
+}
+.moviebanner dl dd {
+	margin-top: 15px;
 }
 #cliant #cliantGrid{
   margin:40px 0 0 30px;	
