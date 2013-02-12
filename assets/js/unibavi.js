@@ -470,7 +470,8 @@
       return g;
     }
   	
-    // 2012 winter particle 
+    // 2012 winter particle
+    /* 
     var particle = new THREE.Geometry()
       , material = new THREE.ParticleBasicMaterial( { color: 0xC1AD84, size: 0.1 } );
     
@@ -482,6 +483,7 @@
   	particles = new THREE.ParticleSystem(particle, material);
   	
   	scene.add(particles);
+  	*/
   	
   }
   
@@ -499,7 +501,7 @@
     counterUpdate();
     
     // 2012 winter
-    snowUpdate();
+    //snowUpdate();
     
     if (mouseControl) {
       controls.update();
@@ -800,6 +802,7 @@
     }
     
     // 2012 winter
+    /*
     function snowUpdate() {
       for (var i=0, imax=particles.geometry.vertices.length; i<imax; i++) {
         var particle = particles.geometry.vertices[i];
@@ -816,7 +819,7 @@
       }
       particles.geometry.verticesNeedUpdate = true;
     }
-    
+    */
     
   }
   
