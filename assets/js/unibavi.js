@@ -56,7 +56,7 @@
       
   // Color Preset Array
   // default
-  /*
+  
   var colorPatternIndexNum = Math.floor( Math.random() * 4 )
   	colorPatternIndexNumRow = Math.floor( Math.random() * 4 )
     , colorPristArray = [
@@ -83,7 +83,6 @@
       ];
   setup();
   animate();
-  */
   
   // 2012 winter
   /*
@@ -100,8 +99,8 @@
   animate();
   */
       
-  // 2013 winter
-  
+  // 2013 new year
+  /*
   var colorPatternIndexNum = 0
     , colorPristArray = [
       [
@@ -112,7 +111,7 @@
       ];
   setup();
   animate();
-  
+  */
   function setup() {
     // Scene
     scene = new THREE.Scene();
@@ -328,22 +327,22 @@
     g15 = setFParams(g15);
     g16 = setFParams(g16);
     
-    f1 = new THREE.Mesh(g1, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f2 = new THREE.Mesh(g2, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f3 = new THREE.Mesh(g3, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f4 = new THREE.Mesh(g4, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f5 = new THREE.Mesh(g5, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f6 = new THREE.Mesh(g6, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f7 = new THREE.Mesh(g7, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f8 = new THREE.Mesh(g8, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f9 = new THREE.Mesh(g9, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f10 = new THREE.Mesh(g10, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f11 = new THREE.Mesh(g11, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f12 = new THREE.Mesh(g12, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f13 = new THREE.Mesh(g13, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f14 = new THREE.Mesh(g14, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f15 = new THREE.Mesh(g15, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));
-    f16 = new THREE.Mesh(g16, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][0], 16), overdraw: true, side: 2 }));  
+    f1 = new THREE.Mesh(g1, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f2 = new THREE.Mesh(g2, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f3 = new THREE.Mesh(g3, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f4 = new THREE.Mesh(g4, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f5 = new THREE.Mesh(g5, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f6 = new THREE.Mesh(g6, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f7 = new THREE.Mesh(g7, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f8 = new THREE.Mesh(g8, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f9 = new THREE.Mesh(g9, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f10 = new THREE.Mesh(g10, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f11 = new THREE.Mesh(g11, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f12 = new THREE.Mesh(g12, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f13 = new THREE.Mesh(g13, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f14 = new THREE.Mesh(g14, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f15 = new THREE.Mesh(g15, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));
+    f16 = new THREE.Mesh(g16, new MeshMaterial({ color: parseInt(colorPristArray[colorPatternIndexNum][Math.floor(Math.random() * 4)], 16), overdraw: true, side: 2 }));  
     
     depth.push(f1);
     depth.push(f2);
@@ -767,7 +766,6 @@
       
         var cpa = colorPristArray[colorPatternIndexNum];
 
-        /*
         //random
         for (var i=0, imax=4; i<imax; i++) {
           var bgcolor = cpa.splice(Math.floor(Math.random() * cpa.length), 1)
@@ -776,13 +774,14 @@
             , b = parseInt(bgcolor[0].slice(6, 8), 16);
           p5.setBgColor(r, g, b, i);
         }
-        */
         
+        /*
         // 2012 winter
         p5.setBgColor(255, 255, 255, 0);
         p5.setBgColor(251, 251, 251, 1);
         p5.setBgColor(255, 255, 255, 2);
         p5.setBgColor(251, 251, 251, 3);
+        */
         
         p5.setSize(ww, wh);
         p5init = false;
