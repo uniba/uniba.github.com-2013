@@ -1,0 +1,157 @@
+body {
+  background-color: #000; }
+  body #ground {
+    background-attachment: fixed;
+    background-image: url("../images/keyvisual_master_large.png");
+    margin: 0 auto; }
+    body #ground #wrapper {
+      z-index: 0;
+      font-size: 13px;
+      line-height: 23px;
+      letter-spacing: 0.1em;
+      font-family: "times","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro"; }
+      body #ground #wrapper a {
+        color: #fff;
+        font-family: 'helvetica';
+        transition: color 0.2s linear;
+        -webkit-transition: color 0.2s linear; }
+        body #ground #wrapper a:hover {
+          color: #b8b8b8;
+          transition: color 0.2s linear;
+          -webkit-transition: color 0.2s linear; }
+      body #ground #wrapper .parallax-bg .processing {
+        z-index: -10; }
+        body #ground #wrapper .parallax-bg .processing canvas {
+          position: fixed;
+          image-rendering: -webkit-optimize-contrast !important; }
+      body #ground #wrapper .parallax-bg #wrapper-inner {
+        z-index: 0;
+        width: 980px;
+        margin: 0 auto;
+        color: #fff; }
+        body #ground #wrapper .parallax-bg #wrapper-inner .nav {
+          position: fixed; }
+          body #ground #wrapper .parallax-bg #wrapper-inner .nav ul {
+            float: left;
+            margin-top: 40px; }
+            body #ground #wrapper .parallax-bg #wrapper-inner .nav ul li {
+              width: 109px;
+              height: 50px;
+              margin-bottom: 1px; }
+              body #ground #wrapper .parallax-bg #wrapper-inner .nav ul li a {
+                display: block;
+                width: 89px;
+                height: 100%;
+                padding-left: 20px;
+                line-height: 50px;
+                font-size: 15px;
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: background-color 0.2s linear;
+                -webkit-transition: background-color 0.2s linear; }
+                body #ground #wrapper .parallax-bg #wrapper-inner .nav ul li a:hover {
+                  background-color: rgba(102, 102, 102, 0.5);
+                  transition: background-color 0.2s linear;
+                  -webkit-transition: background-color 0.2s linear; }
+        body #ground #wrapper .parallax-bg #wrapper-inner .logo-small {
+          background-image: url("../images/logo-small.png");
+          width: 110px;
+          height: 35px;
+          position: fixed;
+          margin-left: 870px;
+          margin-top: 40px; }
+        body #ground #wrapper .parallax-bg #wrapper-inner #middle {
+          z-index: 10;
+          position: relative;
+          clear: both;
+          width: 680px;
+          margin: 0 150px; }
+          body #ground #wrapper .parallax-bg #wrapper-inner #middle .section {
+            margin-bottom: 100px; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .section h3 {
+              font-size: 30px;
+              margin-bottom: 40px; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column {
+              border-bottom: 1px solid white; }
+              body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner {
+                margin: 40px 0; }
+                body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .text-space {
+                  width: 315px; }
+                  body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .text-space h4 {
+                    font-size: 18px;
+                    margin-bottom: 25px; }
+                body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner p.date {
+                  margin-bottom: 15px; }
+              body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column .first {
+                margin-top: 0; }
+              body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .exhibition-column .last {
+                margin-bottom: 0; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .section .border-none {
+              border-bottom: none; }
+          body #ground #wrapper .parallax-bg #wrapper-inner #middle .contents {
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.5); }
+          body #ground #wrapper .parallax-bg #wrapper-inner #middle .top {
+            padding-top: 230px;
+            display: inline-block; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .top .logo-large {
+              width: 680px;
+              height: 214px;
+              background-image: url("../images/logo-large.png"); }
+              body #ground #wrapper .parallax-bg #wrapper-inner #middle .top .logo-large h1 {
+                text-indent: -9999px; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .top .top-sub-title {
+              font-size: 20px;
+              text-align: center;
+              margin: 40px; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .top .top-date {
+              margin: 0 auto;
+              width: 591px;
+              height: 71px;
+              background-image: url("../images/date.png");
+              margin-bottom: 100px; }
+              body #ground #wrapper .parallax-bg #wrapper-inner #middle .top .top-date h2 {
+                text-indent: -9999px; }
+          body #ground #wrapper .parallax-bg #wrapper-inner #middle .access h5 {
+            font-size: 20px;
+            margin: 15px 0; }
+          body #ground #wrapper .parallax-bg #wrapper-inner #middle .access .information {
+            margin-bottom: 20px; }
+            body #ground #wrapper .parallax-bg #wrapper-inner #middle .access .information h6 {
+              margin-bottom: 10px; }
+      body #ground #wrapper .parallax-bg #bottom {
+        width: 100%;
+        background-color: #990b12;
+        padding: 30px 0; }
+        body #ground #wrapper .parallax-bg #bottom .footer-inner {
+          width: 980px;
+          margin: 0 auto;
+          color: #fff; }
+          body #ground #wrapper .parallax-bg #bottom .footer-inner h5 {
+            background: url("../images/uniba.png") no-repeat left center;
+            padding-left: 80px;
+            line-height: 60px;
+            font-size: 20px;
+            height: 60px;
+            margin-bottom: 20px; }
+          body #ground #wrapper .parallax-bg #bottom .footer-inner h5, body #ground #wrapper .parallax-bg #bottom .footer-inner p {
+            float: left;
+            width: 700px; }
+          body #ground #wrapper .parallax-bg #bottom .footer-inner .sns {
+            float: right;
+            margin-top: 15px; }
+            body #ground #wrapper .parallax-bg #bottom .footer-inner .sns ul li {
+              width: 32px;
+              height: 32px;
+              float: left;
+              margin-left: 20px; }
+              body #ground #wrapper .parallax-bg #bottom .footer-inner .sns ul li a {
+                width: 100%;
+                height: 100%;
+                display: block; }
+            body #ground #wrapper .parallax-bg #bottom .footer-inner .sns ul li.facebook {
+              background: url("../images/facebook.png") no-repeat; }
+            body #ground #wrapper .parallax-bg #bottom .footer-inner .sns ul li.twitter {
+              background: url("../images/twitter.png") no-repeat; }
+            body #ground #wrapper .parallax-bg #bottom .footer-inner .sns ul li.vimeo {
+              background: url("../images/vimeo.png") no-repeat; }

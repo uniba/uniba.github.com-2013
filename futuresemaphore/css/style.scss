@@ -1,0 +1,221 @@
+body{
+  background-color: #000;
+
+  #ground{
+
+    // background-repeat: repeat;
+    background-attachment:fixed;
+    background-image: url('../images/keyvisual_master_large.png');
+    // background-repeat: no-repeat;
+    margin: 0 auto;
+
+    #wrapper{
+
+      z-index:0;
+      font-size: 13px;
+      line-height: 23px;
+      letter-spacing: 0.1em;
+      font-family: "times","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro";
+
+      a{
+        color: #fff;
+        font-family: 'helvetica';
+        transition:color .2s linear;
+        -webkit-transition:color .2s linear;
+        &:hover{
+          color: #b8b8b8;
+          transition:color .2s linear;
+          -webkit-transition:color .2s linear;
+        }
+      }
+
+      .parallax-bg{
+        
+
+      .processing{
+        z-index: -10;
+        canvas{
+          position: fixed;
+          image-rendering: -webkit-optimize-contrast !important;
+        }
+      }
+
+      #wrapper-inner{
+        z-index: 0;
+        width:980px;
+        margin: 0 auto;
+        color: #fff;
+
+        .nav{
+          position: fixed;
+          ul{
+            float: left;
+            margin-top: 40px;
+            li{
+              width: 109px;
+              height: 50px;
+              margin-bottom: 1px;
+              a{
+                display: block;
+                width: 89px;
+                height: 100%;
+                padding-left: 20px;
+                line-height: 50px;
+                font-size: 15px;
+                text-decoration: none;
+                background-color: rgba(0,0,0,0.5);
+                transition:background-color .2s linear;
+                -webkit-transition:background-color .2s linear;
+                  &:hover{
+                    background-color: rgba(102,102,102,0.5);
+                    transition:background-color .2s linear;
+                    -webkit-transition:background-color .2s linear;
+                  }
+                }
+              }
+            }
+          }
+
+          .logo-small{
+            background-image: url("../images/logo-small.png");
+            width: 110px;
+            height: 35px;
+            position: fixed;
+            margin-left: 870px;
+            margin-top: 40px;
+          }
+
+          #middle{
+            z-index: 10;
+            position: relative;
+            clear: both;
+            width: 680px;
+            margin:0 150px;
+            .section{
+              margin-bottom: 100px;
+              h3{
+                font-size: 30px;
+                margin-bottom: 40px;
+              }
+              .exhibition-column{
+                  border-bottom: 1px solid #fff;
+                  .exhibition-column-inner{
+                    .text-space{
+                      width: 315px;
+                      h4{
+                        font-size: 18px;
+                        margin-bottom: 25px;
+                      }
+                    }
+                    p.date{
+                        margin-bottom: 15px;
+                      }
+                    margin: 40px 0;
+                  }
+                  .first{
+                    margin-top: 0;
+                  }
+                  .last{
+                    margin-bottom: 0;
+                  }
+              }
+              .border-none{
+                border-bottom: none;
+              }
+            }
+            .contents{
+              padding: 40px;
+              background-color: rgba(0,0,0,0.5);
+            }
+
+            .top{
+              padding-top: 230px;
+              display: inline-block;
+              .logo-large{
+                width: 680px;
+                height: 214px;
+                background-image:url("../images/logo-large.png"); 
+                h1{
+                  text-indent: -9999px;
+                }
+              }
+              .top-sub-title{
+                font-size: 20px;
+                text-align: center;
+                margin: 40px;
+              }
+              .top-date{
+                margin: 0 auto;
+                width: 591px;
+                height: 71px;
+                background-image:url("../images/date.png");
+                margin-bottom: 100px; 
+                h2{
+                  text-indent: -9999px;
+                }
+              }
+            }
+
+            .access{
+              h5{
+                font-size: 20px;
+                margin: 15px 0;
+              }
+              .information{
+                h6{
+                  margin-bottom: 10px;
+                }
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+
+        #bottom{
+          width:100%;
+          background-color: #990b12;
+          padding: 30px 0;
+          .footer-inner{
+            width: 980px;
+            margin: 0 auto;
+            color: #fff;
+            h5{
+              background:url("../images/uniba.png") no-repeat left center;
+              padding-left: 80px;
+              line-height: 60px;
+              font-size: 20px;
+              height: 60px;
+              margin-bottom: 20px;
+            }
+            h5,p{
+              float: left;
+              width: 700px;
+            }
+            .sns{
+              float: right;
+              margin-top: 15px;
+              ul{
+                li{
+                  width: 32px;
+                  height: 32px;
+                  float: left;
+                  margin-left: 20px;
+                  a{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                  }
+                }
+                li.facebook{background: url("../images/facebook.png") no-repeat;}
+                li.twitter{background: url("../images/twitter.png") no-repeat;}
+                li.vimeo{background: url("../images/vimeo.png") no-repeat;}
+              }
+            }
+          }
+        }
+      }
+    }
+
+}
+
+}

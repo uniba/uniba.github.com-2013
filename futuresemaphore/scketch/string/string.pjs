@@ -1,0 +1,147 @@
+$(function(){
+
+  //size
+  size($(window).width(), $(window).height(),P3D);
+    $(window).resize(function(){
+    size($(window).width(), $(window).height());
+  });
+  
+});
+
+float worldRotY = 270;
+Strip s;
+float targetX,targetY;
+boolean pointIndex = false;
+boolean polyFill = true;
+boolean roundRight = true;
+
+float spring = 0.3;
+float friction = 0.1;
+
+float speedX, speedY = 0;
+float nextPosX, nextPosY = 0;
+float currentPosX, currentPosY = 0;
+
+int counter = 0;
+int trigerSpan = 20;
+
+void setup(){
+  int randomFactor = round( random(4) );
+  if( 0 == randomFactor%2 ) {
+    roundRight = true;
+  } else {
+    roundRight = false;
+  };
+  background(255,0);
+  frameRate(30);
+  camera( 0, 0, 200, 0, 0, 0, 0, 1, 0 );
+  perspective( 70, float(screenWidth) / float(screenHeight), 100000, 0.00001 );
+  s = new Strip( 500 );
+}
+
+void draw() {
+  background(0,0);
+  if( roundRight ) {
+    worldRotY -= 1.5;
+  } else {
+    worldRotY += 1.5;
+  }
+  if( worldRotY >= 360 ) {
+    worldRotY = 0;
+  }
+
+  float ax;
+  ax = (nextPosX - currentPosX) * spring;
+  speedX += ax;
+  speedX *= friction;
+  currentPosX += speedX;
+
+  float ay;
+  ay = (nextPosY - currentPosY) * spring;
+  speedY += ay;
+  speedY *= friction;
+  currentPosY += speedY;
+
+  if (counter % trigerSpan == 0) {
+    nextPosX = random(screenWidth);
+    nextPosY = random(screenHeight);
+    trigerSpan = round( random( 60 ) + 40 );
+    counter = 0;
+  }
+
+  targetX += (currentPosX - targetX)/30;
+  targetY += (currentPosY - targetY)/30;
+  s.update();
+  s.shapeDraw();
+
+  counter++;
+
+}
+
+class Strip{
+  int numOfParticles;
+  ArrayList particles;
+  Strip(int num){
+    this.numOfParticles = num;
+    particles = new ArrayList();
+  }
+
+  void update(){
+    if ( particles.size() < numOfParticles ) {
+      particles.add(new Particle( (targetX-width/3)*cos(PI/180*worldRotY), targetY-height/3, (targetX-width/3)*0.3*sin(PI/180*worldRotY)) );
+    } else {
+      particles.remove(0);
+      particles.add(new Particle( (targetX-width/3)*cos(PI/180*worldRotY), targetY-height/3, (targetX-width/3)*0.3*sin(PI/180*worldRotY)) );
+    }
+  }
+  
+  void shapeDraw(){
+    if(polyFill){
+      noStroke();
+    }
+    translate( screenWidth/2, screenHeight/2, 0 );
+    beginShape(QUAD_STRIP);
+    for ( int i=0; i<particles.size(); i++ ) {
+      Particle p = (Particle) particles.get(i);
+      if(polyFill){
+        fill( 255, 80, 0, 255*i/particles.size() );
+      }
+      vertex(p.x,p.y,p.z);
+      vertex(p.xw,p.yw,p.zw);
+    }
+    endShape();
+    
+    if(pointIndex){
+      fill( 255, 80, 0 );
+      for ( int i=0; i<particles.size(); i++ ) {
+        Particle p = (Particle) particles.get(i);
+        pushMatrix();
+        translate(p.x,p.y,p.z);
+        popMatrix();
+      }
+    }
+  }
+}
+
+class Particle{
+  float x,y,z;
+  float xw,yw,zw;
+  Particle(float x,float y,float z){
+    this.x = x;
+    this.y = y;
+    this.z = z;
+    this.xw = 3 * cos(PI/180*worldRotY) + this.x;
+    this.zw = 3 * sin(PI/180*worldRotY) + this.z;
+    this.yw = 3 + this.y;
+  }
+}
+
+///////////////////////
+//Stage Resize Function
+///////////////////////
+
+void setStageSize(int w, int h) {
+  screenWidth = w;
+  screenHeight = h;
+  perspective( 70, float(screenWidth) / float(screenHeight), 100000, 0.00001 );
+}
