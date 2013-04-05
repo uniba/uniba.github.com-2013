@@ -2,15 +2,13 @@ body{
   background-color: #000;
 
   #ground{
-
-    // background-repeat: repeat;
+    z-index:0;
     background-attachment:fixed;
-    background-image: url('../images/keyvisual_master_large.png');
-    // background-repeat: no-repeat;
+    background-image: url('../images/keyvisual_master_large.jpg');
     margin: 0 auto;
+    background-size: 100%;
 
     #wrapper{
-
       z-index:0;
       font-size: 13px;
       line-height: 23px;
@@ -28,9 +26,6 @@ body{
           -webkit-transition:color .2s linear;
         }
       }
-
-      .parallax-bg{
-        
 
       .processing{
         z-index: -10;
@@ -172,10 +167,13 @@ body{
         }
 
         #bottom{
+          z-index: 10;
           width:100%;
+          position: relative;
           background-color: #990b12;
           padding: 30px 0;
           .footer-inner{
+            z-index: 10;
             width: 980px;
             margin: 0 auto;
             color: #fff;
@@ -214,8 +212,6 @@ body{
           }
         }
       }
-    }
-
 }
 
 }
