@@ -208,6 +208,11 @@ $(function() {
   $window.on('resize orientationchange', function(e) {
     var width = $window.width()
       , height = $window.height();
+      
+    /**
+     * Semaphore
+     */
+    $('#exhibision2013').height(height);
 
     /**
      * Half stage height for portrait view.
