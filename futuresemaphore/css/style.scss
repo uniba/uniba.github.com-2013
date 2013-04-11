@@ -107,12 +107,11 @@ body{
                 .exhibition-column-inner{
                   margin: 40px 0;
 
-                  .text-space{
-                    width: 315px;
+                  .text-area{
 
                     h4{
                       font-size: 18px;
-                      margin-bottom: 25px;
+                      margin: 20px 0 15px 0;
                     }
                   }
 
@@ -138,6 +137,10 @@ body{
           .contents{
             padding: 40px;
             background-color: rgba(0,0,0,0.5);
+            iframe{
+              margin-top:30px;
+              border: 1px solid #666;
+            }
           }
 
           .top{
@@ -147,7 +150,7 @@ body{
             .logo-large{
               width: 680px;
               height: 214px;
-              background-image:url("../images/logo-large.png"); 
+              background-image:url("../images/logo-large.png");
 
               h1{
                 text-indent: -9999px;
@@ -165,7 +168,7 @@ body{
               width: 591px;
               height: 71px;
               background-image:url("../images/date.png");
-              margin-bottom: 100px; 
+              margin-bottom: 100px;
 
               h2{
                 text-indent: -9999px;
