@@ -8,7 +8,7 @@ body {
     background-size: 100%; }
     body #ground #wrapper {
       z-index: 0;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 23px;
       letter-spacing: 0.1em;
       font-family: "times","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro"; }
@@ -80,8 +80,12 @@ body {
                 body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .text-area h4 {
                   font-size: 18px;
                   margin: 20px 0 15px 0; }
-                body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner p.date {
+                body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .year-people-container {
+                  font-size: 13px;
                   margin-bottom: 15px; }
+                  body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .year-people-container p.year {
+                    float: left;
+                    margin-right: 10px; }
               body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .first {
                 margin-top: 0; }
               body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .last {

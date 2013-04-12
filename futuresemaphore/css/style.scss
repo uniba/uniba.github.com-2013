@@ -10,7 +10,7 @@ body{
 
     #wrapper{
       z-index:0;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 23px;
       letter-spacing: 0.1em;
       font-family: "times","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro";
@@ -114,9 +114,13 @@ body{
                       margin: 20px 0 15px 0;
                     }
                   }
-
-                  p.date{
+                  .year-people-container{
+                    font-size: 13px;
                     margin-bottom: 15px;
+                    p.year{
+                      float: left;
+                      margin-right: 10px;
+                    }
                   }
                 }
 

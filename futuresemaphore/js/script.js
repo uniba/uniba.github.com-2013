@@ -27,7 +27,7 @@ $(function() {
       var posY = (document.documentElement.scrollTop) ? document.documentElement.scrollTop : window.pageYOffset;
 
       var ground = document.getElementById('ground');
-      var groundparallax = calcParallax(1733, 4, posY);
+      var groundparallax = calcParallax(1733, 8, posY);
       ground.style.backgroundPosition = "0 " + groundparallax + "px";
 
       if(bgWidth < 1280){
