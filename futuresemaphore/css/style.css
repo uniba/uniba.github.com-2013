@@ -1,12 +1,14 @@
 body {
   background-color: #000; }
   body #ground {
+    width: 100%;
     z-index: 0;
     background-attachment: fixed;
     background-image: url("../images/keyvisual_master_large.jpg");
     margin: 0 auto;
     background-size: 100%; }
     body #ground #wrapper {
+      width: 100%;
       z-index: 0;
       font-size: 12px;
       line-height: 23px;
