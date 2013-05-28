@@ -1,14 +1,17 @@
 body {
   background-color: #000; }
   body #ground {
+    width: 100%;
+    min-width: 980px;
     z-index: 0;
     background-attachment: fixed;
     background-image: url("../images/keyvisual_master_large.jpg");
     margin: 0 auto;
     background-size: 100%; }
     body #ground #wrapper {
+      width: 100%;
       z-index: 0;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 23px;
       letter-spacing: 0.1em;
       font-family: "times","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro"; }
@@ -77,13 +80,15 @@ body {
               border-bottom: 1px solid white; }
               body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner {
                 margin: 40px 0; }
-                body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .text-space {
-                  width: 315px; }
-                  body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .text-space h4 {
-                    font-size: 18px;
-                    margin-bottom: 25px; }
-                body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner p.date {
+                body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .text-area h4 {
+                  font-size: 18px;
+                  margin: 20px 0 15px 0; }
+                body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .year-people-container {
+                  font-size: 13px;
                   margin-bottom: 15px; }
+                  body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .exhibition-column-inner .year-people-container p.year {
+                    float: left;
+                    margin-right: 10px; }
               body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .first {
                 margin-top: 0; }
               body #ground #wrapper #wrapper-inner #middle .section .exhibition-column .last {
@@ -93,6 +98,9 @@ body {
           body #ground #wrapper #wrapper-inner #middle .contents {
             padding: 40px;
             background-color: rgba(0, 0, 0, 0.5); }
+            body #ground #wrapper #wrapper-inner #middle .contents iframe {
+              margin-top: 30px;
+              border: 1px solid #666666; }
           body #ground #wrapper #wrapper-inner #middle .top {
             padding-top: 230px;
             display: inline-block; }

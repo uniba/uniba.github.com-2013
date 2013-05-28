@@ -2,6 +2,8 @@ body{
   background-color: #000;
 
   #ground{
+    width: 100%;
+    min-width: 980px;
     z-index:0;
     background-attachment:fixed;
     background-image: url('../images/keyvisual_master_large.jpg');
@@ -9,8 +11,9 @@ body{
     background-size: 100%;
 
     #wrapper{
+      width: 100%;
       z-index:0;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 23px;
       letter-spacing: 0.1em;
       font-family: "times","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro";
@@ -107,17 +110,20 @@ body{
                 .exhibition-column-inner{
                   margin: 40px 0;
 
-                  .text-space{
-                    width: 315px;
+                  .text-area{
 
                     h4{
                       font-size: 18px;
-                      margin-bottom: 25px;
+                      margin: 20px 0 15px 0;
                     }
                   }
-
-                  p.date{
+                  .year-people-container{
+                    font-size: 13px;
                     margin-bottom: 15px;
+                    p.year{
+                      float: left;
+                      margin-right: 10px;
+                    }
                   }
                 }
 
@@ -138,6 +144,10 @@ body{
           .contents{
             padding: 40px;
             background-color: rgba(0,0,0,0.5);
+            iframe{
+              margin-top:30px;
+              border: 1px solid #666;
+            }
           }
 
           .top{
@@ -147,7 +157,7 @@ body{
             .logo-large{
               width: 680px;
               height: 214px;
-              background-image:url("../images/logo-large.png"); 
+              background-image:url("../images/logo-large.png");
 
               h1{
                 text-indent: -9999px;
@@ -165,7 +175,7 @@ body{
               width: 591px;
               height: 71px;
               background-image:url("../images/date.png");
-              margin-bottom: 100px; 
+              margin-bottom: 100px;
 
               h2{
                 text-indent: -9999px;
