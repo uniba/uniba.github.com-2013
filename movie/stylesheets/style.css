@@ -45,7 +45,7 @@
  src:url("../../assets/fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"),url("../../assets/fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"),url("../../assets/fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
 }
 
-@font-face{ 
+@font-face{
  font-family: "WebIconFonts";
  src: url("../../assets/fonts/WebIconFonts.eot");
  src: url("../../assets/fonts/WebIconFonts.eot?") format('eot'),url("../../assets/fonts/WebIconFonts.woff") format("woff"),url("../../assets/fonts/WebIconFonts.ttf") format("truetype");
@@ -57,22 +57,39 @@
   border: 0;
 }
 
-
-
 body {
   font-family: 'DIN Next W01 Medium';
   font-weight: 200;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
+}
+
+img {
+  vertical-align: top;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
 
 header {
   width: 100%;
   height: 52px;
 }
+
 header .sticky {
   position: fixed;
   width: 100%;
-  height: 74px;
+  padding: 0 0 10px 0;
   z-index: 10;
   background-color: #fff;
   background-color: #e5e5e5;
@@ -88,17 +105,17 @@ header .sticky h1 {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
 }
-/*header .sticky small {
-  margin-left: 0.5em;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-}*/
+
+header .sticky .gotohome {
+  height: 17px;
+}
 
 header #sort-by {
   float: left;
   height: 17px;
   margin-left: 0.8em;
 }
+
 button {
   margin: 0;
   padding: 3px 5px;
@@ -119,6 +136,7 @@ button:hover {
 button:active {
   background-color: yellow;
 }
+
 header .gotohome {
   float: right;
   margin-right: 0.8em;
@@ -132,14 +150,34 @@ header .gotohome {
   padding: 0 0 20px 0;
 }
 
+#container > div {
+  *zoom: 1;
+}
+
+#container > div:before,
+#container > div:after {
+  content: " ";
+  display: table;
+}
+
+#container > div:after {
+  clear: both;
+}
+
+#container p {
+  width: 300px;
+  padding: 0.2em 0 0.4em 0;
+  line-height: 1.2;
+}
+
 #container p span {
-	float: left;
-	font-size: 12px;
-	color: #333;
-	/*font-family: "Helvetica Neue", Helvetica;*/
-	font-family: '中ゴシックBBB', 'Gothic Medium BBB';
-	width: 300px;
-	background: #ffffff;
+/*  float: left;*/
+  font-size: 12px;
+  color: #333;
+  /*font-family: "Helvetica Neue", Helvetica;*/
+  font-family: '中ゴシックBBB', 'Gothic Medium BBB';
+
+  background: #ffffff;
 }
 
 /**** Isotope Filtering ****/
@@ -147,7 +185,7 @@ header .gotohome {
 .isotope-item {
   z-index: 2;
   margin: 5px;
-  padding: 10px 10px 5px 10px;
+  padding: 10px 10px 2px 10px;
   background-color: #fff;
   box-shadow: 1px 1px 5px #eee;
   border-radius: 1px;
