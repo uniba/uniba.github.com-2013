@@ -117,7 +117,7 @@ body{
  overflow-x: hidden;
 }
 #visual:hover{
- cursor: move;
+/*  cursor: move; */
 }
 #visual{
   width: 100%;
@@ -127,6 +127,9 @@ body{
   position: relative;
   z-index:100;
   -webkit-tap-highlight-color: rgba(0,0,0,0.0); 
+  background-image: url("../img/bg_logo_animation.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 #exhibision2013{
 	width: 100%;
@@ -256,7 +259,7 @@ body{
   background: url(../img/a_prototyping.png) no-repeat;
   width: 290px;
   height: 80px;
-  top: 290px;
+  top: 30px;
   left: 30px;
   cursor: pointer;
   display: block;
