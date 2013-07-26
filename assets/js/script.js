@@ -255,12 +255,12 @@ $(function() {
      * Apply size.
      */
     
-    if (renderer) {
-      renderer.setSize(width, height);
+    if (window.renderer) {
+      window.renderer.setSize(width, height);
     }
     if (window.p5) {
       // TODO: avoid flicking.
-      p5.setSize(width, height);
+      window.p5.setSize(width, height);
     }
   }).trigger('resize');
 });
