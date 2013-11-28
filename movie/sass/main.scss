@@ -1,0 +1,154 @@
+@import "compass";
+@import "compass/reset/";
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == pc {
+    @media ( max-width: 1068px ) { @content; }
+  }
+  @else if $breakpoint == sp {
+    @media ( max-width: 560px ) { @content; }
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: line-through;
+  }
+}
+
+body {
+  background-color: #FFF;
+  padding: 20px 0 0 60px;
+  font-family: '小塚ゴシック Pro','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo',sans-serif;
+  @include breakpoint(sp) {
+    padding: 10px 10px 0 10px;
+  }
+}
+
+header {
+  margin: 0 0 180px 0;
+  h1,h2 {
+    text-transform: uppercase;
+    font-family:'Futura W01 Medium';
+  }
+  h1 {
+    letter-spacing: 0.1em;
+  }
+  h2 {
+    margin: 30px 0 50px -7px;
+    font-size: 5em;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.2em;
+  }
+  ul {
+    overflow: hidden;
+    li {
+      margin: 0 30px 0 0;
+      display: inline;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family:'Futura W01 Medium';
+      letter-spacing: 0.1em;
+      &:hover,&.active {
+        text-decoration: line-through;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.box {
+  margin: 0 0 40px 0;
+  h3 {
+    display: inline-block;
+    margin: 0 0 9px 0;
+    padding: 4px 5px 2px 4px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 0.9em;
+    font-family:'Futura W01 Medium';
+    font-style: italic;
+    letter-spacing: 0.1em;
+  }
+  .screenshots {
+    height: 130px;
+    overflow: hidden;
+    ul {
+      width: 100%;
+      position: relative;
+      line-height: 0;
+      -webkit-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%);
+      &.active {
+        -webkit-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        filter: grayscale(0%);
+      }
+      li {
+        display: inline;
+        margin: 0 -3px 0 0;
+        position: absolute;
+          @for $i from 0 through 10 {
+            &:nth-child(#{$i + 1}) {
+              left: #{233 * $i}px;
+            }
+          }
+        img {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .title {
+    margin: 9px 0 0 0;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+  }
+}
+
+footer {
+  margin: 85px 60px 40px 0;
+  .button {
+    border: 1px solid #000;
+    width: 100%;
+    height: 80px;
+    &:hover {
+      background-color: #000;
+    }
+    a {
+      padding: 30px 0 0 0;
+      width: 100%;
+      height: 50px;
+      display: block;
+      font-size: 1.1em;
+      color: #000;
+      text-decoration: none;
+      font-family:'Futura W01 Medium';
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      &:hover {
+        color: #FFF;
+      }
+      span {
+        width: 100%;
+        height: 80px;
+      }
+    }
+  }
+}
