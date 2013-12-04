@@ -77,29 +77,17 @@ header {
   }
   .screenshots {
     height: 130px;
-    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      overflow: hidden;
+    }
     ul {
-      width: 100%;
+      width: 2330px;
+      height: 130px;
       position: relative;
       line-height: 0;
-      -webkit-transition: all .5s ease;
-      -ms-transition: all .5s ease;
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      filter: grayscale(100%);
-      &.active {
-        -webkit-transition: all .5s ease;
-        -ms-transition: all .5s ease;
-        -webkit-filter: grayscale(0%);
-        -moz-filter: grayscale(0%);
-        -o-filter: grayscale(0%);
-        -ms-filter: grayscale(0%);
-        filter: grayscale(0%);
-      }
       li {
-        display: inline;
         margin: 0 -3px 0 0;
         position: absolute;
           @for $i from 0 through 10 {

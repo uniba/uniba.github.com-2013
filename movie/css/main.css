@@ -149,108 +149,96 @@ header ul li:last-child {
 /* line 78, ../sass/main.scss */
 .box .screenshots {
   height: 130px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 82, ../sass/main.scss */
+.box .screenshots::-webkit-scrollbar {
   overflow: hidden;
 }
-/* line 81, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 .box .screenshots ul {
-  width: 100%;
+  width: 2330px;
+  height: 130px;
   position: relative;
   line-height: 0;
-  -webkit-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  filter: grayscale(100%);
 }
-/* line 92, ../sass/main.scss */
-.box .screenshots ul.active {
-  -webkit-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
-/* line 101, ../sass/main.scss */
+/* line 90, ../sass/main.scss */
 .box .screenshots ul li {
-  display: inline;
   margin: 0 -3px 0 0;
   position: absolute;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(1) {
   left: 0px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(2) {
   left: 233px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(3) {
   left: 466px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(4) {
   left: 699px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(5) {
   left: 932px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(6) {
   left: 1165px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(7) {
   left: 1398px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(8) {
   left: 1631px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(9) {
   left: 1864px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(10) {
   left: 2097px;
 }
-/* line 106, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .box .screenshots ul li:nth-child(11) {
   left: 2330px;
 }
-/* line 110, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 .box .screenshots ul li img {
   margin: 0;
   padding: 0;
 }
-/* line 117, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 .box .title {
   margin: 9px 0 0 0;
   font-size: 0.9em;
   letter-spacing: 0.1em;
 }
 
-/* line 124, ../sass/main.scss */
+/* line 112, ../sass/main.scss */
 footer {
   margin: 85px 60px 40px 0;
 }
-/* line 126, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 footer .button {
   border: 1px solid #000;
   width: 100%;
   height: 80px;
 }
-/* line 130, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 footer .button:hover {
   background-color: #000;
 }
-/* line 133, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 footer .button a {
   padding: 30px 0 0 0;
   width: 100%;
@@ -264,11 +252,11 @@ footer .button a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* line 145, ../sass/main.scss */
+/* line 133, ../sass/main.scss */
 footer .button a:hover {
   color: #FFF;
 }
-/* line 148, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 footer .button a span {
   width: 100%;
   height: 80px;
