@@ -1,0 +1,347 @@
+
+<!doctype html>
+<html>
+<head>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.5/mousetrap.js"></script>
+  <script src="http://rawgithub.com/sole/tween.js/r12/build/tween.min.js"></script>
+  <script src="http://threejs.org/build/three.js"></script>
+  <script src="http://threejs.org/examples/js/controls/TrackballControls.js"></script>
+  <script src="http://threejs.org/examples/js/renderers/CSS3DRenderer.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+
+  <script src="http://mohayonao.github.io/timbre.js/timbre.js"></script>
+  
+  <style>
+    * { margin: 0; padding: 0; }
+    body {
+      font-family: 'Helvetica Neue';
+      font-size: .8em;
+      background-color: #333;
+      /*background-image: url(http://radiatinglight.files.wordpress.com/2011/06/golden-rays.jpg);
+      */
+      /*background-image: url(http://www.freefever.com/stock/new-earth-space-pictures-images.jpg);
+      background-size: cover;*/
+    }
+    .controls {
+      position: absolute;
+      top: 10px; right: 10px;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, .4);
+      padding: 1em;
+      color: #fff;
+    }
+    .controls:hover {
+      background-color: rgba(0, 0, 0, .6);
+    }
+  </style>
+</head>
+<body>
+ 
+<div class="controls">
+  <input type="checkbox" id="3d">
+  <label for="3d">3D Mode</label>
+</div>
+ 
+<script>
+ 
+var is3D = false;
+var checkbox = document.querySelector('[type=checkbox]');
+ 
+checkbox.onchange = function(e) {
+  if (e.target.checked) {
+    enter3DMode();
+  } else {
+    exit3DMode();
+  }
+};
+ 
+var margin = 0;
+var fov = 75;
+var scene = new THREE.Scene();
+ 
+var aspect = window.innerHeight / window.innerWidth;
+var camera = new THREE.PerspectiveCamera(fov, 1, 1, 100000);
+var defaultZ = camera.position.z = (window.innerWidth * 0.5) / Math.tan(fov * 0.5 * 0.01745) * aspect;
+ 
+var renderer = new THREE.CSS3DRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.domElement.style.position = 'absolute';
+renderer.domElement.style.zIndex = '1';
+document.body.appendChild(renderer.domElement);
+ 
+var controls = new THREE.TrackballControls(camera, renderer.domElement);
+controls.rotateSpeed = 0.5;
+// controls.addEventListener('change', render);
+ 
+var iframe = document.createElement('iframe');
+iframe.src = 'http://moxus.org';
+var aspect = window.innerWidth / window.innerHeight;
+iframe.width = window.innerWidth - margin;
+iframe.height = window.innerHeight - margin;
+iframe.setAttribute('frameborder', 0);
+ 
+var object = new THREE.CSS3DObject(iframe);
+scene.add(object);
+ 
+var lastPosition = new THREE.Vector3(0, 0, 1000);
+var lastRotation = new THREE.Euler(0, 0, 0);
+ 
+function enter3DMode() {
+  is3D = true;
+ 
+  var posTween = new TWEEN.Tween(camera.position);
+  var rotTween = new TWEEN.Tween(camera.rotation);
+ 
+  posTween
+  .to(lastPosition, 1000)
+  .easing(TWEEN.Easing.Elastic.Out)
+  .start();
+ 
+  rotTween
+  .to({ x: lastRotation.x, y: lastRotation.y, z: lastRotation.z }, 1000)
+  .easing(TWEEN.Easing.Elastic.Out)
+  .start();  
+}
+ 
+function exit3DMode() {
+  is3D = false;
+ 
+  lastPosition = camera.position.clone();
+  lastRotation = camera.rotation.clone();
+ 
+  var posTween = new TWEEN.Tween(camera.position);
+  var rotTween = new TWEEN.Tween(camera.rotation);
+ 
+  posTween
+  .to({ x: 0, y: 0, z: defaultZ }, 1000)
+  .easing(TWEEN.Easing.Exponential.Out)
+  .start();
+ 
+  rotTween
+  .to({ x: 0, y: 0, z: 0 }, 1000)
+  .easing(TWEEN.Easing.Exponential.Out)
+  .start();
+}
+ 
+requestAnimationFrame(function() {
+  requestAnimationFrame(arguments.callee);
+  if (is3D) controls.update();
+  TWEEN.update();
+  renderer.render(scene, camera);
+
+  renderBG();// renderBG
+});
+
+/*---------------------------------------------------*/
+/*
+Background Particles
+*/
+var BG_PARTICLE_NUM = 5000;
+
+var rendererBG, cameraBG, sceneBG, particlesBG, geometryBG, materialsBG = [];
+
+initBGParticle();
+
+function initBGParticle() {
+  rendererBG = new THREE.WebGLRenderer();
+  rendererBG.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(rendererBG.domElement);
+  rendererBG.domElement.style.position = 'absolute';
+  rendererBG.domElement.style.zIndex = '0';
+
+  cameraBG = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 1,  3000);
+  cameraBG.position.z = 1000;
+
+  sceneBG = new THREE.Scene();
+  geometryBG = new THREE.Geometry();
+
+  var params = [6, 5, 4, 3, 2, 1];
+  for (var i = 0; i < BG_PARTICLE_NUM; i++) {
+    var vert = new THREE.Vector3();
+    vert.x = Math.random() * 5000 - 2500;
+    vert.y = Math.random() * 5000 - 2500;
+    vert.z = Math.random() * 5000 - 2500;
+    geometryBG.vertices.push( vert );
+  }
+
+   for (var i = 0; i < params.length; i++) {
+     materialsBG[i] = new THREE.ParticleSystemMaterial({color: 0xFFFFFF, size: params[i]});
+     particlesBG = new THREE.ParticleSystem(geometryBG, materialsBG[i]);
+     particlesBG.rotation.x = Math.random() * 6.0;
+     particlesBG.rotation.y = Math.random() * 6.0;
+     particlesBG.rotation.z = Math.random() * 6.0;
+     sceneBG.add( particlesBG );
+   }
+}
+
+function renderBG() {
+  if (is3D) {
+    var time = Date.now() * 0.00002;
+    cameraBG.lookAt( sceneBG.position );
+    for ( i = 0; i < sceneBG.children.length; i ++ ) {
+      var object = sceneBG.children[ i ];
+      if ( object instanceof THREE.ParticleSystem ) {
+        object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+      }
+    }
+    rendererBG.render( sceneBG, cameraBG );
+  }
+}
+
+
+/*---------------------------------------------------*/
+
+
+(function() { 
+
+  // グローバルな変数
+  
+  var drawnNum = 120;
+  var oscDrawn = new Array(drawnNum);
+  var oscDrawnOriginFreq = new Array(drawnNum);
+  
+  var intervalArray = new Array(drawnNum);
+  var intervalArrayOriginTime = new Array(drawnNum);
+  
+  var filterArray = new Array(drawnNum);
+  var filterOriginFreq = new Array(drawnNum);
+
+  var moursOsc;
+  var mmoursEnv;
+  var randomNote;
+
+
+  //
+  // setup関数
+  //
+  function timbleInit() {
+    randomNote = randomNoteDefine()
+    console.log(randomNote)
+
+    for(var i = 0; i < drawnNum; ++i) { 
+      oscDrawn[i] = T("saw",{freq: mtof(randomNote.drawn()) + Math.random()*4, mul:0.02});
+      oscDrawnOriginFreq[i] = oscDrawn[i].freq.value;
+
+
+      /*sawオシレーターかけてローパスかけたらいい感じに*/
+      filterArray[i] = T("lpf" , {cutoff:400 + (Math.random()*100), Q:12}, oscDrawn[i]);
+      filterOriginFreq[i] = filterArray[i].freq.value;
+
+      /*イントロ用にアタック弱めにしてみるテスト*/
+      var param = T("param").linTo(1, "5sec")
+      T("*", filterArray[i], param).play();
+    }
+
+    var oscMelo = T("tri", {freq: mtof(airNoteMelody()), mul:0.5});
+    var meloenv =  T("perc", {a:2, r:30}, oscMelo).bang();
+    var interval = T("param", {value:1000});
+
+    T("interval", {interval:interval}, meloenv).start();
+    meloenv.play();
+
+
+    moursOsc = T("tri", {freq: mtof(airNoteMelody()), mul:0.25});
+    var moursFilter = T("bandpass" , {freq:1000 + (Math.random()*100), Q:5}, moursOsc)
+    mmoursEnv =  T("env", {table: [0.8, [0.8, 100],[0, 5]]}, moursFilter).bang();
+    T("delay", {time:300, fb:0.6, mix:0.5}, mmoursEnv).play();
+    
+
+    
+  }
+
+  function mtof(val) {
+    return Math.floor(440*Math.pow(2, (val-69)/12));
+  }
+
+
+  function ftom(frequency) {
+    return(69+12*Math.log(frequency/440)/Math.log(2))
+  }
+
+  function scaleTonal(freq) {
+    return mtof(parseInt(ftom(freq) ) ) 
+  }
+
+  function  airNotation() {
+    return Math.floor(Math.random()*25) * 5
+  }
+
+
+  function  airNoteMelody() {
+    return Math.floor(Math.random()*15 + 7) * 5
+  }
+
+  function  cm75Notation() {
+    var target = Math.floor(Math.random()*4)
+    var randOct = Math.floor(Math.random()*5 + 2) * 12
+    return ( [0, 4, 8, 11][target] + randOct )
+  }
+
+  function  myDarkNotation(coef) {
+    if(typeof coef === 'undefined') coef = 2;
+    var target = Math.floor(Math.random()*4)
+    var randOct = Math.floor(Math.random()*5 + coef) * 12
+    return ( [0, 2, 4, 9, 11][target] + randOct )
+  }
+
+  function randomNoteDefine() {
+    var target = Math.floor(Math.random()* 2)
+    if (target == 1 ) {
+      return {
+        drawn: function() { return airNotation() }, melody: function() { return airNoteMelody() }
+      }
+    } else {
+       return {
+        drawn: function() { return myDarkNotation() }, melody: function() { return myDarkNotation(5) }
+      }
+    }
+  }
+
+
+
+    
+  timbleInit();
+    
+
+  renderer.domElement.addEventListener('mousewheel', function(e){
+    var z_val = camera.position.z;   
+    var sin_val = Math.sin(z_val * 0.001);
+
+    for(var count = 0; count < drawnNum; ++count) { 
+      filterArray[count].freq.value = (sin_val * 300) + filterOriginFreq[count];
+      oscDrawn[count].freq.value = (sin_val * 8) + oscDrawnOriginFreq[count];
+      moursOsc.freq.value =  (sin_val * 10) + moursOsc.freq.value;
+    }
+    
+  })
+
+
+
+
+
+  setInterval(function() { 
+    T.reset();
+    timbleInit();
+  }, 120000)
+
+
+
+  setInterval( function() {    
+    if(Math.floor(Math.random()*3) % 3 == 0) {
+      moursOsc.freq.value = mtof(randomNote.melody());
+      mmoursEnv.bang().play();
+    }
+  }, 80);
+
+
+
+
+})();
+
+
+
+ 
+</script>
+ 
+</body>
+</html>
