@@ -232,13 +232,7 @@ function renderBG() {
       T("*", filterArray[i], param).play();
     }
 
-    var oscMelo = T("tri", {freq: mtof(airNoteMelody()), mul:0.5});
-    var meloenv =  T("perc", {a:2, r:30}, oscMelo).bang();
-    var interval = T("param", {value:1000});
-
-    T("interval", {interval:interval}, meloenv).start();
-    meloenv.play();
-
+  
 
     moursOsc = T("tri", {freq: mtof(airNoteMelody()), mul:0.25});
     var moursFilter = T("bandpass" , {freq:1000 + (Math.random()*100), Q:5}, moursOsc)
