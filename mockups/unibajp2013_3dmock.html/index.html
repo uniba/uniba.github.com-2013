@@ -222,18 +222,14 @@ function renderBG() {
       oscDrawn[i] = T("saw",{freq: mtof(randomNote.drawn()) + Math.random()*4, mul:0.02});
       oscDrawnOriginFreq[i] = oscDrawn[i].freq.value;
 
-
-      /*sawオシレーターかけてローパスかけたらいい感じに*/
       filterArray[i] = T("lpf" , {cutoff:400 + (Math.random()*100), Q:12}, oscDrawn[i]);
       filterOriginFreq[i] = filterArray[i].freq.value;
 
-      /*イントロ用にアタック弱めにしてみるテスト*/
       var param = T("param").linTo(1, "5sec")
       T("*", filterArray[i], param).play();
     }
 
   
-
     moursOsc = T("tri", {freq: mtof(airNoteMelody()), mul:0.25});
     var moursFilter = T("bandpass" , {freq:1000 + (Math.random()*100), Q:5}, moursOsc)
     mmoursEnv =  T("env", {table: [0.8, [0.8, 100],[0, 5]]}, moursFilter).bang();
@@ -248,14 +244,6 @@ function renderBG() {
   }
 
 
-  function ftom(frequency) {
-    return(69+12*Math.log(frequency/440)/Math.log(2))
-  }
-
-  function scaleTonal(freq) {
-    return mtof(parseInt(ftom(freq) ) ) 
-  }
-
   function  airNotation() {
     return Math.floor(Math.random()*25) * 5
   }
@@ -263,12 +251,6 @@ function renderBG() {
 
   function  airNoteMelody() {
     return Math.floor(Math.random()*15 + 7) * 5
-  }
-
-  function  cm75Notation() {
-    var target = Math.floor(Math.random()*4)
-    var randOct = Math.floor(Math.random()*5 + 2) * 12
-    return ( [0, 4, 8, 11][target] + randOct )
   }
 
   function  myDarkNotation(coef) {
@@ -292,7 +274,6 @@ function renderBG() {
   }
 
 
-
     
   timbleInit();
     
@@ -311,8 +292,6 @@ function renderBG() {
 
 
 
-
-
   setInterval(function() { 
     T.reset();
     timbleInit();
@@ -326,7 +305,6 @@ function renderBG() {
       mmoursEnv.bang().play();
     }
   }, 80);
-
 
 
 
