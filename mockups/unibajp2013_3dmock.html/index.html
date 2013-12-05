@@ -306,7 +306,7 @@ function renderBG() {
       oscDrawn[count].freq.value = (sin_val * 8) + oscDrawnOriginFreq[count];
       moursOsc.freq.value =  (sin_val * 10) + moursOsc.freq.value;
     }
-    
+    cameraBG.position.z = z_val * 0.0003; // set cameraBG position by DRUG
   })
 
 
