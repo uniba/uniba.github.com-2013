@@ -12,11 +12,19 @@ $(function() {
 */
 
 $(function() {
-  $('img').lazyload({
-    threshold: 200,
-    effect : "fadeIn",
-  });
+  $('.screenshots img')
+    .lazyload({
+      threshold: 0,
+      effect : "fadeIn",
+      effectspeed: 100,
+    })
 });
+
+/*
+$(function() {
+  $('.screenshots').flickable();
+});
+*/
 	
 /*
 // On window load. This waits until images have loaded which is essential

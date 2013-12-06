@@ -77,11 +77,9 @@ header {
   }
   .screenshots {
     height: 130px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar {
-      overflow: hidden;
-    }
+/*     overflow: hidden; */
+    overflow: auto;
+/*     -webkit-overflow-scrolling: touch; */
     ul {
       width: 2330px;
       height: 130px;
