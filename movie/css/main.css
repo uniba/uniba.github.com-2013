@@ -64,43 +64,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 13, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
 a {
   color: #000;
   text-decoration: none;
 }
-/* line 16, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 a:hover {
   text-decoration: line-through;
 }
 
-/* line 21, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 body {
   background-color: #FFF;
   padding: 20px 0 0 60px;
   font-family: '小塚ゴシック Pro','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo',sans-serif;
 }
-@media (max-width: 560px) {
-  /* line 21, ../sass/main.scss */
+@media (max-width: 460px) {
+  /* line 24, ../sass/main.scss */
   body {
     padding: 10px 10px 0 10px;
   }
 }
 
-/* line 30, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 header {
   margin: 0 0 180px 0;
 }
-/* line 32, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 header h1, header h2 {
   text-transform: uppercase;
   font-family: 'Futura W01 Medium';
 }
-/* line 36, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 header h1 {
   letter-spacing: 0.1em;
 }
-/* line 39, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 header h2 {
   margin: 30px 0 50px -7px;
   font-size: 5em;
@@ -108,11 +108,11 @@ header h2 {
   font-style: italic;
   letter-spacing: 0.2em;
 }
-/* line 46, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 header ul {
   overflow: hidden;
 }
-/* line 48, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 header ul li {
   margin: 0 30px 0 0;
   display: inline;
@@ -121,20 +121,20 @@ header ul li {
   font-family: 'Futura W01 Medium';
   letter-spacing: 0.1em;
 }
-/* line 55, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 header ul li:hover, header ul li.active {
   text-decoration: line-through;
 }
-/* line 58, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 header ul li:last-child {
   margin: 0;
 }
 
-/* line 65, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 .box {
   margin: 0 0 40px 0;
 }
-/* line 67, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 .box h3 {
   display: inline-block;
   margin: 0 0 9px 0;
@@ -146,96 +146,103 @@ header ul li:last-child {
   font-style: italic;
   letter-spacing: 0.1em;
 }
-/* line 78, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 .box .screenshots {
   height: 130px;
-  /*     overflow: hidden; */
-  overflow: auto;
-  /*     -webkit-overflow-scrolling: touch; */
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-/* line 83, ../sass/main.scss */
+@media (max-width: 770px) {
+  /* line 81, ../sass/main.scss */
+  .box .screenshots {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+/* line 90, ../sass/main.scss */
 .box .screenshots ul {
   width: 2330px;
   height: 130px;
   position: relative;
   line-height: 0;
 }
-/* line 88, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 .box .screenshots ul li {
   margin: 0 -3px 0 0;
   position: absolute;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(1) {
   left: 0px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(2) {
   left: 233px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(3) {
   left: 466px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(4) {
   left: 699px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(5) {
   left: 932px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(6) {
   left: 1165px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(7) {
   left: 1398px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(8) {
   left: 1631px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(9) {
   left: 1864px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(10) {
   left: 2097px;
 }
-/* line 92, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .box .screenshots ul li:nth-child(11) {
   left: 2330px;
 }
-/* line 96, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 .box .screenshots ul li img {
   margin: 0;
   padding: 0;
 }
-/* line 103, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 .box .title {
   margin: 9px 0 0 0;
   font-size: 0.9em;
   letter-spacing: 0.1em;
 }
 
-/* line 110, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 footer {
   margin: 85px 60px 40px 0;
 }
-/* line 112, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 footer .button {
   border: 1px solid #000;
   width: 100%;
   height: 80px;
 }
-/* line 116, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 footer .button:hover {
   background-color: #000;
 }
-/* line 119, ../sass/main.scss */
+/* line 126, ../sass/main.scss */
 footer .button a {
   padding: 30px 0 0 0;
   width: 100%;
@@ -249,11 +256,11 @@ footer .button a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* line 131, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 footer .button a:hover {
   color: #FFF;
 }
-/* line 134, ../sass/main.scss */
+/* line 141, ../sass/main.scss */
 footer .button a span {
   width: 100%;
   height: 80px;

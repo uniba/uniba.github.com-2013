@@ -5,8 +5,11 @@
   @if $breakpoint == pc {
     @media ( max-width: 1068px ) { @content; }
   }
+  @else if $breakpoint == tablet {
+    @media ( max-width: 770px ) { @content; }
+  }
   @else if $breakpoint == sp {
-    @media ( max-width: 560px ) { @content; }
+    @media ( max-width: 460px ) { @content; }
   }
 }
 
@@ -77,9 +80,13 @@ header {
   }
   .screenshots {
     height: 130px;
-/*     overflow: hidden; */
-    overflow: auto;
-/*     -webkit-overflow-scrolling: touch; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @include breakpoint(tablet) {
+      -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
     ul {
       width: 2330px;
       height: 130px;
