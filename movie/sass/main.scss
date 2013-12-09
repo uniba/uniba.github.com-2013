@@ -9,7 +9,7 @@
     @media ( max-width: 770px ) { @content; }
   }
   @else if $breakpoint == sp {
-    @media ( max-width: 460px ) { @content; }
+    @media ( max-width: 510px ) { @content; }
   }
 }
 
@@ -32,6 +32,9 @@ body {
 
 header {
   margin: 0 0 180px 0;
+  @include breakpoint(sp) {
+    margin: 0 0 30px 0;
+  }
   h1,h2 {
     text-transform: uppercase;
     font-family:'Futura W01 Medium';
@@ -45,9 +48,16 @@ header {
     font-weight: bold;
     font-style: italic;
     letter-spacing: 0.2em;
+    @include breakpoint(sp) {
+      margin: 23px 0 25px -3px;
+      font-size: 1.6em;
+    }
   }
   ul {
     overflow: hidden;
+    @include breakpoint(sp) {
+      display: none;
+    }
     li {
       margin: 0 30px 0 0;
       display: inline;
@@ -60,6 +70,31 @@ header {
       }
       &:last-child {
         margin: 0;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    display: none;
+    @include breakpoint(sp) {
+      display: inline-table;
+    }
+    td {
+      width: 50%;
+      vertical-align: middle;
+      border: 1px solid #000;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      font-weight: bold;
+      font-family:'Futura W01 Medium';
+      letter-spacing: 0.1em;
+      &:hover {
+        color: #FFF;
+        background-color: #000;
+      }
+      a {
+        padding: 14px 0 14px 10px;
+        display: block;
       }
     }
   }
@@ -79,7 +114,7 @@ header {
     letter-spacing: 0.1em;
   }
   .screenshots {
-    height: 130px;
+/*     height: 130px; */
     overflow-x: hidden;
     overflow-y: hidden;
     @include breakpoint(tablet) {
@@ -87,30 +122,51 @@ header {
       overflow-x: auto;
       overflow-y: hidden;
     }
+    @include breakpoint(sp) {
+      overflow: hidden;
+    }
     ul {
       width: 2330px;
       height: 130px;
       position: relative;
       line-height: 0;
+      @include breakpoint(sp) { 
+        width: 100%;
+        height: auto;
+        min-height: 130px;
+      }
       li {
         margin: 0 -3px 0 0;
         position: absolute;
-          @for $i from 0 through 10 {
+        @for $i from 0 through 10 {
+          &:nth-child(#{$i + 1}) {
+            left: #{233 * $i}px;
+          }
+        }
+        @include breakpoint(sp) {
+          position: static;
+          @for $i from 1 through 10 {
             &:nth-child(#{$i + 1}) {
-              left: #{233 * $i}px;
+              display: none;
             }
           }
+        }
         img {
           margin: 0;
           padding: 0;
+          @include breakpoint(sp) {
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }
   }
   .title {
     margin: 9px 0 0 0;
-    font-size: 0.9em;
+    font-size: 1em;
     letter-spacing: 0.1em;
+    line-height: 1.5em;
   }
 }
 

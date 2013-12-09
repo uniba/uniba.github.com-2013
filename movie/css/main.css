@@ -80,7 +80,7 @@ body {
   padding: 20px 0 0 60px;
   font-family: '小塚ゴシック Pro','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo',sans-serif;
 }
-@media (max-width: 460px) {
+@media (max-width: 510px) {
   /* line 24, ../sass/main.scss */
   body {
     padding: 10px 10px 0 10px;
@@ -91,16 +91,22 @@ body {
 header {
   margin: 0 0 180px 0;
 }
-/* line 35, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 33, ../sass/main.scss */
+  header {
+    margin: 0 0 30px 0;
+  }
+}
+/* line 38, ../sass/main.scss */
 header h1, header h2 {
   text-transform: uppercase;
   font-family: 'Futura W01 Medium';
 }
-/* line 39, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 header h1 {
   letter-spacing: 0.1em;
 }
-/* line 42, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 header h2 {
   margin: 30px 0 50px -7px;
   font-size: 5em;
@@ -108,11 +114,24 @@ header h2 {
   font-style: italic;
   letter-spacing: 0.2em;
 }
-/* line 49, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 45, ../sass/main.scss */
+  header h2 {
+    margin: 23px 0 25px -3px;
+    font-size: 1.6em;
+  }
+}
+/* line 56, ../sass/main.scss */
 header ul {
   overflow: hidden;
 }
-/* line 51, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 56, ../sass/main.scss */
+  header ul {
+    display: none;
+  }
+}
+/* line 61, ../sass/main.scss */
 header ul li {
   margin: 0 30px 0 0;
   display: inline;
@@ -121,20 +140,52 @@ header ul li {
   font-family: 'Futura W01 Medium';
   letter-spacing: 0.1em;
 }
-/* line 58, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 header ul li:hover, header ul li.active {
   text-decoration: line-through;
 }
-/* line 61, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 header ul li:last-child {
   margin: 0;
 }
+/* line 76, ../sass/main.scss */
+header table {
+  width: 100%;
+  display: none;
+}
+@media (max-width: 510px) {
+  /* line 76, ../sass/main.scss */
+  header table {
+    display: inline-table;
+  }
+}
+/* line 82, ../sass/main.scss */
+header table td {
+  width: 50%;
+  vertical-align: middle;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  font-weight: bold;
+  font-family: 'Futura W01 Medium';
+  letter-spacing: 0.1em;
+}
+/* line 91, ../sass/main.scss */
+header table td:hover {
+  color: #FFF;
+  background-color: #000;
+}
+/* line 95, ../sass/main.scss */
+header table td a {
+  padding: 14px 0 14px 10px;
+  display: block;
+}
 
-/* line 68, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 .box {
   margin: 0 0 40px 0;
 }
-/* line 70, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 .box h3 {
   display: inline-block;
   margin: 0 0 9px 0;
@@ -146,103 +197,171 @@ header ul li:last-child {
   font-style: italic;
   letter-spacing: 0.1em;
 }
-/* line 81, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 .box .screenshots {
-  height: 130px;
+  /*     height: 130px; */
   overflow-x: hidden;
   overflow-y: hidden;
 }
 @media (max-width: 770px) {
-  /* line 81, ../sass/main.scss */
+  /* line 116, ../sass/main.scss */
   .box .screenshots {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overflow-y: hidden;
   }
 }
-/* line 90, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 116, ../sass/main.scss */
+  .box .screenshots {
+    overflow: hidden;
+  }
+}
+/* line 128, ../sass/main.scss */
 .box .screenshots ul {
   width: 2330px;
   height: 130px;
   position: relative;
   line-height: 0;
 }
-/* line 95, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 128, ../sass/main.scss */
+  .box .screenshots ul {
+    width: 100%;
+    height: auto;
+    min-height: 130px;
+  }
+}
+/* line 138, ../sass/main.scss */
 .box .screenshots ul li {
   margin: 0 -3px 0 0;
   position: absolute;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(1) {
   left: 0px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(2) {
   left: 233px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(3) {
   left: 466px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(4) {
   left: 699px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(5) {
   left: 932px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(6) {
   left: 1165px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(7) {
   left: 1398px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(8) {
   left: 1631px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(9) {
   left: 1864px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(10) {
   left: 2097px;
 }
-/* line 99, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .box .screenshots ul li:nth-child(11) {
   left: 2330px;
 }
-/* line 103, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 138, ../sass/main.scss */
+  .box .screenshots ul li {
+    position: static;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(2) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(3) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(4) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(5) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(6) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(7) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(8) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(9) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(10) {
+    display: none;
+  }
+  /* line 149, ../sass/main.scss */
+  .box .screenshots ul li:nth-child(11) {
+    display: none;
+  }
+}
+/* line 154, ../sass/main.scss */
 .box .screenshots ul li img {
   margin: 0;
   padding: 0;
 }
-/* line 110, ../sass/main.scss */
+@media (max-width: 510px) {
+  /* line 154, ../sass/main.scss */
+  .box .screenshots ul li img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 165, ../sass/main.scss */
 .box .title {
   margin: 9px 0 0 0;
-  font-size: 0.9em;
+  font-size: 1em;
   letter-spacing: 0.1em;
+  line-height: 1.5em;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 footer {
   margin: 85px 60px 40px 0;
 }
-/* line 119, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 footer .button {
   border: 1px solid #000;
   width: 100%;
   height: 80px;
 }
-/* line 123, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 footer .button:hover {
   background-color: #000;
 }
-/* line 126, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 footer .button a {
   padding: 30px 0 0 0;
   width: 100%;
@@ -256,11 +375,11 @@ footer .button a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* line 138, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 footer .button a:hover {
   color: #FFF;
 }
-/* line 141, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 footer .button a span {
   width: 100%;
   height: 80px;
